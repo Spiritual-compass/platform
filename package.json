@@ -1,0 +1,63 @@
+{
+  "name": "spiritual-compass-platform",
+  "version": "1.0.0",
+  "description": "Multi-religious spiritual guidance platform for seekers finding their sacred direction",
+  "main": "functions/index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "npm run build:bots",
+    "build:bots": "cd bots/content-bot && npm install && cd ../research-bot && npm install && cd ../moderation-bot && npm install",
+    "deploy": "netlify deploy --prod",
+    "deploy:bots": "npm run deploy:content && npm run deploy:research && npm run deploy:moderation",
+    "deploy:content": "cd bots/content-bot && npm run deploy",
+    "deploy:research": "cd bots/research-bot && npm run deploy",
+    "deploy:moderation": "cd bots/moderation-bot && npm run deploy",
+    "bot:content": "cd bots/content-bot && node daily-post.js",
+    "bot:research": "cd bots/research-bot && node research/find-wisdom.js",
+    "bot:moderation": "cd bots/moderation-bot && node moderation/health-check.js",
+    "bot:schedule": "node scripts/schedule-bots.js",
+    "test": "npm run test:bots",
+    "test:bots": "cd bots/content-bot && npm test && cd ../research-bot && npm test",
+    "lint": "eslint public/scripts/ bots/ functions/",
+    "setup": "npm install && npm run build:bots",
+    "start": "netlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiritual-compass/platform.git"
+  },
+  "keywords": [
+    "spiritual",
+    "multi-faith",
+    "guidance",
+    "meditation",
+    "community",
+    "wisdom",
+    "seekers",
+    "religious-traditions"
+  ],
+  "author": "Spiritual Compass Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spiritual-compass/platform/issues"
+  },
+  "homepage": "https://spiritual-compass.com",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0",
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.0.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

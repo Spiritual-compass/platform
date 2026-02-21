@@ -1,0 +1,393 @@
+/* Assessment Specific Styles */
+
+.assessment-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+    text-align: center;
+    position: relative;
+}
+
+.assessment-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+
+.assessment-header h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.assessment-subtitle {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+    opacity: 0.9;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.assessment-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.meta-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.assessment-form-section {
+    padding: var(--space-2xl) 0;
+    background: var(--background);
+}
+
+.assessment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: var(--surface);
+    padding: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--wisdom-blue), var(--truth-purple));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 25%;
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* Question Groups */
+.question-group {
+    padding: var(--space-2xl);
+    display: none;
+}
+
+.question-group.active {
+    display: block;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.question-group h2 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    position: relative;
+}
+
+.question-group h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--wisdom-blue), var(--truth-purple));
+    border-radius: 2px;
+}
+
+.question {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background: var(--background);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+}
+
+.question:last-child {
+    margin-bottom: 0;
+}
+
+.question h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    font-weight: 600;
+}
+
+/* Form Options */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.options label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.options label:hover {
+    background: var(--surface-elevated);
+    border-color: var(--border);
+    transform: translateY(-1px);
+}
+
+.options label:has(input:checked) {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.options input[type="radio"],
+.options input[type="checkbox"] {
+    margin: 0;
+    transform: scale(1.2);
+    accent-color: var(--primary);
+}
+
+/* Form Inputs */
+.form-row {
+    margin-bottom: var(--space-md);
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--surface);
+    transition: border-color 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.question-note {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: var(--space-sm);
+    font-style: italic;
+}
+
+/* Navigation */
+.form-navigation {
+    background: var(--surface);
+    padding: var(--space-lg) var(--space-2xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.form-navigation .btn {
+    min-width: 120px;
+}
+
+/* Question Types */
+.question[data-type="multiple-choice"] .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.question[data-type="single-choice"] .options label {
+    justify-content: flex-start;
+}
+
+.question[data-type="checkbox"] .options label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    margin-right: var(--space-sm);
+    transition: all 0.2s ease;
+}
+
+.question[data-type="checkbox"] .options label:has(input:checked)::before {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Validation States */
+.question.error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.question.error h3::after {
+    content: ' *';
+    color: #ef4444;
+}
+
+.validation-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: var(--space-sm);
+    display: none;
+}
+
+.question.error .validation-message {
+    display: block;
+}
+
+/* Success States */
+.question.completed {
+    border-color: var(--peace-green);
+    background: rgba(16, 185, 129, 0.02);
+}
+
+.question.completed h3::before {
+    content: '✓ ';
+    color: var(--peace-green);
+}
+
+/* Loading States */
+.assessment-form.submitting {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.assessment-form.submitting .btn {
+    position: relative;
+}
+
+.assessment-form.submitting .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .assessment-header h1 {
+        font-size: 2rem;
+    }
+    
+    .assessment-meta {
+        gap: var(--space-md);
+    }
+    
+    .meta-item {
+        font-size: 0.8rem;
+        padding: var(--space-xs);
+    }
+    
+    .question-group {
+        padding: var(--space-lg);
+    }
+    
+    .question {
+        padding: var(--space-lg);
+    }
+    
+    .options {
+        gap: var(--space-xs);
+    }
+    
+    .options label {
+        padding: var(--space-sm);
+        font-size: 0.9rem;
+    }
+    
+    .form-navigation {
+        padding: var(--space-md);
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .form-navigation .btn {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .nav, .footer, .form-navigation {
+        display: none;
+    }
+    
+    .assessment-header {
+        background: none;
+        color: var(--text-primary);
+    }
+    
+    .question-group {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+}

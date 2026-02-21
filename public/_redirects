@@ -1,0 +1,41 @@
+# Netlify redirects file
+# https://docs.netlify.com/routing/redirects/
+
+# Assessment page
+/assessment /assessment/ 200
+/quiz /assessment/ 301
+/spiritual-assessment /assessment/ 301
+
+# Wisdom pages
+/wisdom /wisdom/ 200
+/daily-wisdom /wisdom/ 301
+/quotes /wisdom/ 301
+
+# Community pages  
+/community /community/ 200
+/find-community /community/ 301
+/local /community/ 301
+
+# Support pages
+/support /support/ 200
+/help /support/ 301
+/guidance /support/ 301
+/crisis /support/ 301
+
+# API endpoints (for future use)
+/api/* https://api.spiritual-compass.com/:splat 200
+
+# Social media and external links
+/twitter https://twitter.com/SpiritualCompass 301
+/instagram https://instagram.com/spiritual.compass 301
+/discord https://discord.gg/spiritualcompass 301
+
+# Legacy redirects (in case we change structure)
+/home / 301
+/index.html / 301
+
+# SPA fallback for future React/Vue components
+/app/* /app/index.html 200
+
+# 404 page
+/* /404.html 404
