@@ -1,0 +1,673 @@
+/* ==========================================================================
+   Interactive Spiritual Compass Styles
+   Enhanced compass experience for exploring spiritual traditions
+   ========================================================================== */
+
+/* ==========================================================================
+   Compass Section
+   ========================================================================== */
+
+.compass-section {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--background) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.compass-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, var(--primary-color)08 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.compass-explorer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .compass-explorer {
+    grid-template-columns: 1fr 0.8fr;
+    gap: var(--space-16);
+  }
+}
+
+/* ==========================================================================
+   Main Compass Wheel
+   ========================================================================== */
+
+.compass-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.compass-wheel {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--background) 30%, var(--surface) 60%, var(--surface-alt) 100%);
+  box-shadow: var(--shadow-xl);
+  border: 3px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .compass-wheel {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+/* Compass center circle with subtle pattern */
+.compass-wheel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--background) 0%, var(--surface) 100%);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-inner);
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Tradition Segments
+   ========================================================================== */
+
+.tradition-segment {
+  position: absolute;
+  width: 140px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+  padding: var(--space-2);
+  z-index: 3;
+  box-shadow: var(--shadow);
+}
+
+.tradition-segment:hover {
+  transform: scale(1.05);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+  background: var(--surface);
+  z-index: 4;
+}
+
+.tradition-segment:focus {
+  transform: scale(1.05);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color)30, var(--shadow-lg);
+  background: var(--surface);
+  z-index: 4;
+}
+
+.tradition-segment.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-dark);
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+.tradition-name {
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.5px;
+}
+
+.tradition-symbol {
+  font-size: var(--text-xl);
+  opacity: 0.9;
+}
+
+.tradition-segment.active .tradition-symbol {
+  opacity: 1;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+/* Positioning the tradition segments around the compass */
+.buddhism { 
+  top: -40px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.christianity { 
+  top: 20%; 
+  right: -70px; 
+}
+
+.islam { 
+  bottom: -40px; 
+  right: 20%; 
+  transform: translateX(50%); 
+}
+
+.judaism { 
+  bottom: -40px; 
+  left: 20%; 
+  transform: translateX(-50%); 
+}
+
+.hinduism { 
+  top: 20%; 
+  left: -70px; 
+}
+
+.secular { 
+  top: 60%; 
+  left: -70px; 
+}
+
+.indigenous { 
+  top: 60%; 
+  right: -70px; 
+}
+
+.universal { 
+  bottom: -40px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+/* Color coding for different traditions */
+.buddhism:hover, .buddhism.active { 
+  background: linear-gradient(135deg, #ff9800, #f57c00); 
+  border-color: #e65100;
+}
+
+.christianity:hover, .christianity.active { 
+  background: linear-gradient(135deg, #2196f3, #1976d2); 
+  border-color: #0d47a1;
+}
+
+.islam:hover, .islam.active { 
+  background: linear-gradient(135deg, #4caf50, #388e3c); 
+  border-color: #1b5e20;
+}
+
+.judaism:hover, .judaism.active { 
+  background: linear-gradient(135deg, #673ab7, #512da8); 
+  border-color: #311b92;
+}
+
+.hinduism:hover, .hinduism.active { 
+  background: linear-gradient(135deg, #e91e63, #c2185b); 
+  border-color: #880e4f;
+}
+
+.secular:hover, .secular.active { 
+  background: linear-gradient(135deg, #607d8b, #455a64); 
+  border-color: #263238;
+}
+
+.indigenous:hover, .indigenous.active { 
+  background: linear-gradient(135deg, #795548, #5d4037); 
+  border-color: #3e2723;
+}
+
+.universal:hover, .universal.active { 
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2); 
+  border-color: #4a148c;
+}
+
+/* ==========================================================================
+   Compass Center - Meditation Area
+   ========================================================================== */
+
+.compass-center-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.meditation-center {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--secondary-color), var(--secondary-dark));
+  border: 3px solid var(--background);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.meditation-center:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-xl);
+  background: radial-gradient(circle, var(--secondary-light), var(--secondary-color));
+}
+
+.meditation-center:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px var(--secondary-color)50, var(--shadow-xl);
+}
+
+.meditation-icon {
+  font-size: var(--text-xl);
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+[data-motion="reduced"] .meditation-icon {
+  animation: none;
+}
+
+.meditation-text {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Tradition Details Panel
+   ========================================================================== */
+
+.tradition-panel {
+  background: var(--background);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-8);
+  min-height: 400px;
+  position: sticky;
+  top: calc(4rem + var(--space-4));
+  transition: all var(--transition-base);
+}
+
+.tradition-content {
+  opacity: 1;
+  transition: opacity var(--transition-base);
+}
+
+.tradition-content.loading {
+  opacity: 0.6;
+}
+
+.tradition-title {
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tradition-description {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.tradition-details {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.detail-section {
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary-color);
+}
+
+.detail-section h4 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.detail-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+  line-height: 1.6;
+}
+
+.detail-section:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+.tradition-quotes {
+  margin-top: var(--space-4);
+}
+
+.tradition-quote {
+  background: var(--surface-alt);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.tradition-quote blockquote {
+  font-family: var(--font-reading);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.tradition-quote cite {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+.tradition-actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.tradition-action {
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tradition-action:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Meditation Modal
+   ========================================================================== */
+
+.meditation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.meditation-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.meditation-content {
+  background: var(--background);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(20px);
+  transition: transform var(--transition-base);
+}
+
+.meditation-modal.active .meditation-content {
+  transform: translateY(0);
+}
+
+.meditation-timer h3 {
+  margin-bottom: var(--space-6);
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+}
+
+.breathing-guide {
+  margin: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.breathing-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-color)20, var(--primary-color)40);
+  border: 3px solid var(--primary-color);
+  animation: breathe 4s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+[data-motion="reduced"] .breathing-circle {
+  animation: none;
+}
+
+.breathing-instruction {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.meditation-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+  flex-wrap: wrap;
+}
+
+.meditation-duration {
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.meditation-duration:hover,
+.meditation-duration.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.meditation-start,
+.meditation-close {
+  margin: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+}
+
+.meditation-start {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.meditation-start:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-1px);
+}
+
+.meditation-close {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.meditation-close:hover {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Responsive Design for Compass
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .compass-wheel {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .tradition-segment {
+    width: 100px;
+    height: 60px;
+    font-size: var(--text-xs);
+  }
+  
+  .tradition-name {
+    font-size: 10px;
+  }
+  
+  .tradition-symbol {
+    font-size: var(--text-lg);
+  }
+  
+  .meditation-center {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .meditation-icon {
+    font-size: var(--text-lg);
+  }
+  
+  .tradition-panel {
+    position: static;
+    margin-top: var(--space-8);
+  }
+  
+  .compass-explorer {
+    grid-template-columns: 1fr;
+  }
+  
+  .buddhism { top: -30px; }
+  .christianity { right: -50px; }
+  .islam { bottom: -30px; right: 25%; }
+  .judaism { bottom: -30px; left: 25%; }
+  .hinduism { left: -50px; }
+  .secular { left: -50px; }
+  .indigenous { right: -50px; }
+  .universal { bottom: -30px; }
+}
+
+@media (max-width: 480px) {
+  .compass-wheel {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .tradition-segment {
+    width: 85px;
+    height: 50px;
+  }
+  
+  .tradition-name {
+    font-size: 9px;
+  }
+  
+  .tradition-symbol {
+    font-size: var(--text-base);
+  }
+}
+
+/* ==========================================================================
+   Loading States
+   ========================================================================== */
+
+.compass-loading {
+  position: relative;
+}
+
+.compass-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+[data-motion="reduced"] .compass-loading::after {
+  animation: none;
+  border-top-color: var(--primary-color);
+}
