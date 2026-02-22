@@ -76,45 +76,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Wisdom rotation (if not dynamic yet)
-    const wisdomQuotes = [
-        {
-            quote: "Peace comes from within. Do not seek it without.",
-            author: "Buddha",
-            tradition: "Buddhism",
-            theme: "Peace"
-        },
-        {
-            quote: "Above all, love each other deeply, because love covers over a multitude of sins.",
-            author: "Apostle Peter",
-            tradition: "Christianity",
-            theme: "Love"
-        },
-        {
-            quote: "Be kind, for whenever kindness becomes part of something, it beautifies it.",
-            author: "Prophet Muhammad",
-            tradition: "Islam",
-            theme: "Compassion"
-        },
-        {
-            quote: "Who is wise? One who learns from every person.",
-            author: "Ben Zoma",
-            tradition: "Judaism",
-            theme: "Wisdom"
-        },
-        {
-            quote: "You have the right to perform your actions, but you are not entitled to the fruits of action.",
-            author: "Lord Krishna",
-            tradition: "Hinduism",
-            theme: "Purpose"
-        },
-        {
-            quote: "Gratitude is not only the greatest of virtues, but the parent of all others.",
-            author: "Cicero",
-            tradition: "Secular",
-            theme: "Gratitude"
-        }
-    ];
+    // Import expanded wisdom quotes
+    // Note: In production, this would be loaded via import or script tag
+    // For now, we'll load it dynamically
+    let wisdomQuotes = [];
+    
+    // Load expanded quotes if available
+    if (typeof expandedWisdomQuotes !== 'undefined') {
+        wisdomQuotes = expandedWisdomQuotes;
+    } else {
+        // Fallback to basic quotes if expanded collection not loaded
+        wisdomQuotes = [
+            {
+                quote: "Peace comes from within. Do not seek it without.",
+                author: "Buddha",
+                tradition: "Buddhism",
+                theme: "Peace"
+            },
+            {
+                quote: "Above all, love each other deeply, because love covers over a multitude of sins.",
+                author: "Apostle Peter",
+                tradition: "Christianity",
+                theme: "Love"
+            },
+            {
+                quote: "Be kind, for whenever kindness becomes part of something, it beautifies it.",
+                author: "Prophet Muhammad",
+                tradition: "Islam",
+                theme: "Compassion"
+            },
+            {
+                quote: "Who is wise? One who learns from every person.",
+                author: "Ben Zoma",
+                tradition: "Judaism",
+                theme: "Wisdom"
+            },
+            {
+                quote: "You have the right to perform your actions, but you are not entitled to the fruits of action.",
+                author: "Lord Krishna",
+                tradition: "Hinduism",
+                theme: "Purpose"
+            },
+            {
+                quote: "Gratitude is not only the greatest of virtues, but the parent of all others.",
+                author: "Cicero",
+                tradition: "Secular",
+                theme: "Gratitude"
+            }
+        ];
+    }
     
     // Rotate wisdom quote every 24 hours or on page load
     function updateWisdomQuote() {
