@@ -126,4 +126,4 @@ bots/*/.env
 
 # Local development
 local-config.json
-dev-settings.json
+dev-settings.json.env.deploy
