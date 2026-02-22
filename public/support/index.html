@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Support & Guidance | Spiritual Compass</title>
+    <meta name="description" content="Find spiritual support, crisis resources, and guidance during difficult times from multiple religious traditions.">
+    
+    <link rel="icon" href="/images/compass-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/assessment/" class="nav-link">Assessment</a>
+                <a href="/#wisdom" class="nav-link">Daily Wisdom</a>
+                <a href="/support/" class="nav-link active">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Spiritual Support & Guidance</h1>
+                <p class="hero-subtitle">
+                    Whether you're facing a crisis, spiritual doubt, or need guidance during difficult times, you're not alone.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#crisis" class="btn btn-primary">Crisis Resources</a>
+                    <a href="#guidance" class="btn btn-secondary">Request Guidance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Immediate Help -->
+    <section id="crisis" class="section" style="background: #fef7f0; border: 2px solid #f59e0b;">
+        <div class="container">
+            <div class="crisis-alert">
+                <h2 style="color: #d97706; text-align: center; margin-bottom: 2rem;">
+                    🚨 Need Immediate Help?
+                </h2>
+                <div class="crisis-resources">
+                    <div class="crisis-card">
+                        <h3>🆘 Crisis Support</h3>
+                        <p><strong>Call 988</strong> - Suicide & Crisis Lifeline</p>
+                        <p><strong>Text "HELLO" to 741741</strong> - Crisis Text Line</p>
+                        <p>Available 24/7, free and confidential</p>
+                    </div>
+                    <div class="crisis-card">
+                        <h3>🏥 Emergency Services</h3>
+                        <p><strong>Call 911</strong> - Medical emergencies</p>
+                        <p><strong>Call 1-800-273-8255</strong> - Veterans Crisis Line</p>
+                        <p>If you're in immediate danger</p>
+                    </div>
+                    <div class="crisis-card">
+                        <h3>💬 Online Support</h3>
+                        <p><strong>Chat: suicidepreventionlifeline.org</strong></p>
+                        <p><strong>Text: home to 741741</strong></p>
+                        <p>Anonymous online chat support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Guidance -->
+    <section id="guidance" class="section">
+        <div class="container">
+            <h2 class="section-title">Spiritual Guidance Request</h2>
+            <div class="guidance-content">
+                <div class="guidance-info">
+                    <h3>How We Can Help</h3>
+                    <p>Our network of spiritual mentors and counselors from various traditions can provide:</p>
+                    <ul class="support-list">
+                        <li><strong>Spiritual Direction</strong> - Guidance on your spiritual journey</li>
+                        <li><strong>Crisis Support</strong> - Help during difficult times</li>
+                        <li><strong>Doubt & Questions</strong> - Safe space to explore spiritual concerns</li>
+                        <li><strong>Grief Support</strong> - Comfort during loss and transition</li>
+                        <li><strong>Faith Exploration</strong> - Guidance for those questioning or changing paths</li>
+                        <li><strong>Life Transitions</strong> - Support during major life changes</li>
+                    </ul>
+                    <p><em>Response time: Usually within 24-48 hours</em></p>
+                </div>
+                <form name="spiritual-guidance" method="POST" netlify class="guidance-form">
+                    <h4>Request Spiritual Guidance</h4>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your name (or anonymous)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="urgency" required>
+                            <option value="">How urgent is this?</option>
+                            <option value="crisis">Crisis - Need immediate help</option>
+                            <option value="urgent">Urgent - Within 24 hours</option>
+                            <option value="soon">Soon - Within few days</option>
+                            <option value="general">General guidance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="tradition-preference">
+                            <option value="">Spiritual tradition preference (optional)</option>
+                            <option value="any">Any tradition welcome</option>
+                            <option value="christian">Christian perspective</option>
+                            <option value="muslim">Islamic perspective</option>
+                            <option value="jewish">Jewish perspective</option>
+                            <option value="buddhist">Buddhist perspective</option>
+                            <option value="hindu">Hindu perspective</option>
+                            <option value="interfaith">Interfaith/multi-tradition</option>
+                            <option value="secular">Secular/non-religious</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="support-type">
+                            <option value="">Type of support needed</option>
+                            <option value="spiritual-direction">Spiritual direction/guidance</option>
+                            <option value="crisis-support">Crisis/emotional support</option>
+                            <option value="doubt-questions">Spiritual doubts/questions</option>
+                            <option value="grief">Grief and loss</option>
+                            <option value="life-transition">Major life transition</option>
+                            <option value="faith-exploration">Faith/tradition exploration</option>
+                            <option value="relationship">Relationship/family issues</option>
+                            <option value="purpose">Finding purpose/meaning</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="situation" placeholder="Tell us about your situation and how we can help..." rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="permission" value="yes" required>
+                            I understand this is not professional therapy or medical advice, but spiritual guidance and support.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Request Guidance</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <h2 class="section-title">Additional Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>📞 Hotlines & Support</h3>
+                    <ul>
+                        <li><strong>988</strong> - Suicide & Crisis Lifeline</li>
+                        <li><strong>1-855-382-5433</strong> - Teen Line</li>
+                        <li><strong>1-866-488-7386</strong> - Trevor Project (LGBTQ+)</li>
+                        <li><strong>1-800-366-8288</strong> - Self-Injury Outreach</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>🧘 Mental Health Apps</h3>
+                    <ul>
+                        <li><strong>Headspace</strong> - Meditation and mindfulness</li>
+                        <li><strong>Calm</strong> - Sleep stories and meditation</li>
+                        <li><strong>Insight Timer</strong> - Free meditation library</li>
+                        <li><strong>Sanvello</strong> - Anxiety and mood tracking</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>📚 Spiritual Reading</h3>
+                    <ul>
+                        <li><strong>Sacred texts</strong> from your tradition</li>
+                        <li><strong>Devotional books</strong> for daily inspiration</li>
+                        <li><strong>Spiritual memoirs</strong> of others' journeys</li>
+                        <li><strong>Interfaith wisdom</strong> collections</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>🏥 Professional Help</h3>
+                    <ul>
+                        <li><strong>Psychology Today</strong> - Find therapists</li>
+                        <li><strong>Chaplains</strong> at hospitals/hospices</li>
+                        <li><strong>Pastoral counselors</strong> in your area</li>
+                        <li><strong>Spiritual directors</strong> for guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="compass-icon">🧭</span>
+                        <span>Spiritual Compass</span>
+                    </div>
+                    <p>You are never alone in your journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Help</h4>
+                    <a href="#crisis">Crisis Resources</a>
+                    <a href="#guidance">Request Guidance</a>
+                    <a href="/community/">Find Community</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <a href="tel:988">Call 988 - Crisis Line</a>
+                    <a href="sms:741741">Text 741741</a>
+                    <a href="tel:911">Call 911 - Emergency</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. Here for you always.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .crisis-alert {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+        
+        .crisis-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .crisis-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid #f59e0b;
+            text-align: center;
+        }
+        
+        .crisis-card h3 {
+            color: #d97706;
+            margin-bottom: 1rem;
+        }
+        
+        .guidance-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .guidance-form, .guidance-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .support-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .support-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .support-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 0.2rem;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .resource-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resource-card li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #f9fafb;
+        }
+        
+        .resource-card li:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .guidance-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .crisis-resources {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

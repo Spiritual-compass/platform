@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Spiritual Community | Spiritual Compass</title>
+    <meta name="description" content="Discover local spiritual communities, meditation groups, and houses of worship near you.">
+    
+    <link rel="icon" href="/images/compass-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/assessment/" class="nav-link">Assessment</a>
+                <a href="/#wisdom" class="nav-link">Daily Wisdom</a>
+                <a href="/community/" class="nav-link active">Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your Spiritual Community</h1>
+                <p class="hero-subtitle">
+                    Connect with like-minded seekers, local spiritual groups, and communities that align with your path.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#search" class="btn btn-primary">Find Communities</a>
+                    <a href="#create" class="btn btn-secondary">Start a Group</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Search -->
+    <section id="search" class="section">
+        <div class="container">
+            <h2 class="section-title">Search Spiritual Communities</h2>
+            <div class="community-search">
+                <form name="community-search" method="POST" netlify class="search-form">
+                    <div class="search-grid">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" name="location" placeholder="City, State or ZIP code" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tradition">Tradition (Optional)</label>
+                            <select name="tradition">
+                                <option value="">All traditions</option>
+                                <option value="christianity">Christianity</option>
+                                <option value="islam">Islam</option>
+                                <option value="judaism">Judaism</option>
+                                <option value="buddhism">Buddhism</option>
+                                <option value="hinduism">Hinduism</option>
+                                <option value="interfaith">Interfaith</option>
+                                <option value="secular">Secular/Humanist</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Community Type</label>
+                            <select name="type">
+                                <option value="">Any type</option>
+                                <option value="worship">House of worship</option>
+                                <option value="meditation">Meditation group</option>
+                                <option value="study">Study group</option>
+                                <option value="service">Service/volunteer</option>
+                                <option value="support">Support group</option>
+                                <option value="interfaith">Interfaith dialogue</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Search Communities</button>
+                        </div>
+                    </div>
+                    <p class="search-note">We'll email you a personalized list of spiritual communities in your area.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Types -->
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <h2 class="section-title">Types of Spiritual Communities</h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="card-icon">⛪</div>
+                    <h3>Houses of Worship</h3>
+                    <p>Traditional religious congregations across all major faiths. Find established communities with regular services and programs.</p>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">🧘</div>
+                    <h3>Meditation Groups</h3>
+                    <p>Mindfulness and meditation circles from various traditions. Perfect for developing contemplative practice with others.</p>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Study Groups</h3>
+                    <p>Explore sacred texts, spiritual teachings, and philosophical discussions with fellow seekers and learners.</p>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Service Communities</h3>
+                    <p>Faith-based and spiritual service organizations focused on helping others and making a positive impact.</p>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">🌈</div>
+                    <h3>Interfaith Groups</h3>
+                    <p>Multi-tradition communities that celebrate diversity while exploring common spiritual ground and values.</p>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">💚</div>
+                    <h3>Support Networks</h3>
+                    <p>Spiritual support groups for life transitions, grief, addiction recovery, and other shared experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Community -->
+    <section id="create" class="section">
+        <div class="container">
+            <h2 class="section-title">Start Your Own Community</h2>
+            <div class="create-content">
+                <div class="create-info">
+                    <h3>Don't see what you're looking for?</h3>
+                    <p>Starting a spiritual community can be incredibly rewarding. Whether it's a meditation group, study circle, or service organization, we can help you get started.</p>
+                    <ul class="create-benefits">
+                        <li>Free startup resources and guides</li>
+                        <li>Connection with like-minded organizers</li>
+                        <li>Promotion in our community directory</li>
+                        <li>Ongoing support and advice</li>
+                    </ul>
+                </div>
+                <form name="create-community" method="POST" netlify class="create-form">
+                    <h4>Tell us about your vision:</h4>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="location" placeholder="Your city/area" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="community-type" required>
+                            <option value="">What type of community?</option>
+                            <option value="meditation">Meditation/mindfulness group</option>
+                            <option value="study">Study/discussion group</option>
+                            <option value="service">Service/volunteer organization</option>
+                            <option value="interfaith">Interfaith dialogue group</option>
+                            <option value="support">Spiritual support group</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="vision" placeholder="Describe your vision for this community..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Support to Start</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="compass-icon">🧭</span>
+                        <span>Spiritual Compass</span>
+                    </div>
+                    <p>Connecting spiritual seekers with communities.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="/assessment/">Spiritual Assessment</a>
+                    <a href="/#wisdom">Daily Wisdom</a>
+                    <a href="/community/">Find Community</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/support/">Spiritual Support</a>
+                    <a href="/#contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. Connecting hearts and communities.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .search-form, .create-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .search-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: end;
+        }
+        
+        .search-grid .form-group:last-child {
+            grid-column: span 2;
+            justify-self: center;
+        }
+        
+        .search-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+        
+        .create-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .create-benefits {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .create-benefits li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .create-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--peace-green);
+            font-weight: bold;
+        }
+        
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .search-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-grid .form-group:last-child {
+                grid-column: span 1;
+            }
+            
+            .create-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
