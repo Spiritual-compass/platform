@@ -1,0 +1,348 @@
+/* DRAMATIC VISUAL OVERHAUL - IMPOSSIBLE TO MISS CHANGES */
+
+/* BOLD NEW COLOR SCHEME - DRAMATIC CHANGE */
+:root {
+    /* Completely different, vibrant color palette */
+    --primary: #ff6b6b;          /* Bold red instead of blue */
+    --primary-dark: #e55656;     
+    --secondary: #4ecdc4;        /* Turquoise instead of purple */
+    --accent: #ffe66d;           /* Bright yellow */
+    --text-primary: #2d3436;     
+    --text-secondary: #636e72;   
+    --background: #ffeaa7;       /* CREAM BACKGROUND - DRAMATIC CHANGE */
+    --surface: #fab1a0;          /* PEACH SURFACES */
+    --surface-elevated: #fd79a8; /* PINK ELEVATED SURFACES */
+    --border: #e17055;           /* ORANGE BORDERS */
+    
+    /* SPIRITUAL RAINBOW PALETTE */
+    --wisdom-blue: #0984e3;      
+    --peace-green: #00b894;      
+    --love-pink: #fd79a8;        
+    --hope-yellow: #fdcb6e;      
+    --truth-purple: #6c5ce7;     
+}
+
+/* MASSIVE TYPOGRAPHY CHANGES */
+body {
+    font-family: 'Crimson Text', 'Georgia', serif !important; /* Completely different font family */
+    background: linear-gradient(135deg, var(--background) 0%, #fab1a0 100%) !important;
+    background-attachment: fixed !important;
+}
+
+/* HERO SECTION - DRAMATIC TRANSFORMATION */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 8rem 2rem !important; /* Much larger padding */
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+    animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.hero-title {
+    font-size: 4rem !important; /* HUGE title */
+    font-weight: 900 !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+    margin-bottom: 2rem !important;
+    letter-spacing: 0.1em !important;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+    margin-bottom: 3rem !important;
+    line-height: 1.8 !important;
+}
+
+/* NAVIGATION - COMPLETELY NEW DESIGN */
+.nav {
+    background: rgba(255, 107, 107, 0.95) !important; /* Semi-transparent red */
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 3px solid var(--accent) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    padding: 1rem 0 !important;
+}
+
+.nav-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.compass-icon {
+    font-size: 2.5rem !important; /* HUGE compass icon */
+    animation: spin 10s linear infinite !important;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo-text {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.nav-links {
+    display: flex !important;
+    gap: 2rem !important;
+}
+
+.nav-link {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 25px !important;
+    background: rgba(255,255,255,0.2) !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.nav-link:hover {
+    background: var(--accent) !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+}
+
+/* BUTTONS - COMPLETELY NEW STYLE */
+.btn {
+    padding: 1rem 2.5rem !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    border-radius: 50px !important;
+    border: 3px solid transparent !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--secondary) !important;
+    color: white !important;
+    border-color: var(--secondary) !important;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4) !important;
+}
+
+.btn-primary:hover {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(255, 230, 109, 0.6) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+.btn-secondary:hover {
+    background: white !important;
+    color: var(--primary) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* CARDS - VIBRANT NEW DESIGN */
+.card {
+    background: var(--surface-elevated) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) !important;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
+}
+
+/* WISDOM QUOTES - DRAMATIC STYLING */
+.wisdom-quote {
+    background: linear-gradient(135deg, var(--truth-purple), var(--love-pink)) !important;
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 3rem !important;
+    margin: 3rem 0 !important;
+    position: relative !important;
+}
+
+.wisdom-quote blockquote {
+    font-size: 1.8rem !important;
+    font-style: italic !important;
+    font-weight: 600 !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+}
+
+.wisdom-quote blockquote::before {
+    content: '"';
+    font-size: 4rem !important;
+    color: rgba(255,255,255,0.5) !important;
+    position: absolute !important;
+    top: 1rem !important;
+    left: 2rem !important;
+}
+
+/* SECTIONS - ADD SPACING */
+section {
+    padding: 6rem 0 !important;
+}
+
+/* MOBILE NAVIGATION - DRAMATIC HAMBURGER */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+    
+    .nav-container::after {
+        content: "☰";
+        font-size: 2rem !important;
+        color: white !important;
+        cursor: pointer !important;
+        animation: bounce 2s ease-in-out infinite !important;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* SCROLLBAR CUSTOMIZATION */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+/* SELECTION HIGHLIGHT */
+::selection {
+    background: var(--accent) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ANIMATIONS FOR ALL SECTIONS */
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ADD SPARKLE EFFECTS */
+.sparkle {
+    position: relative;
+}
+
+.sparkle::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+}
