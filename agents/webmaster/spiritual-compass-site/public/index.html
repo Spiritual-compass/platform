@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Compass - Find Your Sacred Direction</title>
+    <meta name="description" content="Discover your spiritual path across multiple traditions. Interactive compass, personalized wisdom, and inclusive guidance for seekers finding their sacred direction.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Spiritual Compass - Find Your Sacred Direction">
+    <meta property="og:description" content="Interactive spiritual guidance with personalized wisdom from multiple traditions. Find your sacred path with our compassionate community.">
+    <meta property="og:image" content="https://spiritual-compass.com/images/compass-social.jpg">
+    <meta property="og:url" content="https://spiritual-compass.com">
+    
+    <link rel="icon" href="/images/compass-icon.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4a4a4a">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/compass.css">
+    <link rel="stylesheet" href="/styles/wisdom.css">
+    <link rel="stylesheet" href="/styles/accessibility.css">
+    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
+    
+    <!-- PWA & Performance -->
+    <link rel="preload" as="style" href="/styles/main.css">
+    <link rel="preload" as="script" href="/scripts/main.js">
+</head>
+<body>
+    <!-- Skip to content for screen readers -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Accessibility Settings Panel -->
+    <div id="accessibility-panel" class="accessibility-panel" role="dialog" aria-labelledby="accessibility-title" aria-hidden="true">
+        <div class="accessibility-content">
+            <h2 id="accessibility-title">Accessibility Settings</h2>
+            <div class="accessibility-controls">
+                <button class="accessibility-control" data-setting="high-contrast" aria-pressed="false">
+                    <span class="control-icon">🌓</span>
+                    <span class="control-text">High Contrast</span>
+                </button>
+                <button class="accessibility-control" data-setting="large-text" aria-pressed="false">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Larger Text</span>
+                </button>
+                <button class="accessibility-control" data-setting="dyslexia-font" aria-pressed="false">
+                    <span class="control-icon">📖</span>
+                    <span class="control-text">Dyslexia-Friendly Font</span>
+                </button>
+                <button class="accessibility-control" data-setting="reduce-motion" aria-pressed="false">
+                    <span class="control-icon">⏸️</span>
+                    <span class="control-text">Reduce Motion</span>
+                </button>
+                <button class="accessibility-control" data-setting="focus-mode" aria-pressed="false">
+                    <span class="control-icon">🎯</span>
+                    <span class="control-text">Focus Mode</span>
+                </button>
+            </div>
+            <button class="accessibility-close" aria-label="Close accessibility settings">×</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="compass-icon" role="img" aria-label="Spiritual compass">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </div>
+            <div class="nav-controls">
+                <button class="accessibility-toggle" aria-label="Open accessibility settings" aria-expanded="false" aria-controls="accessibility-panel">
+                    <span class="accessibility-icon">♿</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="nav-links" id="nav-menu">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#compass" class="nav-link">Explore Paths</a>
+                    <a href="#wisdom" class="nav-link">Personal Wisdom</a>
+                    <a href="#community" class="nav-link">Community</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">Find Your Sacred Direction</h1>
+                    <p class="hero-subtitle">
+                        Discover personalized spiritual wisdom from multiple traditions. Whether you're questioning, seeking, or exploring different paths, our interactive compass will help you find the direction that resonates with your heart.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#compass" class="btn btn-primary">Explore Interactive Compass</a>
+                        <a href="#wisdom" class="btn btn-secondary">Get Personal Wisdom</a>
+                    </div>
+                </div>
+                <div class="hero-visual" role="img" aria-label="Interactive spiritual compass showing different traditions">
+                    <div class="compass-container">
+                        <!-- This will be enhanced with JavaScript -->
+                        <div class="compass-preview">
+                            <div class="compass-ring"></div>
+                            <div class="compass-needle"></div>
+                            <div class="compass-center">
+                                <span class="compass-center-text">Click to Explore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Compass Section -->
+        <section id="compass" class="section compass-section" aria-labelledby="compass-title">
+            <div class="container">
+                <h2 id="compass-title" class="section-title">Interactive Spiritual Path Explorer</h2>
+                <p class="section-subtitle">Click on any tradition to explore its wisdom, practices, and teachings</p>
+                
+                <div class="compass-explorer">
+                    <div class="compass-main" role="application" aria-label="Interactive spiritual compass">
+                        <div class="compass-wheel">
+                            <button class="tradition-segment buddhism" data-tradition="buddhism" aria-label="Explore Buddhism">
+                                <span class="tradition-name">Buddhism</span>
+                                <span class="tradition-symbol">☸️</span>
+                            </button>
+                            <button class="tradition-segment christianity" data-tradition="christianity" aria-label="Explore Christianity">
+                                <span class="tradition-name">Christianity</span>
+                                <span class="tradition-symbol">✝️</span>
+                            </button>
+                            <button class="tradition-segment islam" data-tradition="islam" aria-label="Explore Islam">
+                                <span class="tradition-name">Islam</span>
+                                <span class="tradition-symbol">☪️</span>
+                            </button>
+                            <button class="tradition-segment judaism" data-tradition="judaism" aria-label="Explore Judaism">
+                                <span class="tradition-name">Judaism</span>
+                                <span class="tradition-symbol">✡️</span>
+                            </button>
+                            <button class="tradition-segment hinduism" data-tradition="hinduism" aria-label="Explore Hinduism">
+                                <span class="tradition-name">Hinduism</span>
+                                <span class="tradition-symbol">🕉️</span>
+                            </button>
+                            <button class="tradition-segment secular" data-tradition="secular" aria-label="Explore Secular Philosophy">
+                                <span class="tradition-name">Secular</span>
+                                <span class="tradition-symbol">🤔</span>
+                            </button>
+                            <button class="tradition-segment indigenous" data-tradition="indigenous" aria-label="Explore Indigenous Wisdom">
+                                <span class="tradition-name">Indigenous</span>
+                                <span class="tradition-symbol">🌍</span>
+                            </button>
+                            <button class="tradition-segment universal" data-tradition="universal" aria-label="Explore Universal Wisdom">
+                                <span class="tradition-name">Universal</span>
+                                <span class="tradition-symbol">🌟</span>
+                            </button>
+                            
+                            <!-- Center meditation/reflection area -->
+                            <div class="compass-center-area">
+                                <button class="meditation-center" id="meditation-toggle" aria-label="Start guided meditation">
+                                    <span class="meditation-icon">🧘</span>
+                                    <span class="meditation-text">Meditate</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tradition Details Panel -->
+                    <div class="tradition-panel" id="tradition-panel" role="complementary" aria-live="polite">
+                        <div class="tradition-content">
+                            <h3 class="tradition-title">Select a Tradition to Explore</h3>
+                            <p class="tradition-description">Click on any segment of the compass above to learn about that spiritual path.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meditation Modal -->
+                <div class="meditation-modal" id="meditation-modal" role="dialog" aria-labelledby="meditation-title" aria-hidden="true">
+                    <div class="meditation-content">
+                        <h3 id="meditation-title">Guided Reflection</h3>
+                        <div class="meditation-timer">
+                            <div class="breathing-guide">
+                                <div class="breathing-circle"></div>
+                                <p class="breathing-instruction">Breathe naturally</p>
+                            </div>
+                            <div class="meditation-controls">
+                                <button class="meditation-duration" data-duration="2">2 min</button>
+                                <button class="meditation-duration" data-duration="5">5 min</button>
+                                <button class="meditation-duration" data-duration="10">10 min</button>
+                            </div>
+                            <button class="meditation-start">Start Session</button>
+                            <button class="meditation-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">Your Spiritual Journey, Honored</h2>
+                <div class="about-grid">
+                    <div class="about-card reveal interactive">
+                        <div class="card-icon" role="img" aria-label="Search icon">🔍</div>
+                        <h3>For Seekers</h3>
+                        <p>Questioning your spiritual path? Exploring different traditions? We provide respectful, personalized guidance across multiple faiths and philosophies.</p>
+                    </div>
+                    <div class="about-card reveal interactive">
+                        <div class="card-icon" role="img" aria-label="Safe space icon">🤝</div>
+                        <h3>Safe Space</h3>
+                        <p>A respectful, non-judgmental community where all sincere spiritual seeking is welcomed and honored, regardless of background or ability.</p>
+                    </div>
+                    <div class="about-card reveal interactive">
+                        <div class="card-icon" role="img" aria-label="Many traditions icon">🌍</div>
+                        <h3>Many Traditions</h3>
+                        <p>Interactive exploration of wisdom from Christianity, Islam, Judaism, Buddhism, Hinduism, Indigenous traditions, and secular philosophy.</p>
+                    </div>
+                    <div class="about-card reveal interactive">
+                        <div class="card-icon" role="img" aria-label="Personal guidance icon">💡</div>
+                        <h3>Personal Guidance</h3>
+                        <p>AI-powered recommendations based on your current needs, values, experiences, and what you're seeking in spiritual life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Wisdom Section -->
+        <section id="wisdom" class="section wisdom" aria-labelledby="wisdom-title">
+            <div class="container">
+                <h2 id="wisdom-title" class="section-title">Personalized Spiritual Wisdom</h2>
+                
+                <!-- Mood Selector -->
+                <div class="mood-selector" role="radiogroup" aria-labelledby="mood-selector-title">
+                    <h3 id="mood-selector-title">How are you feeling today?</h3>
+                    <div class="mood-options">
+                        <button class="mood-option" data-mood="peaceful" role="radio" aria-checked="false">
+                            <span class="mood-icon">🕊️</span>
+                            <span class="mood-label">Seeking Peace</span>
+                        </button>
+                        <button class="mood-option" data-mood="strength" role="radio" aria-checked="false">
+                            <span class="mood-icon">💪</span>
+                            <span class="mood-label">Need Strength</span>
+                        </button>
+                        <button class="mood-option" data-mood="grateful" role="radio" aria-checked="false">
+                            <span class="mood-icon">🙏</span>
+                            <span class="mood-label">Feeling Grateful</span>
+                        </button>
+                        <button class="mood-option" data-mood="purpose" role="radio" aria-checked="false">
+                            <span class="mood-icon">🎯</span>
+                            <span class="mood-label">Exploring Purpose</span>
+                        </button>
+                        <button class="mood-option" data-mood="comfort" role="radio" aria-checked="false">
+                            <span class="mood-icon">🤗</span>
+                            <span class="mood-label">Need Comfort</span>
+                        </button>
+                        <button class="mood-option" data-mood="guidance" role="radio" aria-checked="false">
+                            <span class="mood-icon">🧭</span>
+                            <span class="mood-label">Seeking Guidance</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wisdom Display -->
+                <div class="wisdom-display" id="wisdom-display" role="region" aria-live="polite">
+                    <div class="wisdom-card active premium-card" id="wisdom-card">
+                        <div class="wisdom-quote">
+                            <blockquote id="wisdom-text">
+                                "The present moment is the only time over which we have dominion."
+                            </blockquote>
+                            <cite id="wisdom-source">— Thích Nhất Hạnh, Buddhist Teacher</cite>
+                        </div>
+                        <div class="wisdom-tradition">
+                            <span class="tradition-label" id="wisdom-tradition">Buddhism</span>
+                            <span class="theme-label" id="wisdom-theme">Mindfulness</span>
+                        </div>
+                        <div class="wisdom-actions">
+                            <button class="wisdom-action btn-enhanced focus-enhanced" id="save-wisdom" aria-label="Save this wisdom to your collection">
+                                <span>💾</span> Save
+                            </button>
+                            <button class="wisdom-action btn-enhanced focus-enhanced" id="hear-wisdom" aria-label="Listen to this wisdom">
+                                <span>🔊</span> Listen
+                            </button>
+                            <button class="wisdom-action btn-enhanced focus-enhanced" id="share-wisdom" aria-label="Share this wisdom">
+                                <span>📤</span> Share
+                            </button>
+                            <button class="wisdom-action btn-enhanced focus-enhanced" id="reflect-wisdom" aria-label="Start a guided reflection on this wisdom">
+                                <span>🤔</span> Reflect
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading State -->
+                    <div class="wisdom-loading-card" id="wisdom-loading" style="display: none;">
+                        <div class="spiritual-spinner"></div>
+                        <p class="loading-text">Discovering your perfect wisdom...</p>
+                    </div>
+                </div>
+
+                <!-- Personal Collection -->
+                <div class="personal-collection">
+                    <h3>Your Saved Wisdom <span class="collection-count" id="collection-count">(0)</span></h3>
+                    <div class="collection-preview" id="collection-preview">
+                        <p class="collection-empty">Your saved wisdom quotes will appear here. Click the save button above to start your collection.</p>
+                    </div>
+                    <button class="btn btn-outline" id="view-collection">View Full Collection</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="section community" aria-labelledby="community-title">
+            <div class="container">
+                <h2 id="community-title" class="section-title">Find Your Spiritual Community</h2>
+                <div class="community-grid stagger-in">
+                    <div class="community-card premium-card interactive">
+                        <div class="card-header">
+                            <h3>Local Resources</h3>
+                            <div class="card-icon">📍</div>
+                        </div>
+                        <p>Find spiritual communities, meditation groups, and houses of worship in your area.</p>
+                        <div class="card-actions">
+                            <a href="/community/" class="btn btn-outline btn-enhanced focus-enhanced">Explore Communities</a>
+                        </div>
+                    </div>
+                    <div class="community-card premium-card interactive">
+                        <div class="card-header">
+                            <h3>Online Discussions</h3>
+                            <div class="card-icon">💬</div>
+                        </div>
+                        <p>Join respectful conversations with fellow seekers from all backgrounds in our moderated forums.</p>
+                        <div class="card-actions">
+                            <a href="/community/discussions/" class="btn btn-outline btn-enhanced focus-enhanced">Join Discussions</a>
+                        </div>
+                    </div>
+                    <div class="community-card premium-card interactive">
+                        <div class="card-header">
+                            <h3>Spiritual Support</h3>
+                            <div class="card-icon">🤲</div>
+                        </div>
+                        <p>Need guidance during a difficult time? Connect with experienced spiritual mentors and counselors.</p>
+                        <div class="card-actions">
+                            <a href="/support/" class="btn btn-outline btn-enhanced focus-enhanced">Find Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Connect With Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Questions? We're here to help.</h3>
+                        <p>Whether you have questions about spirituality, need guidance, or want to connect with our community, we're here for you.</p>
+                        <div class="contact-details">
+                            <p><strong>Email:</strong> <a href="mailto:hello@spiritual-compass.com">hello@spiritual-compass.com</a></p>
+                            <p><strong>Response time:</strong> Usually within 24 hours</p>
+                        </div>
+                    </div>
+                    <form name="contact" method="POST" netlify class="contact-form" role="form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your name</label>
+                            <input type="text" name="name" id="name" required aria-describedby="name-help">
+                            <span id="name-help" class="form-help">How would you like us to address you?</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your email</label>
+                            <input type="email" name="email" id="email" required aria-describedby="email-help">
+                            <span id="email-help" class="form-help">We'll only use this to respond to your message</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="topic" class="form-label">What can we help with?</label>
+                            <select name="topic" id="topic" required>
+                                <option value="">Choose a topic...</option>
+                                <option value="spiritual-guidance">Spiritual guidance</option>
+                                <option value="finding-community">Finding community</option>
+                                <option value="tradition-questions">Questions about traditions</option>
+                                <option value="accessibility">Accessibility support</option>
+                                <option value="technical">Technical support</option>
+                                <option value="general">General inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your message</label>
+                            <textarea name="message" id="message" rows="5" required aria-describedby="message-help"></textarea>
+                            <span id="message-help" class="form-help">Tell us how we can help you on your spiritual journey</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="compass-icon" role="img" aria-label="Spiritual compass">🧭</span>
+                        <span>Spiritual Compass</span>
+                    </div>
+                    <p>Honoring all paths to the sacred.</p>
+                    <div class="footer-accessibility">
+                        <button class="accessibility-toggle-footer" aria-label="Open accessibility settings">
+                            ♿ Accessibility Settings
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="/assessment/">Spiritual Assessment</a>
+                    <a href="#wisdom">Personal Wisdom</a>
+                    <a href="#community">Find Community</a>
+                    <a href="/traditions/">Learn About Traditions</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/support/">Spiritual Support</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/accessibility/">Accessibility</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. Made with respect for all spiritual traditions and accessibility for all.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/accessibility.js"></script>
+    <script src="/scripts/mobile-navigation.js"></script>
+    <script src="/scripts/toast-notifications.js"></script>
+    <script src="/scripts/enhanced-animations.js"></script>
+    <script src="/scripts/compass.js"></script>
+    <script src="/scripts/wisdom.js"></script>
+    <script src="/scripts/meditation.js"></script>
+    <script src="/scripts/main.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => console.log('SW registered: ', registration))
+                    .catch((registrationError) => console.log('SW registration failed: ', registrationError));
+            });
+        }
+    </script>
+</body>
+</html>

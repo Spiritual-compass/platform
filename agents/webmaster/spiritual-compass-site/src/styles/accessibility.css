@@ -1,0 +1,676 @@
+/* ==========================================================================
+   Accessibility & Inclusive Design Styles
+   Ensuring spiritual seeking is accessible to all abilities
+   ========================================================================== */
+
+/* ==========================================================================
+   Accessibility Panel
+   ========================================================================== */
+
+.accessibility-panel {
+  position: fixed;
+  top: 4rem;
+  right: -400px;
+  width: 350px;
+  height: calc(100vh - 4rem);
+  background: var(--background);
+  border-left: 1px solid var(--border);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-modal);
+  transition: right var(--transition-base);
+  overflow-y: auto;
+}
+
+.accessibility-panel[aria-hidden="false"] {
+  right: 0;
+}
+
+.accessibility-content {
+  padding: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accessibility-content h2 {
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.accessibility-content h2::before {
+  content: '♿';
+  font-size: var(--text-2xl);
+}
+
+.accessibility-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.accessibility-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: left;
+  width: 100%;
+  font-size: var(--text-sm);
+}
+
+.accessibility-control:hover {
+  background: var(--surface-alt);
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.accessibility-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color)30;
+}
+
+.accessibility-control[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border-color: var(--primary-dark);
+}
+
+.accessibility-control[aria-pressed="true"] .control-icon {
+  filter: brightness(1.2);
+}
+
+.control-icon {
+  font-size: var(--text-xl);
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.control-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.accessibility-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  transition: all var(--transition-fast);
+}
+
+.accessibility-close:hover {
+  background: var(--surface-alt);
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   High Contrast Mode
+   ========================================================================== */
+
+[data-accessibility="high-contrast"] {
+  --primary-color: #000080;
+  --primary-light: #0000cd;
+  --primary-dark: #000060;
+  --secondary-color: #ff8c00;
+  --secondary-light: #ffa500;
+  --secondary-dark: #ff6600;
+  --accent-color: #800080;
+  --success-color: #008000;
+  --warning-color: #ffa500;
+  --error-color: #dc143c;
+  
+  --background: #ffffff;
+  --surface: #f8f9fa;
+  --surface-alt: #e9ecef;
+  --text-primary: #000000;
+  --text-secondary: #212529;
+  --text-muted: #495057;
+  --border: #000000;
+  --border-light: #6c757d;
+  
+  /* Enhanced shadows for better definition */
+  --shadow: 0 2px 8px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 8px 20px -3px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 12px 30px -5px rgb(0 0 0 / 0.3);
+}
+
+[data-accessibility="high-contrast"] .btn {
+  border-width: 2px;
+  font-weight: 700;
+}
+
+[data-accessibility="high-contrast"] .nav-link:focus,
+[data-accessibility="high-contrast"] .btn:focus,
+[data-accessibility="high-contrast"] input:focus,
+[data-accessibility="high-contrast"] select:focus,
+[data-accessibility="high-contrast"] textarea:focus {
+  outline: 3px solid #ff8c00;
+  outline-offset: 2px;
+}
+
+[data-accessibility="high-contrast"] .tradition-segment {
+  border-width: 3px;
+  font-weight: 700;
+}
+
+[data-accessibility="high-contrast"] .wisdom-card {
+  border-width: 2px;
+  border-color: #000000;
+}
+
+/* ==========================================================================
+   Large Text Mode
+   ========================================================================== */
+
+[data-accessibility="large-text"] {
+  font-size: 1.125rem;
+}
+
+[data-accessibility="large-text"] .text-xs { font-size: 0.9rem; }
+[data-accessibility="large-text"] .text-sm { font-size: 1rem; }
+[data-accessibility="large-text"] .text-base { font-size: 1.125rem; }
+[data-accessibility="large-text"] .text-lg { font-size: 1.3rem; }
+[data-accessibility="large-text"] .text-xl { font-size: 1.5rem; }
+[data-accessibility="large-text"] .text-2xl { font-size: 1.75rem; }
+[data-accessibility="large-text"] .text-3xl { font-size: 2.2rem; }
+[data-accessibility="large-text"] .text-4xl { font-size: 2.8rem; }
+[data-accessibility="large-text"] .text-5xl { font-size: 3.5rem; }
+[data-accessibility="large-text"] .text-6xl { font-size: 4.2rem; }
+
+[data-accessibility="large-text"] .btn {
+  padding: var(--space-4) var(--space-8);
+  font-size: 1.125rem;
+}
+
+[data-accessibility="large-text"] .nav-link {
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+}
+
+[data-accessibility="large-text"] .tradition-segment {
+  width: 160px;
+  height: 90px;
+  font-size: 1rem;
+}
+
+[data-accessibility="large-text"] .mood-option {
+  min-height: 120px;
+}
+
+[data-accessibility="large-text"] .wisdom-action {
+  padding: var(--space-4) var(--space-5);
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Dyslexia-Friendly Font
+   ========================================================================== */
+
+[data-accessibility="dyslexia-font"] {
+  --font-primary: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif;
+  --font-display: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif;
+  --font-reading: 'OpenDyslexic', 'Comic Sans MS', 'Georgia', serif;
+  
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+[data-accessibility="dyslexia-font"] h1,
+[data-accessibility="dyslexia-font"] h2,
+[data-accessibility="dyslexia-font"] h3,
+[data-accessibility="dyslexia-font"] h4,
+[data-accessibility="dyslexia-font"] h5,
+[data-accessibility="dyslexia-font"] h6 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+[data-accessibility="dyslexia-font"] .wisdom-quote blockquote {
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+
+/* Load OpenDyslexic font */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/otf/OpenDyslexic-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/otf/OpenDyslexic-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+[data-accessibility="reduce-motion"],
+[data-accessibility="reduce-motion"] * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+[data-accessibility="reduce-motion"] .compass-icon {
+  animation: none;
+}
+
+[data-accessibility="reduce-motion"] .meditation-icon {
+  animation: none;
+}
+
+[data-accessibility="reduce-motion"] .breathing-circle {
+  animation: none;
+}
+
+[data-accessibility="reduce-motion"] .btn::before {
+  display: none;
+}
+
+[data-accessibility="reduce-motion"] .mood-option::before {
+  display: none;
+}
+
+[data-accessibility="reduce-motion"] .wisdom-loading::after {
+  animation: none;
+  background: var(--surface-alt);
+}
+
+/* ==========================================================================
+   Focus Mode - Minimal distractions
+   ========================================================================== */
+
+[data-accessibility="focus-mode"] {
+  --surface: var(--background);
+  --surface-alt: var(--neutral-50);
+}
+
+[data-accessibility="focus-mode"] .hero::before,
+[data-accessibility="focus-mode"] .wisdom::before,
+[data-accessibility="focus-mode"] .compass-section::before {
+  display: none;
+}
+
+[data-accessibility="focus-mode"] .about-card,
+[data-accessibility="focus-mode"] .community-card,
+[data-accessibility="focus-mode"] .wisdom-card {
+  border: 2px solid var(--border);
+  box-shadow: none;
+}
+
+[data-accessibility="focus-mode"] .tradition-segment {
+  background: var(--background);
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+}
+
+[data-accessibility="focus-mode"] .tradition-segment:hover,
+[data-accessibility="focus-mode"] .tradition-segment.active {
+  background: var(--text-primary);
+  color: var(--background);
+}
+
+[data-accessibility="focus-mode"] .mood-option {
+  background: var(--background);
+  border: 2px solid var(--border);
+}
+
+[data-accessibility="focus-mode"] .mood-option[aria-checked="true"] {
+  background: var(--text-primary);
+  color: var(--background);
+  border-color: var(--text-primary);
+}
+
+/* Remove gradients and complex backgrounds in focus mode */
+[data-accessibility="focus-mode"] .btn-primary {
+  background: var(--primary-color);
+}
+
+[data-accessibility="focus-mode"] .hero {
+  background: var(--background);
+}
+
+[data-accessibility="focus-mode"] .wisdom {
+  background: var(--background);
+}
+
+[data-accessibility="focus-mode"] .compass-section {
+  background: var(--background);
+}
+
+/* ==========================================================================
+   Screen Reader Enhancements
+   ========================================================================== */
+
+.sr-announce {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Live region for dynamic updates */
+.sr-live-region {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+.enhanced-focus:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--primary-color)20;
+}
+
+.enhanced-focus:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--primary-color)20;
+}
+
+/* ==========================================================================
+   Voice Navigation Support
+   ========================================================================== */
+
+[data-voice-nav="active"] .nav-link,
+[data-voice-nav="active"] .btn,
+[data-voice-nav="active"] .tradition-segment,
+[data-voice-nav="active"] .mood-option,
+[data-voice-nav="active"] .wisdom-action {
+  position: relative;
+}
+
+[data-voice-nav="active"] .nav-link::after,
+[data-voice-nav="active"] .btn::after,
+[data-voice-nav="active"] .tradition-segment::after,
+[data-voice-nav="active"] .mood-option::after,
+[data-voice-nav="active"] .wisdom-action::after {
+  content: attr(data-voice-label);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-primary);
+  color: var(--background);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+  z-index: var(--z-tooltip);
+}
+
+[data-voice-nav="active"] .nav-link:focus::after,
+[data-voice-nav="active"] .btn:focus::after,
+[data-voice-nav="active"] .tradition-segment:focus::after,
+[data-voice-nav="active"] .mood-option:focus::after,
+[data-voice-nav="active"] .wisdom-action:focus::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Skip Navigation
+   ========================================================================== */
+
+.skip-nav {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  background: var(--primary-color);
+  color: white;
+  padding: var(--space-3) var(--space-5);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  z-index: var(--z-tooltip);
+  transition: top var(--transition-fast);
+}
+
+.skip-nav:focus {
+  top: var(--space-4);
+}
+
+/* ==========================================================================
+   Keyboard Navigation Enhancements
+   ========================================================================== */
+
+/* Tab order indicators */
+[data-show-tab-order="true"] [tabindex]:not([tabindex="-1"]):focus::before {
+  content: attr(data-tab-index);
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: var(--warning-color);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  z-index: var(--z-tooltip);
+}
+
+/* Roving tab index for compass segments */
+.compass-wheel[role="radiogroup"] .tradition-segment[tabindex="0"] {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color)30;
+}
+
+/* ==========================================================================
+   Touch and Gesture Accessibility
+   ========================================================================== */
+
+/* Larger touch targets on mobile */
+@media (max-width: 768px) and (pointer: coarse) {
+  .tradition-segment {
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-3);
+  }
+  
+  .mood-option {
+    min-height: 44px;
+    padding: var(--space-3);
+  }
+  
+  .wisdom-action {
+    min-height: 44px;
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .accessibility-control {
+    min-height: 44px;
+    padding: var(--space-4);
+  }
+  
+  .btn {
+    min-height: 44px;
+  }
+  
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ==========================================================================
+   Color Blind Accessibility
+   ========================================================================== */
+
+/* Pattern-based indicators for color blind users */
+[data-colorblind-support="true"] .tradition-segment::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+[data-colorblind-support="true"] .buddhism::before {
+  background: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='3' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+[data-colorblind-support="true"] .christianity::before {
+  background: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 1v6M1 4h6' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+[data-colorblind-support="true"] .islam::before {
+  background: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l4 4M6 2l-4 4' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+/* Additional pattern support for other traditions... */
+
+/* ==========================================================================
+   Print Accessibility
+   ========================================================================== */
+
+@media print {
+  .accessibility-panel,
+  .nav,
+  .wisdom-audio,
+  .meditation-modal,
+  .reflection-modal {
+    display: none !important;
+  }
+  
+  .wisdom-card,
+  .tradition-panel,
+  .personal-collection {
+    border: 2px solid #000 !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    margin-bottom: var(--space-4) !important;
+    page-break-inside: avoid;
+  }
+  
+  .section-title,
+  .hero-title {
+    color: #000 !important;
+  }
+  
+  body {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+/* ==========================================================================
+   Responsive Accessibility
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .accessibility-panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  
+  .accessibility-panel[aria-hidden="false"] {
+    right: 0;
+  }
+  
+  .accessibility-content {
+    padding: var(--space-4);
+  }
+  
+  .accessibility-controls {
+    gap: var(--space-3);
+  }
+  
+  .accessibility-control {
+    padding: var(--space-3);
+  }
+}
+
+/* ==========================================================================
+   Utilities for Assistive Technology
+   ========================================================================== */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: inherit !important;
+}
+
+/* Announce content changes to screen readers */
+.sr-only-live[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
