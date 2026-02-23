@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#98d8e8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f0f8ff;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#dda0dd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682b4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#skyGradient)"/>
+  
+  <!-- Mountain silhouettes -->
+  <path d="M0,630 L0,400 L200,300 L400,350 L600,250 L800,320 L1000,200 L1200,280 L1200,630 Z" fill="rgba(45,90,39,0.4)"/>
+  <path d="M0,630 L0,450 L150,380 L350,420 L550,340 L750,400 L950,320 L1200,370 L1200,630 Z" fill="rgba(45,90,39,0.6)"/>
+  
+  <!-- Large compass in center -->
+  <g transform="translate(600, 315)">
+    <circle cx="0" cy="0" r="120" stroke="#ffffff" stroke-width="8" fill="rgba(255,255,255,0.9)" filter="url(#glow)"/>
+    <path d="M0 -100L30 -20l-60 0l30-80z" fill="#d4af37"/>
+    <path d="M0 -100L-30 -20l60 0l-30-80z" fill="#8fbc8f"/>
+    <path d="M0 100L30 20l-60 0l30 80z" fill="#d4af37"/>
+    <path d="M0 100L-30 20l60 0l-30 80z" fill="#8fbc8f"/>
+    <circle cx="0" cy="0" r="8" fill="#2c3e50"/>
+    <path d="M0 -140v20M0 120v20M-140 0h20M120 0h20" stroke="#4a90a4" stroke-width="3"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="600" y="150" font-family="serif" font-size="72" font-weight="bold" text-anchor="middle" fill="white" filter="url(#glow)">
+    Spiritual Compass
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="200" font-family="sans-serif" font-size="32" text-anchor="middle" fill="white" opacity="0.9">
+    Find Your Sacred Direction
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="150" r="3" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="1000" cy="180" r="3" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="150" cy="200" r="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="1050" cy="220" r="2" fill="rgba(255,255,255,0.4)"/>
+</svg>

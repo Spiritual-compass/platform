@@ -1,0 +1,313 @@
+/* SPIRITUAL BACKGROUNDS & REFINED VISUAL HIERARCHY */
+
+/* Beautiful gradient backgrounds with spiritual imagery patterns */
+:root {
+    /* Refined spiritual color palette */
+    --primary: #4a90a4;          /* Serene ocean blue */
+    --primary-dark: #3a7085;     
+    --secondary: #8fbc8f;        /* Sage green */
+    --accent: #d4af37;           /* Sacred gold */
+    --text-primary: #2c3e50;     
+    --text-secondary: #5d6d7e;   
+    --background: #f8f9fa;       /* Pure white base */
+    --surface: #ffffff;          /* Clean white surfaces */
+    --surface-elevated: #f1f8ff; /* Soft blue-white */
+    --border: #e1ecf4;           /* Gentle borders */
+    
+    /* Spiritual nature palette */
+    --forest-green: #2d5a27;     
+    --mountain-gray: #708090;    
+    --sunset-orange: #ff8c69;    
+    --cloud-white: #f0f8ff;      
+    --ocean-blue: #4682b4;       
+}
+
+/* Hero section with spiritual mountain/sky background */
+.hero {
+    background: linear-gradient(135deg, 
+        #87ceeb 0%,     /* Sky blue */
+        #98d8e8 25%,    /* Light blue */
+        #f0f8ff 50%,    /* Cloud white */
+        #dda0dd 75%,    /* Plum (sunset) */
+        #4682b4 100%    /* Steel blue */
+    ) !important;
+    position: relative !important;
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+    padding: 8rem 2rem !important;
+}
+
+/* Subtle mountain silhouette overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,200 L0,100 L200,50 L400,80 L600,30 L800,60 L1000,20 L1200,40 L1200,200 Z" fill="rgba(45,90,39,0.4)"/><path d="M0,200 L0,120 L150,80 L350,100 L550,60 L750,90 L950,50 L1200,70 L1200,200 Z" fill="rgba(45,90,39,0.6)"/></svg>') no-repeat center bottom;
+    background-size: cover;
+}
+
+/* Refined hero typography */
+.hero-title {
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: 0.02em !important;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 2.5rem !important;
+    line-height: 1.7 !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Refined navigation */
+.nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid var(--border) !important;
+    color: var(--text-primary) !important;
+}
+
+.nav-logo .logo-text {
+    color: var(--primary) !important;
+    text-shadow: none !important;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+    letter-spacing: normal !important;
+}
+
+.nav-link:hover {
+    background: var(--surface-elevated) !important;
+    color: var(--primary) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Refined buttons with spiritual elegance */
+.btn {
+    padding: 0.8rem 2rem !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0.025em !important;
+    border-radius: 8px !important;
+    border: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.btn-primary {
+    background: var(--primary) !important;
+    color: white !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 2px 8px rgba(74, 144, 164, 0.3) !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(74, 144, 164, 0.4) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border-color: rgba(255,255,255,0.8) !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Elegant card styling */
+.card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) !important;
+    border-radius: 12px 12px 0 0;
+}
+
+.card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+}
+
+/* Serene wisdom quote styling */
+.wisdom-quote {
+    background: linear-gradient(135deg, 
+        var(--cloud-white) 0%, 
+        var(--surface-elevated) 50%, 
+        rgba(212, 175, 55, 0.1) 100%
+    ) !important;
+    color: var(--text-primary) !important;
+    border-left: 4px solid var(--accent) !important;
+    border-radius: 0 12px 12px 0 !important;
+    padding: 2.5rem !important;
+    margin: 2rem 0 !important;
+    position: relative !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05) !important;
+}
+
+.wisdom-quote blockquote {
+    font-size: 1.4rem !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    color: var(--text-primary) !important;
+}
+
+.wisdom-quote blockquote::before {
+    content: '"';
+    font-size: 3rem !important;
+    color: var(--accent) !important;
+    opacity: 0.3 !important;
+    position: absolute !important;
+    top: 1rem !important;
+    left: 2rem !important;
+}
+
+/* Body background with subtle spiritual patterns */
+body {
+    background: linear-gradient(135deg, 
+        var(--background) 0%, 
+        var(--cloud-white) 50%, 
+        var(--surface-elevated) 100%
+    ) !important;
+    background-attachment: fixed !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Subtle pattern overlay for texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(74, 144, 164, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Sections with gentle spacing */
+section {
+    padding: 4rem 0 !important;
+    position: relative !important;
+}
+
+/* Compass icon with gentle rotation */
+.compass-icon {
+    font-size: 2rem !important;
+    animation: gentleRotate 20s linear infinite !important;
+}
+
+@keyframes gentleRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Remove harsh effects */
+.btn::before {
+    display: none !important;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Refined selection */
+::selection {
+    background: rgba(74, 144, 164, 0.2) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem !important;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+    
+    .card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Gentle fade-in animations */
+.fade-in {
+    animation: gentleFadeIn 1s ease-out forwards;
+}
+
+@keyframes gentleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remove sparkle effects for spiritual calmness */
+.sparkle::after {
+    display: none;
+}
