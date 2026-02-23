@@ -12,42 +12,48 @@
     <meta property="og:image" content="https://spiritual-compass.com/images/compass-og.jpg">
     <meta property="og:url" content="https://spiritual-compass.com">
     
-    <link rel="icon" href="/images/compass-icon.png" type="image/png">
+    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family:Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/improved-colors.css">
-    <link rel="stylesheet" href="/styles/navigation.css">
-    <link rel="stylesheet" href="/styles/animations.css">
-    <link rel="stylesheet" href="/styles/accessibility.css">
-    <link rel="stylesheet" href="/styles/content-layout.css">
+    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
+    <link rel="stylesheet" href="/styles/dramatic-overhaul.css">
+    <link rel="stylesheet" href="/styles/contrast-fix.css">
+    <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
+    <link rel="stylesheet" href="/styles/loading-animations.css">
+    <link rel="stylesheet" href="/styles/enhanced-navigation.css">
+    <link rel="stylesheet" href="/styles/content-pages.css">
 </head>
-<body>
-    <!-- Skip to main content for screen readers -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+<body class="smooth-scroll">
+<div class="page-container">
     <!-- Navigation -->
-    <nav class="nav" role="banner" aria-label="Main navigation">
+    <nav class="nav">
+        <div class="scroll-progress"></div>
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="/" class="nav-logo">
                 <span class="compass-icon">🧭</span>
                 <span class="logo-text">Spiritual Compass</span>
-            </div>
+            </a>
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#assessment" class="nav-link">Find Your Path</a>
                 <a href="#wisdom" class="nav-link">Daily Wisdom</a>
-                <a href="#community" class="nav-link">Community</a>
+                <a href="#practices" class="nav-link">Practices</a>
+                <a href="#teachings" class="nav-link">Teachings</a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main content -->
-    <main id="main-content" role="main">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 id="hero-title" class="hero-title">Find Your Sacred Direction</h1>
+                <h1 class="hero-title">Find Your Sacred Direction</h1>
                 <p class="hero-subtitle">
                     Discover spiritual wisdom from multiple traditions. Whether you're questioning, seeking, or exploring different paths, we'll help you find the direction that resonates with your heart.
                 </p>
@@ -75,10 +81,10 @@
         </div>
     </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about" aria-labelledby="about-title">
+    <!-- About Section -->
+    <section id="about" class="section about">
         <div class="container">
-            <h2 id="about-title" class="section-title">Your Spiritual Journey, Honored</h2>
+            <h2 class="section-title">Your Spiritual Journey, Honored</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">🔍</div>
@@ -88,7 +94,7 @@
                 <div class="about-card">
                     <div class="card-icon">🤝</div>
                     <h3>Safe Space</h3>
-                    <p>A respectful, non-judgmental community where all sincere spiritual seeking is welcomed and honored.</p>
+                    <p>A respectful, non-judgmental approach where all sincere spiritual seeking is welcomed and honored through our content.</p>
                 </div>
                 <div class="about-card">
                     <div class="card-icon">🌍</div>
@@ -135,35 +141,57 @@
             <div class="wisdom-subscribe">
                 <h3>Daily Spiritual Wisdom</h3>
                 <p>Receive thoughtful wisdom from multiple traditions in your inbox.</p>
-                <form name="wisdom-signup" method="POST" netlify class="subscribe-form" aria-label="Daily wisdom newsletter signup">
-                    <label for="wisdom-email" class="sr-only">Email address for daily wisdom</label>
-                    <input type="email" id="wisdom-email" name="email" placeholder="Enter your email" required aria-describedby="wisdom-email-help">
-                    <div id="wisdom-email-help" class="sr-only">We'll send you thoughtful spiritual quotes daily. Unsubscribe anytime.</div>
+                <form name="wisdom-signup" method="POST" netlify class="subscribe-form">
+                    <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Community -->
-    <section id="community" class="section community">
+    <!-- Spiritual Practices -->
+    <section id="practices" class="section practices">
         <div class="container">
-            <h2 class="section-title">Find Your Community</h2>
-            <div class="community-grid">
-                <div class="community-card">
-                    <h3>Local Resources</h3>
-                    <p>Find spiritual communities, meditation groups, and houses of worship in your area.</p>
-                    <a href="/community/" class="btn btn-outline">Explore Communities</a>
+            <h2 class="section-title">Spiritual Practices</h2>
+            <div class="practices-grid">
+                <div class="practice-card">
+                    <h3>🧘‍♀️ Meditation & Mindfulness</h3>
+                    <p>Learn meditation techniques from various traditions. Guided sessions for beginners and advanced practitioners.</p>
+                    <a href="/meditation/" class="btn btn-outline">Start Meditating</a>
                 </div>
-                <div class="community-card">
-                    <h3>Online Discussions</h3>
-                    <p>Join respectful conversations with fellow seekers from all backgrounds.</p>
-                    <a href="/community/discussions/" class="btn btn-outline">Join Discussions</a>
+                <div class="practice-card">
+                    <h3>🙏 Prayer & Contemplation</h3>
+                    <p>Explore prayer practices across traditions. From silent contemplation to structured devotional prayers.</p>
+                    <a href="/prayer/" class="btn btn-outline">Prayer Guides</a>
                 </div>
-                <div class="community-card">
-                    <h3>Spiritual Support</h3>
-                    <p>Need guidance during a difficult time? Connect with experienced spiritual mentors.</p>
-                    <a href="/support/" class="btn btn-outline">Find Support</a>
+                <div class="practice-card">
+                    <h3>📿 Sacred Rituals</h3>
+                    <p>Understanding meaningful rituals and ceremonies that connect us to the divine and our inner wisdom.</p>
+                    <a href="/rituals/" class="btn btn-outline">Explore Rituals</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachings & Wisdom -->
+    <section id="teachings" class="section teachings">
+        <div class="container">
+            <h2 class="section-title">Sacred Teachings</h2>
+            <div class="teachings-grid">
+                <div class="teaching-card">
+                    <h3>📖 Sacred Texts</h3>
+                    <p>Explore wisdom from sacred texts of all traditions. Modern interpretations and ancient insights.</p>
+                    <a href="/texts/" class="btn btn-outline">Read Sacred Texts</a>
+                </div>
+                <div class="teaching-card">
+                    <h3>👥 Spiritual Teachers</h3>
+                    <p>Learn from contemporary and historical spiritual teachers across all traditions and paths.</p>
+                    <a href="/teachers/" class="btn btn-outline">Meet Teachers</a>
+                </div>
+                <div class="teaching-card">
+                    <h3>🌱 Growth Paths</h3>
+                    <p>Structured spiritual growth journeys tailored to your tradition and personal spiritual calling.</p>
+                    <a href="/paths/" class="btn btn-outline">Begin Journey</a>
                 </div>
             </div>
         </div>
@@ -182,42 +210,34 @@
                         <p><strong>Response time:</strong> Usually within 24 hours</p>
                     </div>
                 </div>
-                <form name="contact" method="POST" netlify class="contact-form" aria-label="Contact us">
+                <form name="contact" method="POST" netlify class="contact-form">
                     <div class="form-group">
-                        <label for="contact-name">Your name *</label>
-                        <input type="text" id="contact-name" name="name" required aria-describedby="name-help">
-                        <div id="name-help" class="sr-only">Please enter your full name</div>
+                        <input type="text" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact-email">Your email address *</label>
-                        <input type="email" id="contact-email" name="email" required aria-describedby="email-help">
-                        <div id="email-help" class="sr-only">We'll use this to respond to your message</div>
+                        <input type="email" name="email" placeholder="Your email" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact-topic">What can we help with? *</label>
-                        <select id="contact-topic" name="topic" required aria-describedby="topic-help">
-                            <option value="">Please choose a topic</option>
+                        <select name="topic" required>
+                            <option value="">What can we help with?</option>
                             <option value="spiritual-guidance">Spiritual guidance</option>
-                            <option value="finding-community">Finding community</option>
+                            <option value="meditation-practices">Meditation & practices</option>
                             <option value="tradition-questions">Questions about traditions</option>
+                            <option value="sacred-texts">Sacred texts & teachings</option>
                             <option value="general">General inquiry</option>
                         </select>
-                        <div id="topic-help" class="sr-only">This helps us route your message to the right person</div>
                     </div>
                     <div class="form-group">
-                        <label for="contact-message">Your message *</label>
-                        <textarea id="contact-message" name="message" rows="5" required aria-describedby="message-help" placeholder="Tell us how we can help..."></textarea>
-                        <div id="message-help" class="sr-only">Please share what you're looking for or any questions you have</div>
+                        <textarea name="message" placeholder="Tell us how we can help..." rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
-    </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -231,8 +251,8 @@
                     <h4>Explore</h4>
                     <a href="/assessment/">Spiritual Assessment</a>
                     <a href="/wisdom/">Daily Wisdom</a>
-                    <a href="/community/">Find Community</a>
-                    <a href="/traditions/">Learn About Traditions</a>
+                    <a href="/meditation/">Meditation Guide</a>
+                    <a href="/texts/">Sacred Texts</a>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
@@ -247,10 +267,17 @@
             </div>
         </div>
     </footer>
+</div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="/scripts/expanded-quotes.js"></script>
-    <script src="/scripts/navigation.js"></script>
-    <script src="/scripts/performance.js"></script>
+    <script src="/scripts/wisdom.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/mobile-navigation.js"></script>
+    <script src="/scripts/toast-notifications.js"></script>
+    <script src="/scripts/enhanced-animations.js"></script>
+    <script src="/scripts/enhanced-navigation.js"></script>
 </body>
 </html>

@@ -1,0 +1,298 @@
+/* LOADING ANIMATIONS & SMOOTH TRANSITIONS */
+
+/* Page loading fade-in */
+.page-container {
+    opacity: 0;
+    animation: pageLoadFade 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes pageLoadFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered card animations on scroll */
+.about-card, .wisdom-card, .assessment-step {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-card.animate-in, 
+.wisdom-card.animate-in, 
+.assessment-step.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for multiple cards */
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+.about-card:nth-child(3) { animation-delay: 0.3s; }
+.about-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Smooth form transitions */
+.form-group {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(74, 144, 164, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.form-group:focus-within::before {
+    left: 100%;
+}
+
+/* Enhanced button loading states */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth section transitions */
+section {
+    transition: all 0.4s ease;
+}
+
+/* Progressive image loading */
+.progressive-image {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.progressive-image img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.progressive-image.loaded img {
+    opacity: 1;
+}
+
+.progressive-image.loaded {
+    background: none;
+    animation: none;
+}
+
+/* Spiritual compass rotation on load */
+.compass-visual {
+    opacity: 0;
+    transform: scale(0.8) rotate(-20deg);
+    animation: compassAppear 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+}
+
+@keyframes compassAppear {
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Text reveal animation */
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: revealText 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.text-reveal span:nth-child(n+1) { animation-delay: calc(var(--i) * 0.1s); }
+
+@keyframes revealText {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Gentle parallax effect */
+.hero-background {
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+}
+
+/* Accessible loading states */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Skip loading animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .compass-icon {
+        animation: none !important;
+    }
+}
+
+/* Focus enhancements */
+.btn:focus-visible,
+.nav-link:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    transition: outline 0.2s ease;
+}
+
+/* Micro-interactions */
+.card-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--primary);
+}
+
+/* Assessment progress indicator */
+.progress-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+/* Spiritual quote fade-in */
+.wisdom-quote {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: quoteReveal 1s ease-out 0.3s forwards;
+}
+
+@keyframes quoteReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Enhanced tooltip animations */
+[title] {
+    position: relative;
+}
+
+[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 1000;
+    animation: tooltipFade 0.3s ease forwards;
+}
+
+[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--text-primary);
+    z-index: 1000;
+    animation: tooltipFade 0.3s ease forwards;
+}
+
+@keyframes tooltipFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

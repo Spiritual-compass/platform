@@ -1,0 +1,183 @@
+/* Content Pages - Practices & Teachings Styling */
+
+.practices, .teachings {
+    padding: 4rem 0;
+    background: var(--surface, #f9fafb);
+    position: relative;
+}
+
+.practices::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border, #e5e7eb), transparent);
+}
+
+/* Grid Layouts */
+.practices-grid, .teachings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Card Styling */
+.practice-card, .teaching-card {
+    background: var(--surface-elevated, #ffffff);
+    border-radius: var(--radius-lg, 1rem);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+    border: 1px solid var(--border-light, #f3f4f6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.practice-card::before, .teaching-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--wisdom-blue, #3b82f6), var(--peace-green, #10b981));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.practice-card:hover, .teaching-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+}
+
+.practice-card:hover::before, .teaching-card:hover::before {
+    opacity: 1;
+}
+
+.practice-card h3, .teaching-card h3 {
+    color: var(--text-primary, #1f2937);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.practice-card p, .teaching-card p {
+    color: var(--text-secondary, #6b7280);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.practice-card .btn, .teaching-card .btn {
+    margin-top: auto;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary, #2563eb);
+    border: 2px solid var(--primary, #2563eb);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md, 0.5rem);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background: var(--primary, #2563eb);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+/* Section Titles */
+.practices .section-title, .teachings .section-title {
+    background: linear-gradient(135deg, var(--wisdom-blue, #3b82f6), var(--peace-green, #10b981));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .practices, .teachings {
+        padding: 3rem 0;
+    }
+    
+    .practices-grid, .teachings-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .practice-card, .teaching-card {
+        padding: 1.5rem;
+    }
+    
+    .practices .section-title, .teachings .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .practice-card, .teaching-card {
+        background: var(--surface, #1f2937);
+        border-color: var(--border, #374151);
+    }
+    
+    .practices, .teachings {
+        background: var(--background, #111827);
+    }
+}
+
+/* Accessibility */
+.practice-card:focus-within, .teaching-card:focus-within {
+    outline: 2px solid var(--primary, #2563eb);
+    outline-offset: 2px;
+}
+
+/* Loading state for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.practice-card, .teaching-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.practice-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.practice-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.teaching-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.teaching-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
