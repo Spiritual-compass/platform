@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spiritual Compass</title>
+    <meta name="description" content="Get in touch with the Spiritual Compass team for guidance, support, or questions about your spiritual journey.">
+    
+    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family:Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/improved-colors.css">
+    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
+    <link rel="stylesheet" href="/styles/contrast-fix.css">
+    <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
+    <link rel="stylesheet" href="/styles/content-pages.css">
+    <link rel="stylesheet" href="/styles/legal-pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#assessment" class="nav-link">Find Your Path</a>
+                <a href="/contact/" class="nav-link active">Contact</a>
+                <a href="/support/" class="nav-link">Support</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="page-title">📞 Contact Us</h1>
+                <p class="page-subtitle">We're here to support you on your spiritual journey. Whether you have questions, need guidance, or want to share feedback, we'd love to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">How to Reach Us</h2>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Send us a message for general questions, feedback, or spiritual guidance requests.</p>
+                    <p><strong>guidance@spiritual-compass.com</strong></p>
+                    <p class="response-time">Response time: Usually within 24 hours</p>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">🆘</div>
+                    <h3>Spiritual Crisis Support</h3>
+                    <p>If you're experiencing a spiritual crisis or emergency, we prioritize these messages.</p>
+                    <p><strong>crisis@spiritual-compass.com</strong></p>
+                    <p class="response-time">Response time: Within 4-6 hours during business days</p>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">💡</div>
+                    <h3>Feedback & Suggestions</h3>
+                    <p>Help us improve by sharing your experience and suggestions for new content or features.</p>
+                    <p><strong>feedback@spiritual-compass.com</strong></p>
+                    <p class="response-time">Response time: Within 2-3 business days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section alternate-bg">
+        <div class="container">
+            <div class="contact-form-section">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="section-subtitle">Use this form to send us a detailed message. We read every message personally and respond thoughtfully.</p>
+                
+                <form name="contact" method="POST" netlify class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic">What can we help with? *</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">Please choose a topic</option>
+                            <option value="spiritual-guidance">Spiritual guidance and questions</option>
+                            <option value="meditation-practices">Meditation and prayer practices</option>
+                            <option value="tradition-questions">Questions about specific traditions</option>
+                            <option value="sacred-texts">Sacred texts and teachings</option>
+                            <option value="personal-crisis">Personal or spiritual crisis</option>
+                            <option value="technical-support">Website technical issues</option>
+                            <option value="feedback">Feedback and suggestions</option>
+                            <option value="general">General inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tradition">Your Spiritual Background (Optional)</label>
+                        <select id="tradition" name="tradition">
+                            <option value="">Prefer not to specify</option>
+                            <option value="christianity">Christianity</option>
+                            <option value="islam">Islam</option>
+                            <option value="judaism">Judaism</option>
+                            <option value="hinduism">Hinduism</option>
+                            <option value="buddhism">Buddhism</option>
+                            <option value="secular">Secular/Non-religious</option>
+                            <option value="indigenous">Indigenous traditions</option>
+                            <option value="multiple">Multiple traditions</option>
+                            <option value="exploring">Currently exploring</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <small>This helps us provide more relevant guidance, but it's completely optional.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you on your spiritual journey..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            <span class="checkmark"></span>
+                            I'd like to receive the daily wisdom newsletter (optional)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    
+                    <div class="form-note">
+                        <p><strong>Privacy Note:</strong> We respect your privacy completely. Your message will only be seen by our spiritual guidance team, and we never share personal information with third parties.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What kind of spiritual guidance do you provide?</h3>
+                    <p>We offer respectful, non-judgmental guidance that honors all sincere spiritual seeking. Our approach is educational and supportive rather than directive - we help you explore options and find what resonates with your heart and values.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you favor one religious tradition over others?</h3>
+                    <p>No. We respect and learn from all sincere spiritual traditions - Christianity, Islam, Judaism, Buddhism, Hinduism, Indigenous wisdom, and secular philosophy. Our goal is to help you find the path that authentically fits your spiritual seeking.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is this service free?</h3>
+                    <p>Yes, all our guidance and resources are provided freely. We believe spiritual support should be accessible to everyone, regardless of financial circumstances.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are you qualified to provide spiritual guidance?</h3>
+                    <p>Our team includes individuals with diverse spiritual backgrounds, formal religious education, and years of experience in interfaith dialogue. However, we always recommend also connecting with local spiritual communities and qualified religious leaders in your tradition of interest.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I'm in a spiritual crisis?</h3>
+                    <p>We take spiritual crises seriously and prioritize these messages. However, if you're experiencing thoughts of self-harm, please contact a mental health crisis line immediately. We can provide spiritual support alongside professional mental health care.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can you help me choose a religion?</h3>
+                    <p>We can help you explore different traditions, understand their core teachings, and reflect on what might resonate with your spiritual seeking. However, the choice of spiritual path is deeply personal - we provide information and support, but the decision is always yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="compass-icon">🧭</span>
+                        <span>Spiritual Compass</span>
+                    </div>
+                    <p>Honoring all paths to the sacred.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="/assessment/">Spiritual Assessment</a>
+                    <a href="/wisdom/">Daily Wisdom</a>
+                    <a href="/meditation/">Meditation Guide</a>
+                    <a href="/texts/">Sacred Texts</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/support/">Spiritual Support</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. Made with respect for all spiritual traditions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/mobile-navigation.js"></script>
+</body>
+</html>
