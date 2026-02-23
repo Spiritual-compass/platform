@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Wisdom - Spiritual Compass</title>
+    <meta name="description" content="Discover daily spiritual wisdom from multiple traditions. Quotes, insights, and reflections to guide your journey.">
+    
+    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family:Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/improved-colors.css">
+    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
+    <link rel="stylesheet" href="/styles/contrast-fix.css">
+    <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
+    <link rel="stylesheet" href="/styles/content-pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#wisdom" class="nav-link">Daily Wisdom</a>
+                <a href="/wisdom/" class="nav-link active">Wisdom Archive</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero wisdom-hero">
+        <div class="container">
+            <h1>💫 Daily Wisdom</h1>
+            <p class="hero-subtitle">Sacred insights to illuminate your spiritual journey</p>
+        </div>
+    </section>
+
+    <!-- Today's Wisdom -->
+    <section class="section today-wisdom">
+        <div class="container">
+            <div class="wisdom-spotlight">
+                <h2>Today's Sacred Insight</h2>
+                <div class="wisdom-quote-large" id="todaysWisdom">
+                    <blockquote>
+                        "The present moment is the only time over which we have dominion."
+                    </blockquote>
+                    <cite>— Thích Nhất Hạnh</cite>
+                    <div class="quote-meta">
+                        <span class="tradition-label">Buddhism</span>
+                        <span class="theme-label">Presence</span>
+                    </div>
+                </div>
+                <div class="wisdom-reflection">
+                    <h3>Daily Reflection</h3>
+                    <p>In our busy world, we often live anywhere but the present moment—lost in memories of the past or anxieties about the future. This Buddhist teaching reminds us that true power, peace, and spiritual growth can only happen right here, right now. Today, practice returning to the present moment whenever you notice your mind wandering. What does it feel like to be fully here?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wisdom Categories -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Explore Wisdom by Theme</h2>
+                
+                <div class="wisdom-categories">
+                    <div class="category-card" data-theme="peace">
+                        <div class="category-icon">🕊️</div>
+                        <h3>Peace</h3>
+                        <p>Find inner tranquility and harmony</p>
+                        <div class="sample-quote">
+                            "Peace comes from within. Do not seek it without." — Buddha
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-theme="love">
+                        <div class="category-icon">❤️</div>
+                        <h3>Love & Compassion</h3>
+                        <p>Open your heart to divine and human love</p>
+                        <div class="sample-quote">
+                            "Above all, love each other deeply, because love covers over a multitude of sins." — Apostle Peter
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-theme="wisdom">
+                        <div class="category-icon">🦉</div>
+                        <h3>Wisdom</h3>
+                        <p>Cultivate understanding and discernment</p>
+                        <div class="sample-quote">
+                            "Who is wise? One who learns from every person." — Ben Zoma
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-theme="courage">
+                        <div class="category-icon">🦁</div>
+                        <h3>Courage</h3>
+                        <p>Find strength in times of difficulty</p>
+                        <div class="sample-quote">
+                            "Be strong and courageous. Do not be afraid; do not be discouraged." — Joshua 1:9
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-theme="gratitude">
+                        <div class="category-icon">🙏</div>
+                        <h3>Gratitude</h3>
+                        <p>Appreciate the blessings in your life</p>
+                        <div class="sample-quote">
+                            "Gratitude is not only the greatest of virtues, but the parent of all others." — Cicero
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-theme="purpose">
+                        <div class="category-icon">🎯</div>
+                        <h3>Purpose</h3>
+                        <p>Discover your sacred calling</p>
+                        <div class="sample-quote">
+                            "You have the right to perform your actions, but you are not entitled to the fruits of action." — Lord Krishna
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wisdom-traditions">
+                    <h2>Wisdom by Tradition</h2>
+                    <div class="traditions-row">
+                        <button class="tradition-btn active" data-tradition="all">All Traditions</button>
+                        <button class="tradition-btn" data-tradition="buddhism">Buddhism</button>
+                        <button class="tradition-btn" data-tradition="christianity">Christianity</button>
+                        <button class="tradition-btn" data-tradition="islam">Islam</button>
+                        <button class="tradition-btn" data-tradition="judaism">Judaism</button>
+                        <button class="tradition-btn" data-tradition="hinduism">Hinduism</button>
+                        <button class="tradition-btn" data-tradition="sufism">Sufism</button>
+                    </div>
+                </div>
+
+                <div class="wisdom-feed">
+                    <h2>Recent Wisdom</h2>
+                    <div class="wisdom-cards" id="wisdomFeed">
+                        <!-- Wisdom cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="load-more">
+                        <button class="btn btn-outline" id="loadMoreBtn">Load More Wisdom</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="compass-icon">🧭</span>
+                        <span>Spiritual Compass</span>
+                    </div>
+                    <p>Honoring all paths to the sacred.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="/assessment/">Spiritual Assessment</a>
+                    <a href="/meditation/">Meditation Guide</a>
+                    <a href="/texts/">Sacred Texts</a>
+                    <a href="/wisdom/">Daily Wisdom</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/support/">Spiritual Support</a>
+                    <a href="/#contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. Made with respect for all spiritual traditions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/expanded-quotes.js"></script>
+    <script>
+        // Sample wisdom data (would connect to the expanded quotes system)
+        const sampleWisdom = [
+            {
+                quote: "The wound is the place where the Light enters you.",
+                author: "Rumi",
+                tradition: "Sufism",
+                theme: "Healing"
+            },
+            {
+                quote: "Be still and know that I am God.",
+                author: "Psalm 46:10",
+                tradition: "Christianity",
+                theme: "Stillness"
+            },
+            {
+                quote: "The mind is everything. What you think you become.",
+                author: "Buddha",
+                tradition: "Buddhism",
+                theme: "Mindfulness"
+            }
+        ];
+
+        // Populate wisdom feed
+        function populateWisdomFeed(quotes = sampleWisdom) {
+            const wisdomFeed = document.getElementById('wisdomFeed');
+            const wisdomCards = quotes.map(quote => `
+                <div class="wisdom-card">
+                    <blockquote>"${quote.quote}"</blockquote>
+                    <cite>— ${quote.author}</cite>
+                    <div class="quote-meta">
+                        <span class="tradition-label">${quote.tradition}</span>
+                        <span class="theme-label">${quote.theme}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            wisdomFeed.innerHTML = wisdomCards;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Use expanded quotes if available
+            if (typeof expandedWisdomQuotes !== 'undefined' && expandedWisdomQuotes.length > 0) {
+                populateWisdomFeed(expandedWisdomQuotes.slice(0, 6));
+            } else {
+                populateWisdomFeed();
+            }
+
+            // Category interactions
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const theme = this.dataset.theme;
+                    // Filter wisdom by theme (would implement filtering logic)
+                    console.log('Filter by theme:', theme);
+                });
+            });
+
+            // Tradition filtering
+            document.querySelectorAll('.tradition-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.tradition-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const tradition = this.dataset.tradition;
+                    // Filter wisdom by tradition (would implement filtering logic)
+                    console.log('Filter by tradition:', tradition);
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .wisdom-hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(16, 185, 129, 0.15));
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .wisdom-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--hope-yellow), var(--peace-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .today-wisdom {
+            background: var(--surface);
+            padding: 3rem 0;
+        }
+        
+        .wisdom-spotlight {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .wisdom-quote-large {
+            background: var(--surface-elevated);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-light);
+            margin: 2rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .wisdom-quote-large blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .wisdom-quote-large cite {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .quote-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .tradition-label {
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .theme-label {
+            background: var(--secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .wisdom-reflection {
+            background: rgba(59, 130, 246, 0.05);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .wisdom-reflection h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .wisdom-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .category-card {
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .sample-quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1rem;
+        }
+        
+        .wisdom-traditions {
+            margin: 4rem 0 2rem 0;
+            text-align: center;
+        }
+        
+        .traditions-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tradition-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 2px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .tradition-btn.active,
+        .tradition-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .wisdom-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .wisdom-card {
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .wisdom-card blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .wisdom-card cite {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .load-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .wisdom-quote-large {
+                padding: 2rem 1rem;
+            }
+            
+            .wisdom-quote-large blockquote {
+                font-size: 1.25rem;
+            }
+            
+            .quote-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

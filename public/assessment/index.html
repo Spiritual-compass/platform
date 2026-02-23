@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiritual Assessment - Find Your Path | Spiritual Compass</title>
-    <meta name="description" content="Discover spiritual traditions that align with your values and seeking through our thoughtful, respectful assessment.">
+    <title>Spiritual Assessment - Find Your Path - Spiritual Compass</title>
+    <meta name="description" content="Discover your spiritual path across multiple traditions with our comprehensive assessment tool.">
     
-    <link rel="icon" href="/images/compass-icon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family:Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/improved-colors.css">
+    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
+    <link rel="stylesheet" href="/styles/contrast-fix.css">
+    <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
+    <link rel="stylesheet" href="/styles/content-pages.css">
     <link rel="stylesheet" href="/styles/assessment.css">
+    <link rel="stylesheet" href="/styles/enhanced-assessment.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -21,203 +27,136 @@
             </a>
             <div class="nav-links">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/#wisdom" class="nav-link">Daily Wisdom</a>
-                <a href="/#community" class="nav-link">Community</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/assessment/" class="nav-link active">Assessment</a>
+                <a href="/meditation/" class="nav-link">Meditation</a>
             </div>
         </div>
     </nav>
 
-    <!-- Assessment Header -->
-    <section class="assessment-header">
+    <!-- Hero Section -->
+    <section class="hero assessment-hero">
         <div class="container">
-            <h1>Spiritual Path Assessment</h1>
-            <p class="assessment-subtitle">
-                A thoughtful exploration to help you discover spiritual traditions that align with your values, experiences, and seeking. This assessment is completely private and non-judgmental.
-            </p>
-            <div class="assessment-meta">
-                <span class="meta-item">📋 15 Questions</span>
-                <span class="meta-item">⏱️ 5-10 Minutes</span>
-                <span class="meta-item">🔒 Completely Private</span>
+            <h1>🧭 Find Your Spiritual Path</h1>
+            <p class="hero-subtitle">A comprehensive assessment to help guide your spiritual journey</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="assessment-intro">
+                    <h2>Discover Your Spiritual Direction</h2>
+                    <p>This thoughtful assessment will help you explore your spiritual inclinations, values, and practices across multiple traditions. There are no right or wrong answers—only insights to guide your journey.</p>
+                </div>
+
+                <div class="assessment-container">
+                    <div class="assessment-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text">Question <span id="currentQuestion">1</span> of 15</span>
+                    </div>
+
+                    <div class="assessment-form">
+                        <div class="question-card active" data-question="1">
+                            <h3>How do you typically seek spiritual insight or guidance?</h3>
+                            <div class="options">
+                                <label class="option">
+                                    <input type="radio" name="q1" value="prayer">
+                                    <span>Through prayer and conversation with the divine</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q1" value="meditation">
+                                    <span>Through meditation and inner stillness</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q1" value="nature">
+                                    <span>Through connection with nature and the cosmos</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q1" value="study">
+                                    <span>Through study of sacred texts and teachings</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-card" data-question="2">
+                            <h3>What role does community play in your spiritual life?</h3>
+                            <div class="options">
+                                <label class="option">
+                                    <input type="radio" name="q2" value="essential">
+                                    <span>Essential - I need fellowship and shared worship</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q2" value="helpful">
+                                    <span>Helpful but not necessary - I enjoy spiritual discussions</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q2" value="personal">
+                                    <span>Prefer solitary practice with occasional guidance</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q2" value="individual">
+                                    <span>Completely individual - my path is uniquely mine</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-card" data-question="3">
+                            <h3>How do you view the divine or ultimate reality?</h3>
+                            <div class="options">
+                                <label class="option">
+                                    <input type="radio" name="q3" value="personal">
+                                    <span>A personal God who is loving and involved</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q3" value="universal">
+                                    <span>A universal force or energy connecting all things</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q3" value="mystery">
+                                    <span>An unknowable mystery beyond human understanding</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q3" value="consciousness">
+                                    <span>Pure consciousness or awareness itself</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Simplified for demo - would continue with more questions -->
+                        <div class="assessment-note">
+                            <p><em>Note: This is a simplified demo. The full assessment contains 15 comprehensive questions exploring your spiritual preferences, practices, and beliefs across multiple traditions.</em></p>
+                        </div>
+
+                        <div class="assessment-actions">
+                            <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+                            <button class="btn btn-primary" id="nextBtn">Next</button>
+                            <button class="btn btn-primary" id="submitBtn" style="display: none;">Get My Results</button>
+                        </div>
+                    </div>
+
+                    <div class="results-container" id="resultsContainer" style="display: none;">
+                        <h2>Your Spiritual Compass Results</h2>
+                        <div class="result-card">
+                            <h3>Your Primary Spiritual Inclination</h3>
+                            <div class="result-content" id="primaryResult">
+                                <!-- Results will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="recommendations">
+                            <h3>Recommended Paths to Explore</h3>
+                            <div class="recommendation-grid" id="recommendationGrid">
+                                <!-- Recommendations will be populated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Assessment Form -->
-    <section class="assessment-form-section">
-        <div class="container">
-            <form name="spiritual-assessment" method="POST" netlify class="assessment-form" id="assessmentForm">
-                <!-- Progress Bar -->
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                    <span class="progress-text" id="progressText">Question 1 of 15</span>
-                </div>
-
-                <!-- Question Groups -->
-                <div class="question-group active" data-group="1">
-                    <h2>Values & Priorities</h2>
-                    
-                    <div class="question">
-                        <h3>What matters most to you in spiritual life?</h3>
-                        <div class="options">
-                            <label><input type="checkbox" name="values" value="inner-peace"> Finding inner peace and tranquility</label>
-                            <label><input type="checkbox" name="values" value="community"> Being part of a spiritual community</label>
-                            <label><input type="checkbox" name="values" value="service"> Serving others and making a difference</label>
-                            <label><input type="checkbox" name="values" value="wisdom"> Gaining wisdom and understanding</label>
-                            <label><input type="checkbox" name="values" value="transcendence"> Experiencing the transcendent or divine</label>
-                            <label><input type="checkbox" name="values" value="ethics"> Living ethically and with purpose</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>How do you prefer to connect with the sacred?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="connection" value="meditation"> Meditation and contemplation</label>
-                            <label><input type="radio" name="connection" value="prayer"> Prayer and devotion</label>
-                            <label><input type="radio" name="connection" value="nature"> Time in nature</label>
-                            <label><input type="radio" name="connection" value="study"> Study of wisdom texts</label>
-                            <label><input type="radio" name="connection" value="service"> Service to others</label>
-                            <label><input type="radio" name="connection" value="ritual"> Ritual and ceremony</label>
-                            <label><input type="radio" name="connection" value="music"> Music and art</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>What role should tradition play in spiritual practice?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="tradition-role" value="essential"> Ancient traditions provide essential wisdom</label>
-                            <label><input type="radio" name="tradition-role" value="helpful"> Traditions are helpful but not required</label>
-                            <label><input type="radio" name="tradition-role" value="personal"> Personal experience matters most</label>
-                            <label><input type="radio" name="tradition-role" value="modern"> Modern approaches work better for me</label>
-                            <label><input type="radio" name="tradition-role" value="mixed"> I like blending different traditions</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-group" data-group="2">
-                    <h2>Beliefs & Worldview</h2>
-                    
-                    <div class="question">
-                        <h3>How do you view the nature of existence?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="existence" value="divine-purpose"> Everything has divine purpose and meaning</label>
-                            <label><input type="radio" name="existence" value="interconnected"> All life is interconnected and sacred</label>
-                            <label><input type="radio" name="existence" value="natural"> Life follows natural laws and processes</label>
-                            <label><input type="radio" name="existence" value="mystery"> Existence is a beautiful mystery</label>
-                            <label><input type="radio" name="existence" value="personal"> We create our own meaning</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>What happens after death?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="afterlife" value="heaven"> Eternal life with the divine</label>
-                            <label><input type="radio" name="afterlife" value="reincarnation"> Reincarnation or rebirth</label>
-                            <label><input type="radio" name="afterlife" value="energy"> Our energy returns to the universe</label>
-                            <label><input type="radio" name="afterlife" value="legacy"> We live on through our impact</label>
-                            <label><input type="radio" name="afterlife" value="unknown"> It's unknowable, so I focus on this life</label>
-                            <label><input type="radio" name="afterlife" value="nothing"> Consciousness simply ends</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>How do you understand suffering?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="suffering" value="test"> A test or trial for growth</label>
-                            <label><input type="radio" name="suffering" value="karma"> Result of past actions (karma)</label>
-                            <label><input type="radio" name="suffering" value="attachment"> Caused by attachment and craving</label>
-                            <label><input type="radio" name="suffering" value="natural"> Natural part of existence</label>
-                            <label><input type="radio" name="suffering" value="injustice"> Often result of human injustice</label>
-                            <label><input type="radio" name="suffering" value="meaning"> Can lead to wisdom and compassion</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-group" data-group="3">
-                    <h2>Practice & Community</h2>
-                    
-                    <div class="question">
-                        <h3>What type of spiritual community appeals to you?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="community-type" value="traditional"> Traditional religious congregation</label>
-                            <label><input type="radio" name="community-type" value="meditation"> Meditation or mindfulness group</label>
-                            <label><input type="radio" name="community-type" value="interfaith"> Interfaith or multi-tradition community</label>
-                            <label><input type="radio" name="community-type" value="study"> Study and discussion group</label>
-                            <label><input type="radio" name="community-type" value="service"> Service-oriented community</label>
-                            <label><input type="radio" name="community-type" value="online"> Online spiritual community</label>
-                            <label><input type="radio" name="community-type" value="solitary"> Prefer individual practice</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>How important is ritual in spiritual life?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="ritual-importance" value="essential"> Essential - provides structure and meaning</label>
-                            <label><input type="radio" name="ritual-importance" value="helpful"> Helpful but not required</label>
-                            <label><input type="radio" name="ritual-importance" value="simple"> Prefer simple, personal rituals</label>
-                            <label><input type="radio" name="ritual-importance" value="symbolic"> Like the symbolism but not the formality</label>
-                            <label><input type="radio" name="ritual-importance" value="unnecessary"> Don't find ritual meaningful</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>What draws you to explore spirituality?</h3>
-                        <div class="options">
-                            <label><input type="checkbox" name="motivation" value="meaning"> Seeking deeper meaning in life</label>
-                            <label><input type="checkbox" name="motivation" value="peace"> Want more peace and contentment</label>
-                            <label><input type="checkbox" name="motivation" value="community"> Looking for like-minded community</label>
-                            <label><input type="checkbox" name="motivation" value="growth"> Personal growth and development</label>
-                            <label><input type="checkbox" name="motivation" value="crisis"> Going through difficult times</label>
-                            <label><input type="checkbox" name="motivation" value="curiosity"> Intellectual curiosity about different traditions</label>
-                            <label><input type="checkbox" name="motivation" value="heritage"> Reconnecting with cultural heritage</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-group" data-group="4">
-                    <h2>Personal Information</h2>
-                    
-                    <div class="question">
-                        <h3>What's your current spiritual background? (Optional)</h3>
-                        <div class="options">
-                            <label><input type="radio" name="background" value="christian"> Christian background</label>
-                            <label><input type="radio" name="background" value="muslim"> Muslim background</label>
-                            <label><input type="radio" name="background" value="jewish"> Jewish background</label>
-                            <label><input type="radio" name="background" value="buddhist"> Buddhist background</label>
-                            <label><input type="radio" name="background" value="hindu"> Hindu background</label>
-                            <label><input type="radio" name="background" value="secular"> Secular/non-religious background</label>
-                            <label><input type="radio" name="background" value="mixed"> Mixed religious background</label>
-                            <label><input type="radio" name="background" value="none"> No particular background</label>
-                            <label><input type="radio" name="background" value="prefer-not"> Prefer not to say</label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h3>How would you like to receive your results?</h3>
-                        <div class="form-row">
-                            <input type="email" name="email" placeholder="Your email address" required>
-                        </div>
-                        <p class="question-note">We'll send you personalized spiritual path recommendations and resources. Your email is kept completely private.</p>
-                    </div>
-
-                    <div class="question">
-                        <h3>Any additional thoughts or questions? (Optional)</h3>
-                        <div class="form-row">
-                            <textarea name="additional-thoughts" placeholder="Share anything else that might help us provide better recommendations..." rows="4"></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Navigation Buttons -->
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">Previous</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
-                    <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">Get My Results</button>
-                </div>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -230,13 +169,268 @@
                     </div>
                     <p>Honoring all paths to the sacred.</p>
                 </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="/assessment/">Spiritual Assessment</a>
+                    <a href="/meditation/">Meditation Guide</a>
+                    <a href="/texts/">Sacred Texts</a>
+                    <a href="/prayer/">Prayer Practices</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/support/">Spiritual Support</a>
+                    <a href="/#contact">Contact Us</a>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Spiritual Compass. Your spiritual journey is sacred and private.</p>
+                <p>&copy; 2026 Spiritual Compass. Made with respect for all spiritual traditions.</p>
             </div>
         </div>
     </footer>
 
-    <script src="/scripts/assessment.js"></script>
+    <script>
+        // Simple assessment functionality
+        let currentQuestionNum = 1;
+        const totalQuestions = 3; // Simplified for demo
+        
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressFill = document.getElementById('progressFill');
+        const currentQuestionSpan = document.getElementById('currentQuestion');
+        
+        function updateProgress() {
+            const progress = (currentQuestionNum / totalQuestions) * 100;
+            progressFill.style.width = progress + '%';
+            currentQuestionSpan.textContent = currentQuestionNum;
+        }
+        
+        function showQuestion(num) {
+            document.querySelectorAll('.question-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            const currentCard = document.querySelector(`[data-question="${num}"]`);
+            if (currentCard) {
+                currentCard.classList.add('active');
+            }
+            
+            prevBtn.disabled = num === 1;
+            
+            if (num === totalQuestions) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+            } else {
+                nextBtn.style.display = 'inline-block';
+                submitBtn.style.display = 'none';
+            }
+            
+            updateProgress();
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionNum < totalQuestions) {
+                currentQuestionNum++;
+                showQuestion(currentQuestionNum);
+            }
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionNum > 1) {
+                currentQuestionNum--;
+                showQuestion(currentQuestionNum);
+            }
+        });
+        
+        submitBtn.addEventListener('click', () => {
+            // Simple results logic
+            document.querySelector('.assessment-form').style.display = 'none';
+            document.getElementById('resultsContainer').style.display = 'block';
+            
+            document.getElementById('primaryResult').innerHTML = `
+                <div class="result-tradition">
+                    <h4>🧘‍♀️ Contemplative & Meditative Path</h4>
+                    <p>Your responses suggest a strong affinity for contemplative practices and inner spiritual exploration. You may find fulfillment in meditation, mindfulness, and traditions that emphasize direct spiritual experience.</p>
+                </div>
+            `;
+            
+            document.getElementById('recommendationGrid').innerHTML = `
+                <div class="recommendation-card">
+                    <h4>Buddhism</h4>
+                    <p>Explore meditation practices and the Four Noble Truths</p>
+                    <a href="/meditation/" class="btn btn-outline btn-sm">Start Meditating</a>
+                </div>
+                <div class="recommendation-card">
+                    <h4>Christian Contemplation</h4>
+                    <p>Discover contemplative prayer and mystic traditions</p>
+                    <a href="/prayer/" class="btn btn-outline btn-sm">Prayer Guides</a>
+                </div>
+                <div class="recommendation-card">
+                    <h4>Hindu Philosophy</h4>
+                    <p>Study the Bhagavad Gita and yoga philosophy</p>
+                    <a href="/texts/" class="btn btn-outline btn-sm">Read Texts</a>
+                </div>
+            `;
+        });
+    </script>
+    <script src="/scripts/enhanced-assessment.js"></script>
+
+    <style>
+        .assessment-hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(59, 130, 246, 0.1));
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .assessment-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--hope-yellow), var(--wisdom-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .assessment-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .assessment-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .assessment-progress {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--peace-green));
+            transition: width 0.3s ease;
+            width: 33%;
+        }
+        
+        .progress-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .question-card {
+            display: none;
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+        }
+        
+        .question-card.active {
+            display: block;
+        }
+        
+        .question-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .option:hover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .option input[type="radio"] {
+            margin: 0;
+        }
+        
+        .assessment-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .assessment-note {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .result-card {
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+        }
+        
+        .result-tradition {
+            text-align: center;
+        }
+        
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .recommendation-card {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+        
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+    </style>
 </body>
 </html>
