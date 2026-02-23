@@ -20,21 +20,30 @@
     <link rel="stylesheet" href="/styles/dramatic-overhaul.css">
     <link rel="stylesheet" href="/styles/contrast-fix.css">
     <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
+    <link rel="stylesheet" href="/styles/loading-animations.css">
+    <link rel="stylesheet" href="/styles/enhanced-navigation.css">
 </head>
-<body>
+<body class="smooth-scroll">
+<div class="page-container">
     <!-- Navigation -->
     <nav class="nav">
+        <div class="scroll-progress"></div>
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="/" class="nav-logo">
                 <span class="compass-icon">🧭</span>
                 <span class="logo-text">Spiritual Compass</span>
-            </div>
+            </a>
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#assessment" class="nav-link">Find Your Path</a>
                 <a href="#wisdom" class="nav-link">Daily Wisdom</a>
                 <a href="#community" class="nav-link">Community</a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -231,6 +240,10 @@
             </div>
         </div>
     </footer>
+</div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="/scripts/expanded-quotes.js"></script>
     <script src="/scripts/wisdom.js"></script>
@@ -238,5 +251,6 @@
     <script src="/scripts/mobile-navigation.js"></script>
     <script src="/scripts/toast-notifications.js"></script>
     <script src="/scripts/enhanced-animations.js"></script>
+    <script src="/scripts/enhanced-navigation.js"></script>
 </body>
 </html>
