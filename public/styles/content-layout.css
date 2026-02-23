@@ -1,0 +1,513 @@
+/* SPIRITUAL COMPASS - CONTENT LAYOUT IMPROVEMENTS */
+
+/* Enhanced spacing and rhythm */
+:root {
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Line height for reading comfort */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+}
+
+/* Section spacing improvements */
+.section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.section:first-of-type {
+    padding-top: var(--spacing-2xl);
+}
+
+.section:last-of-type {
+    padding-bottom: var(--spacing-2xl);
+}
+
+/* Container improvements */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Hero section improvements */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2xl);
+    min-height: 60vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero-title {
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    margin-bottom: var(--spacing-xl);
+    line-height: var(--line-height-relaxed);
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-xl);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section titles improvement */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: var(--spacing-lg);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
+
+/* Grid improvements */
+.about-grid,
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+}
+
+/* Card spacing and layout */
+.card,
+.community-card,
+.about-card,
+.wisdom-card {
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover,
+.community-card:hover,
+.about-card:hover,
+.wisdom-card:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Card icon spacing */
+.card-icon,
+.community-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Card heading and text spacing */
+.card h3,
+.community-card h3,
+.about-card h3 {
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-tight);
+}
+
+.card p,
+.community-card p,
+.about-card p {
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-normal);
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+/* Button spacing */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: var(--line-height-tight);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    margin-top: var(--spacing-md);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+}
+
+/* Wisdom card layout */
+.wisdom-card {
+    text-align: center;
+    margin: var(--spacing-2xl) 0;
+}
+
+.wisdom-quote {
+    margin-bottom: var(--spacing-lg);
+}
+
+.wisdom-quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: var(--line-height-relaxed);
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-md) 0;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-left: 4px solid var(--primary);
+}
+
+.wisdom-quote cite {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: normal;
+    margin-top: var(--spacing-sm);
+}
+
+.wisdom-tradition {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+}
+
+/* Form spacing improvements */
+.contact-form,
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 600px;
+    margin: var(--spacing-xl) auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: var(--line-height-normal);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: rgba(30, 64, 175, 0.02);
+}
+
+/* Contact section layout */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.contact-info {
+    padding-right: var(--spacing-lg);
+}
+
+.contact-info h3 {
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-tight);
+}
+
+.contact-info p {
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-normal);
+    color: var(--text-secondary);
+}
+
+.contact-details {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 2px solid var(--border-light);
+}
+
+.contact-details p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* CTA section improvement */
+.assessment-cta {
+    background: linear-gradient(135deg, var(--surface) 0%, var(--background) 100%);
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-tight);
+}
+
+.cta-content p {
+    margin-bottom: var(--spacing-xl);
+    line-height: var(--line-height-normal);
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.cta-note {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: var(--spacing-lg);
+}
+
+/* Compass visual spacing */
+.compass-visual {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.compass-directions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer improvements */
+.footer {
+    background: var(--surface);
+    border-top: 2px solid var(--border-light);
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-2xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.footer-section a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: var(--line-height-normal);
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: var(--line-height-normal);
+}
+
+/* Improve readability with max widths */
+.wisdom-card,
+.assessment-cta .cta-content {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-grid,
+.community-grid {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 2rem;
+        --spacing-2xl: 2.5rem;
+    }
+    
+    .section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        min-height: auto;
+    }
+    
+    .hero-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .about-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .contact-info {
+        padding-right: 0;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .wisdom-quote blockquote {
+        font-size: 1.25rem;
+        padding: var(--spacing-lg);
+    }
+    
+    .footer-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .compass-visual {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 1.25rem;
+        --spacing-xl: 1.5rem;
+        --spacing-2xl: 2rem;
+    }
+    
+    .section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .wisdom-quote blockquote {
+        font-size: 1.1rem;
+        padding: var(--spacing-md);
+    }
+    
+    .compass-visual {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Print layout improvements */
+@media print {
+    .section {
+        page-break-inside: avoid;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .btn,
+    .nav {
+        display: none;
+    }
+}

@@ -1,0 +1,370 @@
+/* SPIRITUAL COMPASS - ACCESSIBILITY ENHANCEMENTS */
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Enhanced focus indicators */
+*:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Better focus for interactive elements */
+.btn:focus,
+.nav-link:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(30, 64, 175, 0.1);
+}
+
+/* Focus for cards and clickable areas */
+.card:focus,
+.community-card:focus,
+.wisdom-card:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(30, 64, 175, 0.15);
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+    :root {
+        --text-primary: #000000;
+        --text-secondary: #000000;
+        --border: #000000;
+        --primary: #0000ff;
+        --background: #ffffff;
+    }
+    
+    .btn-primary {
+        background: #0000ff;
+        border: 2px solid #000000;
+    }
+    
+    .btn-secondary,
+    .btn-outline {
+        background: #ffffff;
+        color: #000000;
+        border: 3px solid #000000;
+    }
+    
+    .card,
+    .community-card,
+    .wisdom-card {
+        border: 2px solid #000000;
+        box-shadow: none;
+    }
+    
+    .nav {
+        border-bottom: 3px solid #000000;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-visual,
+    .compass-icon {
+        animation: none !important;
+        transform: none !important;
+    }
+    
+    .btn:hover {
+        transform: none !important;
+    }
+}
+
+/* Color blind friendly indicators */
+.tradition-label,
+.theme-label {
+    position: relative;
+}
+
+.tradition-label::before {
+    content: "🏛️";
+    margin-right: 4px;
+}
+
+.theme-label::before {
+    content: "💡";
+    margin-right: 4px;
+}
+
+/* Enhanced form accessibility */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+input[required] + label::after,
+textarea[required] + label::after,
+select[required] + label::after {
+    content: " *";
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.error-message::before {
+    content: "⚠️";
+    font-size: 1rem;
+}
+
+.success-message {
+    color: #059669;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.success-message::before {
+    content: "✅";
+    font-size: 1rem;
+}
+
+/* Landmark regions for screen readers */
+main {
+    min-height: 60vh;
+}
+
+[role="banner"],
+[role="navigation"],
+[role="main"],
+[role="contentinfo"] {
+    position: relative;
+}
+
+/* Improved heading hierarchy */
+h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    line-height: 1.3;
+}
+
+/* Better text spacing for readability */
+p {
+    line-height: 1.6;
+    max-width: 65ch;
+    margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+    line-height: 1.5;
+    max-width: 60ch;
+    margin: 0 auto 2rem;
+}
+
+/* Link accessibility */
+a:not(.btn) {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+}
+
+a:not(.btn):hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 3px;
+}
+
+a:not(.btn):focus {
+    background: rgba(30, 64, 175, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Table accessibility */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: var(--surface);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Language and direction support */
+[lang]:not([lang=""]) {
+    quotes: """ """ "'" "'";
+}
+
+[dir="rtl"] .compass-visual {
+    transform: scaleX(-1);
+}
+
+/* Print accessibility */
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .nav,
+    .hero-visual,
+    .btn {
+        display: none !important;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        margin-bottom: 1in;
+    }
+}
+
+/* Mobile accessibility improvements */
+@media (max-width: 768px) {
+    /* Larger touch targets */
+    .btn,
+    .nav-link,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better spacing for small screens */
+    .hero-container {
+        padding: 2rem 1rem;
+    }
+    
+    .section {
+        padding: 3rem 1rem;
+    }
+    
+    /* Improved form layout */
+    .contact-form,
+    .subscribe-form {
+        gap: 1rem;
+    }
+    
+    input,
+    textarea,
+    select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Voice control support */
+[data-voice-command] {
+    position: relative;
+}
+
+[data-voice-command]::before {
+    content: attr(data-voice-command);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.voice-commands-visible [data-voice-command]::before {
+    opacity: 1;
+}
+
+/* Status announcements for screen readers */
+.status-announcement {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.status-announcement[aria-live="polite"],
+.status-announcement[aria-live="assertive"] {
+    clip: auto;
+    position: static;
+    width: auto;
+    height: auto;
+}
