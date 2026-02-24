@@ -1,0 +1,314 @@
+/* ==========================================================================
+   Visual Hierarchy & Mobile Experience Enhancements
+   Improved typography, spacing, and mobile responsiveness
+   ========================================================================== */
+
+/* Enhanced Typography Hierarchy */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(44, 90, 160, 0.15);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 42ch;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 50ch;
+  margin: 0 auto 3rem;
+}
+
+/* Enhanced Card Design */
+.about-card {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 8px 30px rgba(44, 90, 160, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.about-card .card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(44, 90, 160, 0.2));
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Enhanced Button Styles */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 48px; /* Improved touch targets */
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  box-shadow: 
+    0 4px 15px rgba(44, 90, 160, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 30px rgba(44, 90, 160, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+/* Improved Spacing System */
+.hero {
+  padding: clamp(6rem, 15vh, 10rem) 0 clamp(4rem, 10vh, 8rem);
+}
+
+.section {
+  padding: clamp(4rem, 10vh, 8rem) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+/* Enhanced Mobile Navigation */
+@media (max-width: 768px) {
+  .nav {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    border-radius: 0 0 20px 20px;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-menu-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(44, 90, 160, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Enhanced Mobile Hero */
+@media (max-width: 768px) {
+  .hero-container {
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Enhanced Card Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Enhanced Accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: 500;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus indicators */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.accessibility-toggle:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Enhanced Loading States */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed nav */
+}
+
+/* Improved Focus Management */
+.nav-link:focus,
+.btn:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Enhanced Visual Feedback */
+.card-hover-effect {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+}
+
+/* Better contrast ratios */
+.text-muted {
+  color: var(--neutral-600); /* Improved contrast */
+}
+
+/* Enhanced print styles */
+@media print {
+  .nav,
+  .accessibility-panel,
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  .hero,
+  .section {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .btn {
+    border: 2px solid black !important;
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .about-card,
+  .card-hover-effect {
+    transition: none;
+  }
+  
+  .btn:hover,
+  .about-card:hover,
+  .card-hover-effect:hover {
+    transform: none;
+  }
+  
+  .btn.loading::after {
+    animation: none;
+  }
+}

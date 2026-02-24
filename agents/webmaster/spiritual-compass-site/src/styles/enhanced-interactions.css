@@ -1,0 +1,447 @@
+/* ==========================================================================
+   Enhanced Interactions & Loading States
+   Premium micro-interactions and smooth transitions
+   ========================================================================== */
+
+/* ==========================================================================
+   Enhanced Loading States
+   ========================================================================== */
+
+.loading-skeleton {
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-alt) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 2s infinite;
+  border-radius: var(--radius);
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+[data-motion="reduced"] .loading-skeleton {
+  animation: none;
+  background: var(--surface-alt);
+}
+
+/* Content Loading States */
+.content-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: content-shimmer 2s infinite;
+  z-index: 1;
+}
+
+@keyframes content-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+[data-motion="reduced"] .content-loading::after {
+  display: none;
+}
+
+/* Elegant Loading Spinner */
+.spiritual-spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: var(--space-4) auto;
+}
+
+.spiritual-spinner::before {
+  content: '🧭';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--text-2xl);
+  animation: gentle-rotate 3s linear infinite;
+}
+
+.spiritual-spinner::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+[data-motion="reduced"] .spiritual-spinner::before,
+[data-motion="reduced"] .spiritual-spinner::after {
+  animation: none;
+}
+
+/* ==========================================================================
+   Enhanced Hover States
+   ========================================================================== */
+
+.interactive-glow {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.interactive-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color)30,
+    var(--secondary-color)30,
+    var(--accent-color)30
+  );
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-base);
+  filter: blur(8px);
+}
+
+.interactive-glow:hover::before {
+  opacity: 1;
+}
+
+[data-motion="reduced"] .interactive-glow::before {
+  display: none;
+}
+
+/* ==========================================================================
+   Micro-interactions
+   ========================================================================== */
+
+.pulse-on-hover {
+  transition: all var(--transition-base);
+}
+
+.pulse-on-hover:hover {
+  animation: gentle-pulse 0.6s ease-in-out;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+[data-motion="reduced"] .pulse-on-hover:hover {
+  animation: none;
+  transform: scale(1.02);
+}
+
+/* Enhanced Focus States */
+.enhanced-focus {
+  transition: all var(--transition-fast);
+}
+
+.enhanced-focus:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 2px var(--background),
+    0 0 0 4px var(--primary-color),
+    0 4px 12px rgba(44, 90, 160, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Smooth Page Transitions
+   ========================================================================== */
+
+.page-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.page-transition.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-motion="reduced"] .page-transition {
+  transition-duration: 0.2s;
+}
+
+/* Staggered animations for lists */
+.stagger-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stagger-in:nth-child(1) { transition-delay: 0.1s; }
+.stagger-in:nth-child(2) { transition-delay: 0.2s; }
+.stagger-in:nth-child(3) { transition-delay: 0.3s; }
+.stagger-in:nth-child(4) { transition-delay: 0.4s; }
+.stagger-in:nth-child(5) { transition-delay: 0.5s; }
+.stagger-in:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-motion="reduced"] .stagger-in {
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+}
+
+/* ==========================================================================
+   Enhanced Card Interactions
+   ========================================================================== */
+
+.premium-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left var(--transition-slow);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.6);
+  border-color: rgba(44, 90, 160, 0.3);
+}
+
+.premium-card:hover::before {
+  left: 100%;
+}
+
+[data-motion="reduced"] .premium-card:hover::before {
+  display: none;
+}
+
+/* ==========================================================================
+   Enhanced Button States
+   ========================================================================== */
+
+.btn-enhanced {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.btn-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease-out;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.btn-enhanced:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-enhanced > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-motion="reduced"] .btn-enhanced::before {
+  display: none;
+}
+
+/* ==========================================================================
+   Toast Notifications (for user feedback)
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: linear-gradient(135deg, var(--background), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(10px);
+  z-index: var(--z-toast);
+  transform: translateX(400px);
+  opacity: 0;
+  transition: all var(--transition-base);
+  max-width: 400px;
+}
+
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast.success {
+  border-left: 4px solid var(--success-color);
+}
+
+.toast.error {
+  border-left: 4px solid var(--error-color);
+}
+
+.toast.info {
+  border-left: 4px solid var(--primary-color);
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.toast-icon {
+  font-size: var(--text-lg);
+}
+
+.toast-message {
+  flex: 1;
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius);
+  transition: all var(--transition-fast);
+}
+
+.toast-close:hover {
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+/* ==========================================================================
+   Progressive Enhancement Classes
+   ========================================================================== */
+
+.js-only {
+  display: none;
+}
+
+.js-enabled .js-only {
+  display: block;
+}
+
+.no-js .js-fallback {
+  display: block;
+}
+
+.js-enabled .js-fallback {
+  display: none;
+}
+
+/* ==========================================================================
+   Responsive Micro-interactions
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .toast {
+    left: var(--space-2);
+    right: var(--space-2);
+    transform: translateY(-100px);
+  }
+  
+  .toast.show {
+    transform: translateY(0);
+  }
+  
+  /* Reduce motion on mobile for better performance */
+  .premium-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ==========================================================================
+   Dark Mode Enhancements
+   ========================================================================== */
+
+[data-theme="dark"] .premium-card {
+  background: linear-gradient(135deg, rgba(41, 37, 36, 0.9), rgba(68, 64, 60, 0.7));
+  border-color: rgba(168, 162, 158, 0.2);
+}
+
+[data-theme="dark"] .toast {
+  background: linear-gradient(135deg, var(--surface), var(--surface-alt));
+}
+
+[data-theme="dark"] .loading-skeleton {
+  background: linear-gradient(90deg, var(--neutral-800) 25%, var(--neutral-700) 50%, var(--neutral-800) 75%);
+  background-size: 200% 100%;
+}
+
+/* ==========================================================================
+   Print Styles (for quotes/wisdom sharing)
+   ========================================================================== */
+
+@media print {
+  .interactive-glow::before,
+  .premium-card::before,
+  .btn-enhanced::before {
+    display: none;
+  }
+  
+  .wisdom-card {
+    box-shadow: none;
+    border: 2px solid var(--border);
+    background: var(--background);
+  }
+  
+  .btn {
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+  }
+}
