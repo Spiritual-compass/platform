@@ -1,0 +1,287 @@
+/* 🌙 DARK MODE STYLES - Spiritual Compass */
+
+:root {
+    --transition-theme: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --text-primary: #e6edf3;
+    --text-secondary: #9198a1;
+    --text-muted: #656d76;
+    
+    --accent-gold: #ffd700;
+    --accent-purple: #a855f7;
+    --accent-blue: #4fb3f9;
+    
+    --nav-bg: rgba(13, 17, 23, 0.95);
+    --card-bg: rgba(33, 38, 45, 0.8);
+    --border-color: #30363d;
+    
+    --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(168, 85, 247, 0.1);
+    
+    /* Spiritual gradient overlays for dark mode */
+    --gradient-mystical: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(13, 17, 23, 0.9) 100%);
+    --gradient-sacred: linear-gradient(45deg, rgba(255, 215, 0, 0.05) 0%, rgba(13, 17, 23, 0.95) 100%);
+}
+
+/* Theme transition for all elements */
+*, *::before, *::after {
+    transition: var(--transition-theme);
+}
+
+/* Dark mode body styles */
+[data-theme="dark"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+}
+
+/* Navigation dark mode */
+[data-theme="dark"] .nav {
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+}
+
+[data-theme="dark"] .nav-link {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+    color: var(--accent-gold);
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+[data-theme="dark"] .nav-logo .logo-text {
+    color: var(--text-primary);
+}
+
+/* Hero section dark mode */
+[data-theme="dark"] .hero {
+    background: var(--gradient-mystical);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-title {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-purple) 50%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="dark"] .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Cards and content dark mode */
+[data-theme="dark"] .card,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .tradition-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-dark);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .tradition-card:hover {
+    box-shadow: var(--shadow-glow);
+    border-color: var(--accent-purple);
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .feature-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-description,
+[data-theme="dark"] .feature-description {
+    color: var(--text-secondary);
+}
+
+/* Buttons dark mode */
+[data-theme="dark"] .btn-primary {
+    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: var(--card-bg);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+/* Form inputs dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Quote sections dark mode */
+[data-theme="dark"] .daily-quote,
+[data-theme="dark"] .quote-container {
+    background: var(--gradient-sacred);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: var(--shadow-dark);
+}
+
+[data-theme="dark"] .quote-text {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .quote-author {
+    color: var(--accent-gold);
+}
+
+/* Footer dark mode */
+[data-theme="dark"] .footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .footer-link {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-link:hover {
+    color: var(--accent-gold);
+}
+
+/* Dark mode toggle button styles */
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: var(--border-color, #ddd);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: var(--transition-theme);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    margin-left: 1rem;
+}
+
+.theme-toggle::before {
+    content: '☀️';
+    position: absolute;
+    left: 6px;
+    font-size: 16px;
+    transition: var(--transition-theme);
+    z-index: 2;
+}
+
+.theme-toggle::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    left: 3px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: var(--accent-purple);
+}
+
+[data-theme="dark"] .theme-toggle::before {
+    content: '🌙';
+    left: auto;
+    right: 6px;
+}
+
+[data-theme="dark"] .theme-toggle::after {
+    transform: translateX(30px);
+    background: var(--bg-primary);
+}
+
+/* Responsive dark mode adjustments */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 50px;
+        height: 25px;
+        margin-left: 0.5rem;
+    }
+    
+    .theme-toggle::after {
+        width: 19px;
+        height: 19px;
+    }
+    
+    [data-theme="dark"] .theme-toggle::after {
+        transform: translateX(25px);
+    }
+}
+
+/* Dark mode accessibility */
+[data-theme="dark"] .sr-only {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] :focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* Smooth theme transition on initial load */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --transition-theme: none;
+    }
+}
+
+/* Print styles for dark mode */
+@media print {
+    [data-theme="dark"] * {
+        background: white !important;
+        color: black !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+}
