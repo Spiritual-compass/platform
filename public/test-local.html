@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL TEST - Spiritual Compass</title>
+    
+    <!-- Essential Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Essential CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/unified-fixes.css">
+    
+    <style>
+        /* Quick test styles */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            min-height: 100vh;
+        }
+        .content {
+            padding: 100px 20px 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-card {
+            background: var(--bg-secondary, #f5f5f5);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color, #ddd);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Test</a>
+                <a href="#" class="nav-link">Contact</a>
+                <!-- Dark mode toggle will be added here by JS -->
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Test Content -->
+    <div class="content">
+        <h1>LOCAL TESTING - Dark Mode & Mobile Nav</h1>
+        
+        <div class="test-card">
+            <h2>Test Card 1</h2>
+            <p>This text should be properly contrasted in both light and dark modes. In light mode, it should be dark text on light background. In dark mode, it should be light text on dark background.</p>
+        </div>
+        
+        <div class="test-card">
+            <h3>Dark Mode Testing</h3>
+            <p>Look for the dark mode toggle in the navigation bar. It should be a moon (🌙) in light mode and sun (☀️) in dark mode.</p>
+            <ul>
+                <li>Click the toggle to switch themes</li>
+                <li>Refresh the page - theme should persist</li>
+                <li>Try keyboard shortcut: Ctrl/Cmd + Shift + D</li>
+            </ul>
+        </div>
+        
+        <div class="test-card">
+            <h3>Mobile Navigation Testing</h3>
+            <p>Resize your browser to mobile width (< 768px) or use device emulation:</p>
+            <ul>
+                <li>Navigation links should hide</li>
+                <li>Hamburger menu (≡) should appear</li>
+                <li>Click hamburger to open mobile menu</li>
+                <li>Menu should slide down with all navigation links</li>
+                <li>Click outside or on a link to close menu</li>
+            </ul>
+        </div>
+        
+        <div class="test-card">
+            <h3>Cross-Page Consistency Test</h3>
+            <p>The dark mode toggle should appear on ALL pages in the same position in the navigation.</p>
+        </div>
+    </div>
+
+    <!-- Essential JavaScript -->
+    <script src="/scripts/unified-functionality.js"></script>
+</body>
+</html>
