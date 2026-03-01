@@ -116,6 +116,378 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 }
             ]
+        },
+        'deep-contemplative-practice': {
+            title: 'Deep Contemplative Practice',
+            icon: '🧘‍♂️',
+            duration: '12 weeks',
+            commitment: '30-45 min/day',
+            level: 'Advanced',
+            description: 'Develop a mature contemplative practice drawing from mystical traditions across cultures. This intensive program guides experienced practitioners into deeper states of awareness and union with the Divine.',
+            weeks: [
+                {
+                    week: 1,
+                    title: 'Establishing Sacred Rhythm',
+                    practices: [
+                        'Day 1-2: Create dedicated sacred space and ritual preparation',
+                        'Day 3-4: Establish consistent 30-minute silent meditation',
+                        'Day 5-7: Lectio Divina with mystical texts (Meister Eckhart, Rumi, etc.)'
+                    ]
+                },
+                {
+                    week: 2,
+                    title: 'Breathing into Depth',
+                    practices: [
+                        'Day 8-10: Advanced pranayama and breath awareness techniques',
+                        'Day 11-12: Hesychast breathing prayer (Jesus Prayer tradition)',
+                        'Day 13-14: Sufi breathing practices and dhikr integration'
+                    ]
+                },
+                {
+                    week: 3,
+                    title: 'Contemplative Silence',
+                    practices: [
+                        'Day 15-17: Extended periods of wordless contemplation (20-30 min)',
+                        'Day 18-19: Cloud of Unknowing apophatic prayer methods',
+                        'Day 20-21: Zen shikantaza (just sitting) practice'
+                    ]
+                },
+                {
+                    week: 4,
+                    title: 'Working with Spiritual Experiences',
+                    practices: [
+                        'Day 22-24: Discernment of authentic vs. illusory spiritual experiences',
+                        'Day 25-26: Integration of visions, insights, and mystical moments',
+                        'Day 27-28: Navigating spiritual dryness and dark nights'
+                    ]
+                },
+                {
+                    week: 5,
+                    title: 'Non-Dual Awareness Foundations',
+                    practices: [
+                        'Day 29-31: Advaita Vedanta self-inquiry (Who am I? meditation)',
+                        'Day 32-33: Christian non-dual contemplation (centering prayer)',
+                        'Day 34-35: Buddhist emptiness meditation (Madhyamika practices)'
+                    ]
+                },
+                {
+                    week: 6,
+                    title: 'Mystical Union Practices',
+                    practices: [
+                        'Day 36-38: Islamic fana (self-annihilation) contemplation',
+                        'Day 39-40: Kabbalistic merkabah meditation and divine names',
+                        'Day 41-42: Hindu samadhi preparation and one-pointed focus'
+                    ]
+                },
+                {
+                    week: 7,
+                    title: 'Integration of Shadow Work',
+                    practices: [
+                        'Day 43-45: Confronting unconscious spiritual bypassing',
+                        'Day 46-47: Contemplative examination of psychological patterns',
+                        'Day 48-49: Healing meditation for wounded aspects of self'
+                    ]
+                },
+                {
+                    week: 8,
+                    title: 'Advanced Prayer Forms',
+                    practices: [
+                        'Day 50-52: Ignatian contemplation with Gospel scenes',
+                        'Day 53-54: Tibetan deity visualization and mantra practice',
+                        'Day 55-56: Indigenous shamanic journey work and spirit communion'
+                    ]
+                },
+                {
+                    week: 9,
+                    title: 'Contemplative Living Integration',
+                    practices: [
+                        'Day 57-59: Continuous prayer and presence throughout daily activities',
+                        'Day 60-61: Contemplative eating, walking, and working practices',
+                        'Day 62-63: Maintaining contemplative awareness in relationships'
+                    ]
+                },
+                {
+                    week: 10,
+                    title: 'Advanced Discernment',
+                    practices: [
+                        'Day 64-66: Distinguishing between ego, soul, and Divine guidance',
+                        'Day 67-68: Reading the movements of consolation and desolation',
+                        'Day 69-70: Discerning authentic from counterfeit mystical experience'
+                    ]
+                },
+                {
+                    week: 11,
+                    title: 'Preparing for Deeper Mysteries',
+                    practices: [
+                        'Day 71-73: 45-minute periods of pure contemplative silence',
+                        'Day 74-75: Preparation for potential dark night experiences',
+                        'Day 76-77: Surrender practices and radical letting go'
+                    ]
+                },
+                {
+                    week: 12,
+                    title: 'Living from Union',
+                    practices: [
+                        'Day 78-80: Integration of contemplative insights into service',
+                        'Day 81-82: Contemplative response to suffering and injustice',
+                        'Day 83-84: Establishing lifelong contemplative practice rhythm'
+                    ]
+                }
+            ]
+        },
+        'spiritual-leadership': {
+            title: 'Spiritual Leadership',
+            icon: '🏛️',
+            duration: '10 weeks',
+            commitment: '30 min/day',
+            level: 'Advanced',
+            description: 'Develop the skills, wisdom, and maturity needed to guide others on their spiritual journeys. This program combines contemplative practice with practical leadership training rooted in spiritual principles.',
+            weeks: [
+                {
+                    week: 1,
+                    title: 'Foundations of Spiritual Authority',
+                    practices: [
+                        'Day 1-2: Self-examination of motivations for spiritual leadership',
+                        'Day 3-4: Study of servant leadership across wisdom traditions',
+                        'Day 5-7: Personal inventory of spiritual gifts and calling'
+                    ]
+                },
+                {
+                    week: 2,
+                    title: 'Holding Sacred Space',
+                    practices: [
+                        'Day 8-10: Creating containers for others\' spiritual experience',
+                        'Day 11-12: Managing group energy and spiritual dynamics',
+                        'Day 13-14: Establishing appropriate boundaries and sacred presence'
+                    ]
+                },
+                {
+                    week: 3,
+                    title: 'Deep Listening and Presence',
+                    practices: [
+                        'Day 15-17: Contemplative listening beyond words to soul movement',
+                        'Day 18-19: Discerning when to speak, when to remain silent',
+                        'Day 20-21: Practicing non-judgmental witnessing of others\' journeys'
+                    ]
+                },
+                {
+                    week: 4,
+                    title: 'Offering Spiritual Guidance',
+                    practices: [
+                        'Day 22-24: Discerning authentic guidance from personal projection',
+                        'Day 25-26: Asking powerful questions that invite deeper reflection',
+                        'Day 27-28: Offering wisdom without creating spiritual dependency'
+                    ]
+                },
+                {
+                    week: 5,
+                    title: 'Working with Spiritual Crises',
+                    practices: [
+                        'Day 29-31: Supporting others through dark nights of the soul',
+                        'Day 32-33: Recognizing when to refer to mental health professionals',
+                        'Day 34-35: Holding space for doubt, anger, and spiritual rebellion'
+                    ]
+                },
+                {
+                    week: 6,
+                    title: 'Building Spiritual Community',
+                    practices: [
+                        'Day 36-38: Fostering authentic spiritual fellowship vs. religious social club',
+                        'Day 39-40: Facilitating group spiritual practices and shared contemplation',
+                        'Day 41-42: Managing conflicts and personality clashes in spiritual settings'
+                    ]
+                },
+                {
+                    week: 7,
+                    title: 'Cross-Tradition Competency',
+                    practices: [
+                        'Day 43-45: Understanding and honoring different spiritual languages',
+                        'Day 46-47: Bridging between traditions without syncretistic confusion',
+                        'Day 48-49: Supporting seekers from backgrounds different from your own'
+                    ]
+                },
+                {
+                    week: 8,
+                    title: 'Ethical Leadership and Power Dynamics',
+                    practices: [
+                        'Day 50-52: Recognizing and avoiding spiritual abuse patterns',
+                        'Day 53-54: Maintaining humility and continuing as lifelong student',
+                        'Day 55-56: Handling projection, idealization, and spiritual transference'
+                    ]
+                },
+                {
+                    week: 9,
+                    title: 'Advanced Facilitation Skills',
+                    practices: [
+                        'Day 57-59: Leading group meditation, prayer, and contemplative practices',
+                        'Day 60-61: Facilitating spiritual direction and one-on-one guidance',
+                        'Day 62-63: Teaching spiritual practices without losing their mystery'
+                    ]
+                },
+                {
+                    week: 10,
+                    title: 'Sustainable Ministry and Self-Care',
+                    practices: [
+                        'Day 64-66: Maintaining your own contemplative practice while serving others',
+                        'Day 67-68: Creating support systems and peer supervision',
+                        'Day 69-70: Integration and commitment to ongoing formation'
+                    ]
+                }
+            ]
+        },
+        'world-religions-integration': {
+            title: 'World Religions Integration',
+            icon: '🌍',
+            duration: '16 weeks',
+            commitment: '45 min/day',
+            level: 'Advanced',
+            description: 'A comprehensive exploration and integration of wisdom from major world religions while deepening your personal spiritual path. This advanced program requires substantial commitment and open-hearted engagement with diverse traditions.',
+            weeks: [
+                {
+                    week: 1,
+                    title: 'Sacred Foundation and Intentions',
+                    practices: [
+                        'Day 1-2: Setting intentions for interfaith exploration without losing your center',
+                        'Day 3-4: Contemplative study of religious pluralism and universal principles',
+                        'Day 5-7: Daily practice of gratitude for world\'s spiritual diversity'
+                    ]
+                },
+                {
+                    week: 2,
+                    title: 'Abrahamic Traditions Deep Dive',
+                    practices: [
+                        'Day 8-9: Jewish contemplative practices - Shema meditation and Kabbalistic study',
+                        'Day 10-11: Christian mystical tradition - Lectio Divina and contemplative prayer',
+                        'Day 12-14: Islamic spirituality - Dhikr, Sufi practices, and 99 Names meditation'
+                    ]
+                },
+                {
+                    week: 3,
+                    title: 'Eastern Wisdom Traditions I',
+                    practices: [
+                        'Day 15-17: Hindu contemplative paths - Bhakti, Raja, and Jnana Yoga practices',
+                        'Day 18-19: Buddhist meditation - Vipassana insight and loving-kindness practices',
+                        'Day 20-21: Integration period - finding common threads and unique gifts'
+                    ]
+                },
+                {
+                    week: 4,
+                    title: 'Eastern Wisdom Traditions II',
+                    practices: [
+                        'Day 22-24: Taoist practices - Wu Wei meditation and Tao Te Ching contemplation',
+                        'Day 25-26: Zen Buddhist practices - Zazen and koan study',
+                        'Day 27-28: Confucian ethical contemplation and ancestor reverence practices'
+                    ]
+                },
+                {
+                    week: 5,
+                    title: 'Indigenous and Earth-Based Spiritualities',
+                    practices: [
+                        'Day 29-31: Native American spiritual practices - Medicine wheel and nature communion',
+                        'Day 32-33: African traditional spirituality - Ancestral wisdom and community ritual',
+                        'Day 34-35: Celtic and Norse earth-based practices - Seasonal celebrations and mythology'
+                    ]
+                },
+                {
+                    week: 6,
+                    title: 'Mystical and Esoteric Traditions',
+                    practices: [
+                        'Day 36-38: Gnostic Christianity - Contemplation of hidden gospels and divine spark',
+                        'Day 39-40: Hermetic traditions - As above, so below meditation practices',
+                        'Day 41-42: Sufi mysticism deep dive - Whirling, sacred geometry, and divine love'
+                    ]
+                },
+                {
+                    week: 7,
+                    title: 'Modern Spiritual Movements',
+                    practices: [
+                        'Day 43-45: Theosophy and Universal teachings - Perennial philosophy study',
+                        'Day 46-47: New Thought and metaphysical Christianity - Consciousness practices',
+                        'Day 48-49: Contemporary integral spirituality - Ken Wilber and developmental models'
+                    ]
+                },
+                {
+                    week: 8,
+                    title: 'Sacred Text Comparative Study',
+                    practices: [
+                        'Day 50-52: Comparative study of creation stories across traditions',
+                        'Day 53-54: Universal themes of salvation/liberation in world scriptures',
+                        'Day 55-56: Mystical poetry - Rumi, Hafez, St. John of the Cross, Mirabai'
+                    ]
+                },
+                {
+                    week: 9,
+                    title: 'Ritual and Ceremonial Integration',
+                    practices: [
+                        'Day 57-59: Creating personal ritual drawing from multiple traditions',
+                        'Day 60-61: Understanding symbol, metaphor, and archetype across cultures',
+                        'Day 62-63: Seasonal and lunar practices from various traditions'
+                    ]
+                },
+                {
+                    week: 10,
+                    title: 'Ethics and Social Justice Across Traditions',
+                    practices: [
+                        'Day 64-66: Comparative study of ethical teachings - Golden Rule variations',
+                        'Day 67-68: Social justice imperatives across religious traditions',
+                        'Day 69-70: Environmental stewardship from multiple spiritual perspectives'
+                    ]
+                },
+                {
+                    week: 11,
+                    title: 'Navigating Religious Differences',
+                    practices: [
+                        'Day 71-73: Dealing with contradictions and theological disagreements',
+                        'Day 74-75: Maintaining spiritual integrity while embracing diversity',
+                        'Day 76-77: Dialogue skills for interfaith understanding and cooperation'
+                    ]
+                },
+                {
+                    week: 12,
+                    title: 'Death and Afterlife Contemplations',
+                    practices: [
+                        'Day 78-80: Comparative study of death and afterlife across traditions',
+                        'Day 81-82: Tibetan Bardo teachings and Christian mystical death',
+                        'Day 83-84: Egyptian, Hindu, and indigenous perspectives on soul journey'
+                    ]
+                },
+                {
+                    week: 13,
+                    title: 'Universal Mystical Experience',
+                    practices: [
+                        'Day 85-87: Study of common mystical phenomena across traditions',
+                        'Day 88-89: Personal mystical experiences interpretation and integration',
+                        'Day 90-91: Unitive consciousness practices from multiple paths'
+                    ]
+                },
+                {
+                    week: 14,
+                    title: 'Personal Synthesis Development',
+                    practices: [
+                        'Day 92-94: Creating your personal interfaith spiritual practice',
+                        'Day 95-96: Identifying your primary tradition while honoring others',
+                        'Day 97-98: Developing your unique spiritual vocabulary and understanding'
+                    ]
+                },
+                {
+                    week: 15,
+                    title: 'Living Interfaith Spirituality',
+                    practices: [
+                        'Day 99-101: Practical application in daily life and relationships',
+                        'Day 102-103: Sharing wisdom without proselytizing or syncretic confusion',
+                        'Day 104-105: Building bridges while maintaining authentic spiritual identity'
+                    ]
+                },
+                {
+                    week: 16,
+                    title: 'Integration and Ongoing Journey',
+                    practices: [
+                        'Day 106-108: Final integration of learnings and continued growth planning',
+                        'Day 109-110: Commitment to ongoing interfaith dialogue and learning',
+                        'Day 111-112: Establishing sustainable practice honoring world spiritual wisdom'
+                    ]
+                }
+            ]
         }
     };
 
