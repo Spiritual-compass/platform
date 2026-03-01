@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/styles/loading-animations.css">
     <link rel="stylesheet" href="/styles/enhanced-navigation.css">
     <link rel="stylesheet" href="/styles/content-pages.css">
-    <link rel="stylesheet" href="/styles/dark-mode-unified.css">
+
     <link rel="stylesheet" href="/styles/interactive-compass.css">
     <link rel="stylesheet" href="/styles/cookie-consent.css">
 </head>
@@ -44,11 +44,7 @@
                 <a href="#practices" class="nav-link">Practices</a>
                 <a href="#teachings" class="nav-link">Teachings</a>
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
         </div>
     </nav>
 
@@ -282,6 +278,170 @@
     <!-- Back to top button -->
     <button class="back-to-top" aria-label="Back to top">↑</button>
 
+    <!-- Service Worker Registration -->
+    <script>
+        // Service Worker Registration - Offline Support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    const registration = await navigator.serviceWorker.register('/sw.js', {
+                        scope: '/'
+                    });
+                    
+                    console.log('Service Worker: Registration successful', registration.scope);
+                    
+                    // Listen for service worker updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        console.log('Service Worker: Update found, installing new version');
+                        
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // New service worker is available
+                                console.log('Service Worker: New version available');
+                                
+                                // Show update notification (optional)
+                                if (window.showUpdateNotification) {
+                                    window.showUpdateNotification();
+                                }
+                            }
+                        });
+                    });
+                    
+                    // Handle service worker messages
+                    navigator.serviceWorker.addEventListener('message', event => {
+                        const { data } = event;
+                        
+                        if (data.type === 'CACHE_UPDATED') {
+                            console.log('Service Worker: Cache updated successfully');
+                        } else if (data.type === 'OFFLINE_READY') {
+                            console.log('Service Worker: Offline functionality ready');
+                        }
+                    });
+                    
+                    // Check if we're back online and refresh if needed
+                    window.addEventListener('online', () => {
+                        console.log('Network: Back online');
+                        
+                        // Verify actual connectivity
+                        fetch('/', { method: 'HEAD', cache: 'no-cache' })
+                            .then(() => {
+                                console.log('Network: Connection verified');
+                            })
+                            .catch(() => {
+                                console.log('Network: Still having connection issues');
+                            });
+                    });
+                    
+                    window.addEventListener('offline', () => {
+                        console.log('Network: Gone offline - cached content available');
+                    });
+                    
+                    // Expose service worker API for cache management
+                    window.serviceWorkerAPI = {
+                        getCacheSize: () => {
+                            return new Promise((resolve) => {
+                                const messageChannel = new MessageChannel();
+                                messageChannel.port1.onmessage = (event) => {
+                                    resolve(event.data.size);
+                                };
+                                registration.active?.postMessage(
+                                    { type: 'GET_CACHE_SIZE' },
+                                    [messageChannel.port2]
+                                );
+                            });
+                        },
+                        
+                        clearCache: () => {
+                            return new Promise((resolve) => {
+                                const messageChannel = new MessageChannel();
+                                messageChannel.port1.onmessage = (event) => {
+                                    resolve(event.data.success);
+                                };
+                                registration.active?.postMessage(
+                                    { type: 'CLEAR_CACHE' },
+                                    [messageChannel.port2]
+                                );
+                            });
+                        },
+                        
+                        updateCache: () => {
+                            return new Promise((resolve) => {
+                                const messageChannel = new MessageChannel();
+                                messageChannel.port1.onmessage = (event) => {
+                                    resolve(event.data.success);
+                                };
+                                registration.active?.postMessage(
+                                    { type: 'UPDATE_CACHE' },
+                                    [messageChannel.port2]
+                                );
+                            });
+                        }
+                    };
+                    
+                } catch (error) {
+                    console.error('Service Worker: Registration failed', error);
+                }
+            });
+        } else {
+            console.log('Service Worker: Not supported in this browser');
+        }
+        
+        // Optional: Show update notification
+        window.showUpdateNotification = () => {
+            // Simple notification - can be enhanced with toast or modal
+            if (window.confirm('🔄 A new version is available! Refresh to update?')) {
+                window.location.reload();
+            }
+        };
+        
+        // Cache status indicator (optional UI enhancement)
+        window.addEventListener('load', () => {
+            if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+                console.log('🧭 Spiritual Compass: Offline support enabled ✨');
+                
+                // Optional: Add cache status to page
+                const addCacheStatus = () => {
+                    const statusDiv = document.createElement('div');
+                    statusDiv.id = 'cache-status';
+                    statusDiv.style.cssText = `
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        background: rgba(102, 126, 234, 0.9);
+                        color: white;
+                        padding: 8px 16px;
+                        border-radius: 20px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        z-index: 1000;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        backdrop-filter: blur(10px);
+                        pointer-events: none;
+                    `;
+                    statusDiv.textContent = '📱 Offline Ready';
+                    document.body.appendChild(statusDiv);
+                    
+                    // Show for 3 seconds
+                    setTimeout(() => {
+                        statusDiv.style.opacity = '1';
+                        setTimeout(() => {
+                            statusDiv.style.opacity = '0';
+                            setTimeout(() => statusDiv.remove(), 300);
+                        }, 3000);
+                    }, 1000);
+                };
+                
+                // Only show on first visit or after updates
+                if (!localStorage.getItem('sw-notification-shown')) {
+                    addCacheStatus();
+                    localStorage.setItem('sw-notification-shown', 'true');
+                }
+            }
+        });
+    </script>
+
     <script src="/scripts/expanded-quotes.js"></script>
     <script src="/scripts/wisdom.js"></script>
     <script src="/scripts/main.js"></script>
@@ -289,7 +449,7 @@
     <script src="/scripts/toast-notifications.js"></script>
     <script src="/scripts/enhanced-animations.js"></script>
     <script src="/scripts/enhanced-navigation.js"></script>
-    <script src="/scripts/theme-manager.js"></script>
+
     <script src="/scripts/interactive-compass.js"></script>
     <script src="/scripts/cookie-consent.js"></script>
     <script src="/scripts/analytics.js"></script>
