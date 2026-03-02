@@ -1,0 +1,9 @@
+tunnel: fec83a94-08b6-4796-add7-faa573ea6598
+credentials-file: /home/gaur/.cloudflared/fec83a94-08b6-4796-add7-faa573ea6598.json
+
+ingress:
+  - hostname: dev.solobot.spiritual-compass.com
+    service: http://localhost:8080
+  - hostname: solobot.spiritual-compass.com
+    service: http://localhost:18789
+  - service: http_status:404
