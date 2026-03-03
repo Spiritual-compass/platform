@@ -1,0 +1,221 @@
+/* PEACEFUL BACKGROUND IMAGES SYSTEM */
+/* Beautiful, serene backgrounds that inspire faith and inner peace */
+
+:root {
+    /* Peaceful background variables */
+    --bg-opacity: 0.15;
+    --overlay-color: rgba(248, 249, 250, 0.85);
+    --text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Peaceful Background Images Collection */
+/* Using high-quality, license-free nature imagery that inspires peace and reflection */
+
+.peaceful-bg-sunrise {
+    background: 
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><radialGradient id="sunrise" cx="50%" cy="70%"><stop offset="0%" stop-color="%23FFD700" stop-opacity="0.8"/><stop offset="40%" stop-color="%23FF8C69" stop-opacity="0.6"/><stop offset="70%" stop-color="%23FF6B6B" stop-opacity="0.4"/><stop offset="100%" stop-color="%234682B4" stop-opacity="0.8"/></radialGradient><linearGradient id="mountain" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%23E6F3FF"/><stop offset="50%" stop-color="%23B8E6B8"/><stop offset="100%" stop-color="%232F4F4F"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23sunrise)"/><path d="M0,800 L0,600 L200,400 L400,500 L600,300 L800,450 L1000,250 L1200,350 L1200,800 Z" fill="url(%23mountain)" opacity="0.7"/><circle cx="600" cy="560" r="80" fill="%23FFD700" opacity="0.6"/></svg>'),
+        linear-gradient(135deg, #87CEEB 0%, #FFE4B5 50%, #F0E68C 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: center, center, center;
+    background-attachment: fixed;
+}
+
+.peaceful-bg-mountain {
+    background: 
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="100%" stop-color="%23B0E0E6"/></linearGradient><linearGradient id="peaks" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%23D3D3D3"/><stop offset="100%" stop-color="%23696969"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23sky)"/><path d="M0,800 L0,500 L150,200 L300,400 L450,150 L600,350 L750,100 L900,300 L1050,180 L1200,280 L1200,800 Z" fill="url(%23peaks)" opacity="0.8"/><path d="M0,800 L0,550 L120,300 L280,450 L420,250 L580,400 L720,200 L880,350 L1020,280 L1200,380 L1200,800 Z" fill="%234682B4" opacity="0.6"/></svg>'),
+        linear-gradient(135deg, #4682B4 0%, #87CEEB 50%, #B0E0E6 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: center, center, center;
+    background-attachment: fixed;
+}
+
+.peaceful-bg-forest {
+    background: 
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="forest-sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2398FB98"/><stop offset="100%" stop-color="%23F0FFF0"/></linearGradient><radialGradient id="sunlight" cx="30%" cy="20%"><stop offset="0%" stop-color="%23FFFFE0" stop-opacity="0.8"/><stop offset="100%" stop-color="%23FFFFE0" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="800" fill="url(%23forest-sky)"/><ellipse cx="360" cy="160" rx="300" ry="100" fill="url(%23sunlight)"/><rect x="50" y="400" width="40" height="400" fill="%23228B22" opacity="0.8"/><rect x="150" y="350" width="50" height="450" fill="%23006400" opacity="0.8"/><rect x="280" y="300" width="45" height="500" fill="%23228B22" opacity="0.8"/><rect x="400" y="250" width="60" height="550" fill="%23006400" opacity="0.8"/><rect x="550" y="320" width="40" height="480" fill="%23228B22" opacity="0.8"/><rect x="680" y="280" width="55" height="520" fill="%23006400" opacity="0.8"/><rect x="820" y="360" width="45" height="440" fill="%23228B22" opacity="0.8"/><rect x="950" y="300" width="50" height="500" fill="%23006400" opacity="0.8"/><rect x="1100" y="380" width="40" height="420" fill="%23228B22" opacity="0.8"/></svg>'),
+        linear-gradient(135deg, #228B22 0%, #98FB98 50%, #F0FFF0 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: center, center, center;
+    background-attachment: fixed;
+}
+
+.peaceful-bg-ocean {
+    background: 
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="ocean-sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="70%" stop-color="%23B0E0E6"/><stop offset="100%" stop-color="%234682B4"/></linearGradient><linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%234682B4"/><stop offset="100%" stop-color="%23191970"/></linearGradient></defs><rect width="1200" height="500" fill="url(%23ocean-sky)"/><rect y="500" width="1200" height="300" fill="url(%23water)"/><path d="M0,500 Q300,480 600,500 T1200,500 L1200,520 Q900,540 600,520 T0,520 Z" fill="%236495ED" opacity="0.8"/><path d="M0,520 Q400,500 800,520 T1200,520 L1200,540 Q800,560 400,540 T0,540 Z" fill="%234169E1" opacity="0.6"/><circle cx="900" cy="150" r="60" fill="%23FFFFE0" opacity="0.9"/></svg>'),
+        linear-gradient(135deg, #4682B4 0%, #87CEEB 50%, #E0F6FF 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: center, center, center;
+    background-attachment: fixed;
+}
+
+.peaceful-bg-meadow {
+    background: 
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="meadow-sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="100%" stop-color="%23E6F3FF"/></linearGradient><radialGradient id="flower" cx="50%" cy="50%"><stop offset="0%" stop-color="%23FF69B4"/><stop offset="100%" stop-color="%23FFB6C1"/></radialGradient></defs><rect width="1200" height="400" fill="url(%23meadow-sky)"/><rect y="400" width="1200" height="400" fill="%2398FB98"/><circle cx="200" cy="600" r="8" fill="url(%23flower)"/><circle cx="350" cy="650" r="8" fill="%23FFD700"/><circle cx="500" cy="580" r="8" fill="%23FF69B4"/><circle cx="650" cy="620" r="8" fill="%23DDA0DD"/><circle cx="800" cy="590" r="8" fill="%23FFD700"/><circle cx="950" cy="640" r="8" fill="%23FF69B4"/><circle cx="1100" cy="610" r="8" fill="%23DDA0DD"/></svg>'),
+        linear-gradient(135deg, #98FB98 0%, #90EE90 50%, #F0FFF0 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: center, center, center;
+    background-attachment: fixed;
+}
+
+/* Background rotation system - different sections get different peaceful backgrounds */
+
+/* Hero section - Sunrise/Dawn inspiration */
+.hero {
+    background: 
+        linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+        linear-gradient(135deg, 
+            #FFD700 0%,     /* Golden sunrise */
+            #FF8C69 25%,    /* Coral morning */
+            #87CEEB 50%,    /* Sky blue */
+            #DDA0DD 75%,    /* Plum clouds */
+            #4682B4 100%    /* Deep sky */
+        ) !important;
+    color: white !important;
+    text-shadow: var(--text-shadow) !important;
+    position: relative !important;
+}
+
+/* About section - Mountain vista */
+#about {
+    background: 
+        linear-gradient(rgba(248,249,250,0.9), rgba(248,249,250,0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="100%" stop-color="%23B0E0E6"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23sky)"/><path d="M0,800 L0,500 L200,300 L400,450 L600,250 L800,400 L1000,200 L1200,350 L1200,800 Z" fill="%23696969" opacity="0.6"/></svg>'),
+        #f8f9fa;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Assessment section - Peaceful meadow */
+#assessment {
+    background: 
+        linear-gradient(rgba(240,255,240,0.9), rgba(240,255,240,0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%2398FB98"/><circle cx="200" cy="400" r="6" fill="%23FFD700"/><circle cx="400" cy="450" r="6" fill="%23FF69B4"/><circle cx="600" cy="350" r="6" fill="%23DDA0DD"/><circle cx="800" cy="420" r="6" fill="%23FFD700"/><circle cx="1000" cy="380" r="6" fill="%23FF69B4"/></svg>'),
+        #F0FFF0;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Wisdom section - Forest sanctuary */
+#wisdom {
+    background: 
+        linear-gradient(rgba(248,255,248,0.9), rgba(248,255,248,0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23228B22" opacity="0.3"/><rect x="100" y="200" width="30" height="400" fill="%23006400" opacity="0.6"/><rect x="300" y="150" width="40" height="450" fill="%23228B22" opacity="0.6"/><rect x="500" y="180" width="35" height="420" fill="%23006400" opacity="0.6"/><rect x="700" y="120" width="45" height="480" fill="%23228B22" opacity="0.6"/><rect x="900" y="160" width="35" height="440" fill="%23006400" opacity="0.6"/><rect x="1100" y="200" width="30" height="400" fill="%23228B22" opacity="0.6"/></svg>'),
+        #F5FFFA;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Practices section - Ocean tranquility */
+#practices {
+    background: 
+        linear-gradient(rgba(240,248,255,0.9), rgba(240,248,255,0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%234682B4"/><stop offset="100%" stop-color="%23191970"/></linearGradient></defs><rect width="1200" height="600" fill="url(%23water)" opacity="0.3"/><path d="M0,300 Q300,280 600,300 T1200,300 L1200,320 Q900,340 600,320 T0,320 Z" fill="%236495ED" opacity="0.4"/></svg>'),
+        #F0F8FF;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Teachings section - Sunset reflection */
+#teachings {
+    background: 
+        linear-gradient(rgba(255,248,240,0.9), rgba(255,248,240,0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><radialGradient id="sunset" cx="80%" cy="20%"><stop offset="0%" stop-color="%23FFD700" stop-opacity="0.8"/><stop offset="50%" stop-color="%23FF8C69" stop-opacity="0.4"/><stop offset="100%" stop-color="%234682B4" stop-opacity="0.2"/></radialGradient></defs><rect width="1200" height="600" fill="url(%23sunset)"/><circle cx="960" cy="120" r="50" fill="%23FFD700" opacity="0.7"/></svg>'),
+        #FFF8DC;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Time-based background rotation */
+.time-dawn { background: var(--dawn-bg) !important; }
+.time-morning { background: var(--morning-bg) !important; }
+.time-afternoon { background: var(--afternoon-bg) !important; }
+.time-evening { background: var(--sunset-bg) !important; }
+.time-night { background: var(--night-bg) !important; }
+
+/* Seasonal background variations */
+.season-spring { filter: hue-rotate(30deg) saturate(1.1); }
+.season-summer { filter: brightness(1.1) saturate(1.2); }
+.season-autumn { filter: hue-rotate(-30deg) saturate(1.1); }
+.season-winter { filter: brightness(0.9) saturate(0.8); }
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    .hero,
+    #about,
+    #assessment,
+    #wisdom,
+    #practices,
+    #teachings {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+    }
+}
+
+/* Accessibility - reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero,
+    #about,
+    #assessment,
+    #wisdom,
+    #practices,
+    #teachings {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Enhanced text readability on peaceful backgrounds */
+.hero h1,
+.hero h2,
+.hero p {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3) !important;
+    position: relative !important;
+}
+
+/* Gentle overlay for better text contrast */
+section.peaceful-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(255,255,255,0.05) 0%, 
+        rgba(255,255,255,0.1) 50%, 
+        rgba(255,255,255,0.05) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+section.peaceful-bg > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Inspired by faith background - subtle cross pattern */
+.spiritual-pattern::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.02) 0%, transparent 20%),
+        radial-gradient(circle at 80% 80%, rgba(74, 144, 164, 0.02) 0%, transparent 20%),
+        radial-gradient(circle at 40% 60%, rgba(143, 188, 143, 0.02) 0%, transparent 20%);
+    background-size: 200px 200px, 150px 150px, 100px 100px;
+    pointer-events: none;
+    z-index: 0;
+}
