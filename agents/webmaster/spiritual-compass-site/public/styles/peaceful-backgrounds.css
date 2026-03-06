@@ -1,0 +1,336 @@
+/* ==========================================================================
+   Peaceful Background Images System
+   Beautiful, serene imagery that inspires faith and inner peace
+   Sunsets, mountains, forests, and spiritual landscapes
+   ========================================================================== */
+
+/* Base peaceful background gradients for immediate loading */
+.peaceful-background {
+  position: relative;
+  overflow: hidden;
+}
+
+/* === SUNSET COLLECTION === */
+.sunset-golden {
+  background: 
+    /* Mountain silhouette */
+    radial-gradient(ellipse 200% 100% at bottom, rgba(0, 0, 0, 0.3) 0%, transparent 50%),
+    /* Golden hour clouds */
+    radial-gradient(ellipse 150% 80% at 30% 20%, rgba(255, 200, 100, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 60% at 70% 30%, rgba(255, 180, 120, 0.25) 0%, transparent 50%),
+    /* Main sunset gradient */
+    linear-gradient(45deg,
+      #ff7e5f 0%,
+      #feb47b 25%,
+      #ff6b6b 50%,
+      #ffa726 75%,
+      #42a5f5 100%
+    );
+}
+
+.sunset-purple {
+  background: 
+    /* Cloud layers */
+    radial-gradient(ellipse 180% 70% at 40% 10%, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 150% 50% at 60% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    /* Purple sunset gradient */
+    linear-gradient(135deg,
+      #667eea 0%,
+      #764ba2 30%,
+      #f093fb 60%,
+      #f5576c 80%,
+      #4facfe 100%
+    );
+}
+
+.sunset-ocean {
+  background: 
+    /* Wave reflections */
+    linear-gradient(0deg, rgba(0, 100, 200, 0.1) 0%, transparent 30%),
+    /* Sunset over water */
+    linear-gradient(180deg,
+      #ffecd2 0%,
+      #fcb69f 30%,
+      #ff8a80 60%,
+      #81c784 80%,
+      #4dd0e1 100%
+    );
+}
+
+/* === MOUNTAIN COLLECTION === */
+.mountain-dawn {
+  background: 
+    /* Mountain peaks (layered) */
+    linear-gradient(0deg, rgba(100, 150, 200, 0.4) 0%, transparent 40%),
+    linear-gradient(0deg, rgba(120, 180, 240, 0.3) 15%, transparent 55%),
+    linear-gradient(0deg, rgba(140, 200, 255, 0.2) 25%, transparent 65%),
+    /* Dawn sky */
+    linear-gradient(45deg,
+      #a8e6cf 0%,
+      #dcedc8 30%,
+      #ffd3a5 60%,
+      #fd9853 80%,
+      #ee9ca7 100%
+    );
+}
+
+.mountain-mist {
+  background: 
+    /* Misty clouds */
+    radial-gradient(ellipse 300% 100% at bottom, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 250% 80% at 20% bottom, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 200% 60% at 80% bottom, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+    /* Mountain base */
+    linear-gradient(135deg,
+      #74b9ff 0%,
+      #81ecec 30%,
+      #a29bfe 60%,
+      #fd79a8 80%,
+      #fdcb6e 100%
+    );
+}
+
+.mountain-snow {
+  background: 
+    /* Snow-capped peaks */
+    linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, transparent 35%),
+    linear-gradient(0deg, rgba(200, 220, 255, 0.2) 10%, transparent 45%),
+    /* Alpine sky */
+    linear-gradient(180deg,
+      #e3f2fd 0%,
+      #bbdefb 30%,
+      #90caf9 60%,
+      #64b5f6 80%,
+      #42a5f5 100%
+    );
+}
+
+/* === FOREST COLLECTION === */
+.forest-morning {
+  background: 
+    /* Tree silhouettes */
+    radial-gradient(ellipse 400% 100% at bottom, rgba(0, 50, 0, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 300% 80% at 30% bottom, rgba(20, 70, 20, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 250% 60% at 70% bottom, rgba(10, 60, 10, 0.15) 0%, transparent 50%),
+    /* Forest morning light */
+    linear-gradient(45deg,
+      #56ab2f 0%,
+      #a8e6cf 30%,
+      #dcedc8 60%,
+      #f8bbd9 80%,
+      #e8cbc0 100%
+    );
+}
+
+.forest-twilight {
+  background: 
+    /* Dense forest shadows */
+    radial-gradient(ellipse 350% 120% at bottom, rgba(0, 20, 40, 0.4) 0%, transparent 80%),
+    /* Twilight filtering through trees */
+    linear-gradient(135deg,
+      #2c3e50 0%,
+      #4a6741 30%,
+      #6a994e 60%,
+      #a7c957 80%,
+      #f2e8cf 100%
+    );
+}
+
+.forest-autumn {
+  background: 
+    /* Autumn foliage layers */
+    radial-gradient(ellipse 300% 90% at 40% bottom, rgba(200, 100, 50, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 250% 70% at 60% bottom, rgba(180, 80, 30, 0.15) 0%, transparent 50%),
+    /* Autumn colors */
+    linear-gradient(180deg,
+      #ff9a9e 0%,
+      #fecfef 25%,
+      #fecfef 50%,
+      #ffc3a0 75%,
+      #ffad84 100%
+    );
+}
+
+/* === SPIRITUAL LANDSCAPES === */
+.sacred-garden {
+  background: 
+    /* Garden elements */
+    radial-gradient(ellipse 250% 80% at 20% 80%, rgba(100, 200, 100, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 200% 60% at 80% 90%, rgba(150, 220, 150, 0.1) 0%, transparent 50%),
+    /* Peaceful garden gradient */
+    linear-gradient(45deg,
+      #a8e6cf 0%,
+      #88d8c0 25%,
+      #78c2ad 50%,
+      #68a085 75%,
+      #4a7c59 100%
+    );
+}
+
+.celestial-peace {
+  background: 
+    /* Star field effect */
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.2), transparent),
+    /* Cosmic gradient */
+    linear-gradient(135deg,
+      #667eea 0%,
+      #764ba2 25%,
+      #f093fb 50%,
+      #f5576c 75%,
+      #4facfe 100%
+    );
+  background-size: 200px 100px;
+}
+
+.desert-serenity {
+  background: 
+    /* Sand dune silhouettes */
+    radial-gradient(ellipse 400% 100% at bottom, rgba(200, 150, 100, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 300% 80% at 60% bottom, rgba(220, 180, 130, 0.2) 0%, transparent 60%),
+    /* Desert sunset */
+    linear-gradient(180deg,
+      #ffecd2 0%,
+      #fcb69f 30%,
+      #ff8a80 60%,
+      #ffcc02 80%,
+      #ff5722 100%
+    );
+}
+
+/* === ANIMATED ELEMENTS === */
+.floating-light {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-light:nth-child(2) { 
+  animation-delay: -2s; 
+  animation-duration: 8s;
+  left: 60%;
+  top: 20%;
+}
+
+.floating-light:nth-child(3) { 
+  animation-delay: -4s; 
+  animation-duration: 10s;
+  left: 80%;
+  top: 60%;
+}
+
+@keyframes float {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) scale(1.2);
+  }
+}
+
+/* Gentle breathing animation for backgrounds */
+.breathing-bg {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { 
+    filter: brightness(1) saturate(1); 
+    transform: scale(1);
+  }
+  50% { 
+    filter: brightness(1.05) saturate(1.1); 
+    transform: scale(1.01);
+  }
+}
+
+/* === SECTION-SPECIFIC BACKGROUND ROTATIONS === */
+.hero {
+  background: inherit;
+}
+
+.hero.morning { background: inherit; }
+.hero.afternoon { background: inherit; }
+.hero.evening { background: inherit; }
+.hero.night { background: inherit; }
+
+/* Content sections with subtle peaceful backgrounds */
+.wisdom-section {
+  position: relative;
+}
+
+.wisdom-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse 200% 100% at 50% 100%, rgba(100, 150, 200, 0.5) 0%, transparent 70%);
+}
+
+.paths-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.02;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse 150% 80% at 30% 0%, rgba(150, 200, 150, 0.5) 0%, transparent 60%);
+}
+
+/* === RESPONSIVE OPTIMIZATIONS === */
+@media (max-width: 768px) {
+  /* Simplified backgrounds for mobile to improve performance */
+  .mountain-dawn,
+  .mountain-mist,
+  .mountain-snow,
+  .forest-morning,
+  .forest-twilight,
+  .forest-autumn {
+    background-size: cover;
+    background-attachment: scroll; /* Better mobile performance */
+  }
+  
+  .floating-light {
+    display: none; /* Reduce animations on mobile */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-light,
+  .breathing-bg {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .sunset-golden,
+  .sunset-purple,
+  .sunset-ocean,
+  .mountain-dawn,
+  .mountain-mist,
+  .mountain-snow,
+  .forest-morning,
+  .forest-twilight,
+  .forest-autumn,
+  .sacred-garden,
+  .celestial-peace,
+  .desert-serenity {
+    filter: contrast(150%) brightness(1.2);
+  }
+}

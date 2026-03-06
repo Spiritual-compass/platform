@@ -3,8 +3,9 @@
    Captivating visual experiences for spiritual seekers
    ========================================================================== */
 
-/* Hero Section - Celestial Dawn */
+/* Hero Section - Enhanced with Peaceful Backgrounds */
 .hero {
+  /* Default peaceful background - will be enhanced by peaceful-backgrounds.js */
   background: 
     /* Soft clouds */
     radial-gradient(ellipse 100% 80% at 30% 100%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
@@ -23,6 +24,7 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  transition: all 3s ease-in-out; /* Smooth background transitions */
 }
 
 /* Floating particles effect */
