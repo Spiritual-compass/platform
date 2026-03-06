@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Spiritual Compass</title>
+    <meta name="description" content="You are currently offline. Spiritual Compass content is cached for your spiritual journey.">
+    
+    <!-- Inline critical styles for offline page -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .offline-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .offline-title {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .offline-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+        
+        .offline-message {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .cached-content {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .cached-content h3 {
+            color: #4c51bf;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .cached-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .cached-link {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .cached-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .cached-link .link-emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .retry-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .retry-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+        }
+        
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .home-button {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 50px;
+            padding: 13px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .home-button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .network-status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .status-offline {
+            background: rgba(245, 101, 101, 0.1);
+            color: #c53030;
+            border: 1px solid rgba(245, 101, 101, 0.3);
+        }
+        
+        .status-online {
+            background: rgba(72, 187, 120, 0.1);
+            color: #2f855a;
+            border: 1px solid rgba(72, 187, 120, 0.3);
+        }
+        
+        .spiritual-quote {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            font-style: italic;
+            color: #4a5568;
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .offline-container {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+            
+            .offline-title {
+                font-size: 2rem;
+            }
+            
+            .offline-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cached-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .retry-button, .home-button {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        
+        /* Dark mode detection */
+        @media (prefers-color-scheme: dark) {
+            .offline-container {
+                background: rgba(26, 32, 44, 0.95);
+                color: #e2e8f0;
+            }
+            
+            .offline-title {
+                color: #e2e8f0;
+            }
+            
+            .offline-subtitle {
+                color: #a0aec0;
+            }
+            
+            .offline-message {
+                color: #cbd5e0;
+            }
+            
+            .cached-link {
+                background: rgba(45, 55, 72, 0.8);
+                color: #e2e8f0;
+                border-color: #4a5568;
+            }
+            
+            .cached-link:hover {
+                border-color: #667eea;
+                color: #667eea;
+            }
+            
+            .spiritual-quote {
+                background: rgba(45, 55, 72, 0.5);
+                color: #cbd5e0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">🧭</div>
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-subtitle">Your spiritual journey continues even without connection</p>
+        
+        <div class="offline-message">
+            <p>Don't worry! Many pages and resources have been saved to your device. You can continue exploring your spiritual path while offline.</p>
+        </div>
+        
+        <div class="cached-content">
+            <h3>📱 Available Offline Content</h3>
+            <p>These sections are cached and ready for your spiritual exploration:</p>
+            
+            <div class="cached-links">
+                <a href="/" class="cached-link">
+                    <span class="link-emoji">🏠</span>
+                    Home
+                </a>
+                <a href="/wisdom/" class="cached-link">
+                    <span class="link-emoji">📚</span>
+                    Wisdom Library
+                </a>
+                <a href="/practices/" class="cached-link">
+                    <span class="link-emoji">🧘</span>
+                    Practices
+                </a>
+                <a href="/assessment/" class="cached-link">
+                    <span class="link-emoji">🔍</span>
+                    Assessment
+                </a>
+                <a href="/traditions/" class="cached-link">
+                    <span class="link-emoji">🌍</span>
+                    Traditions
+                </a>
+                <a href="/teachings/" class="cached-link">
+                    <span class="link-emoji">✨</span>
+                    Teachings
+                </a>
+            </div>
+        </div>
+        
+        <div class="network-status" id="networkStatus">
+            <span id="statusText">🔴 You are currently offline</span>
+        </div>
+        
+        <div class="retry-section">
+            <button class="retry-button" onclick="checkConnection()">🔄 Check Connection</button>
+            <a href="/" class="home-button">🏠 Go to Home</a>
+        </div>
+        
+        <div class="spiritual-quote">
+            <p>"The spiritual path is not a straight line but a circle. You start where you are, and you come back to where you are, but with a different understanding."</p>
+            <div class="quote-author">— Buddhist Teaching</div>
+        </div>
+    </div>
+
+    <script>
+        // Network status detection
+        function updateNetworkStatus() {
+            const statusElement = document.getElementById('statusText');
+            const networkStatusDiv = document.getElementById('networkStatus');
+            
+            if (navigator.onLine) {
+                statusElement.textContent = '🟢 Connection restored! You are back online';
+                networkStatusDiv.className = 'network-status status-online';
+                
+                // Auto-reload after 2 seconds when back online
+                setTimeout(() => {
+                    if (navigator.onLine) {
+                        window.location.reload();
+                    }
+                }, 2000);
+            } else {
+                statusElement.textContent = '🔴 You are currently offline';
+                networkStatusDiv.className = 'network-status status-offline';
+            }
+        }
+        
+        // Check connection manually
+        function checkConnection() {
+            updateNetworkStatus();
+            
+            if (navigator.onLine) {
+                // Try to fetch a small resource to verify real connectivity
+                fetch('/', { 
+                    method: 'HEAD',
+                    cache: 'no-cache'
+                })
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch(() => {
+                    // Still offline despite navigator.onLine
+                    document.getElementById('statusText').textContent = '🔴 Connection detected but server unreachable';
+                    document.getElementById('networkStatus').className = 'network-status status-offline';
+                });
+            }
+        }
+        
+        // Listen for network status changes
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+        
+        // Initial status check
+        updateNetworkStatus();
+        
+        // Periodic connectivity checks (every 10 seconds)
+        setInterval(updateNetworkStatus, 10000);
+        
+        // Handle cached link clicks
+        document.querySelectorAll('.cached-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Let the browser handle the navigation
+                // Service worker will serve from cache if available
+            });
+        });
+        
+        // Add some spiritual animations
+        function addFloatingAnimation() {
+            const icon = document.querySelector('.offline-icon');
+            let angle = 0;
+            
+            setInterval(() => {
+                angle += 1;
+                const offset = Math.sin(angle * 0.02) * 2;
+                icon.style.transform = `translateY(${offset}px)`;
+            }, 50);
+        }
+        
+        // Start animations when page loads
+        window.addEventListener('load', () => {
+            addFloatingAnimation();
+            
+            // Add fade-in animation to content
+            document.querySelector('.offline-container').style.animation = 'fadeIn 0.8s ease-out';
+        });
+        
+        // Add fadeIn keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        console.log('Offline page: Spiritual guidance continues even without internet connection 🧭✨');
+    </script>
+</body>
+</html>

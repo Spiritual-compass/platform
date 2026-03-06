@@ -1,0 +1,231 @@
+/* UNIFIED NAVIGATION SYSTEM - Consistent across all pages */
+
+/* Main navigation container - standard for all pages */
+.nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid var(--border) !important;
+    color: var(--text-primary) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+.nav-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 1rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: var(--primary) !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.nav-logo:hover {
+    color: var(--primary-dark) !important;
+    transform: none !important;
+}
+
+.compass-icon {
+    font-size: 1.8rem !important;
+    animation: gentleRotate 20s linear infinite !important;
+    display: inline-block !important;
+}
+
+.logo-text {
+    color: var(--primary) !important;
+    text-shadow: none !important;
+}
+
+.nav-links {
+    display: flex !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-link,
+.nav-links a {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    padding: 0.6rem 1.2rem !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+    letter-spacing: normal !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid transparent !important;
+    font-size: 0.95rem !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+
+.nav-link:hover,
+.nav-links a:hover {
+    background: var(--surface-elevated) !important;
+    color: var(--primary) !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: var(--border) !important;
+}
+
+.nav-link.active,
+.nav-links a.active {
+    background: var(--primary) !important;
+    color: white !important;
+    border-color: var(--primary) !important;
+}
+
+.nav-link.active:hover,
+.nav-links a.active:hover {
+    background: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) !important;
+    width: 0% !important;
+    z-index: 1001 !important;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 !important;
+    }
+
+    .nav-container {
+        padding: 1rem !important;
+        gap: 1rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .nav-logo {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .nav-links {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    .nav-link,
+    .nav-links a {
+        width: 100% !important;
+        text-align: left !important;
+        padding: 0.8rem 1rem !important;
+        border-radius: 6px !important;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0.8rem !important;
+    }
+
+    .nav-link,
+    .nav-links a {
+        font-size: 0.9rem !important;
+        padding: 0.6rem 0.9rem !important;
+    }
+
+    .compass-icon {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Breadcrumb navigation for sub-pages */
+.breadcrumb {
+    display: flex !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    font-size: 0.9rem !important;
+    color: var(--text-secondary) !important;
+    padding: 1rem 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.breadcrumb a {
+    color: var(--primary) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-dark) !important;
+    text-decoration: underline !important;
+}
+
+.breadcrumb span {
+    color: var(--border) !important;
+    margin: 0 0.25rem !important;
+}
+
+.breadcrumb span:last-child {
+    color: var(--text-secondary) !important;
+    font-weight: 500 !important;
+}
+
+/* Fixed animation for compass */
+@keyframes gentleRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Navigation accessibility */
+.nav-link:focus,
+.nav-links a:focus {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px !important;
+    border-radius: 8px !important;
+}
+
+/* Ensure consistent spacing */
+.nav-links {
+    list-style: none;
+}
+
+/* Ensure all nav links have proper styling */
+nav ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+nav ul li {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+nav a {
+    display: block !important;
+}

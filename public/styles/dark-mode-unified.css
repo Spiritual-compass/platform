@@ -1,0 +1,184 @@
+/* UNIFIED DARK MODE - Works with existing main.css variables */
+
+/* Light mode (default) - override any bright text issues */
+:root {
+  color-scheme: light;
+}
+
+:root:not([data-theme="dark"]) {
+  /* Ensure proper text contrast in light mode */
+  --text-primary: #1c1917;
+  --text-secondary: #44403c; 
+  --text-muted: #78716c;
+  --background: #ffffff;
+  --surface: #fafaf9;
+  --surface-alt: #f5f5f4;
+}
+
+/* Dark mode overrides - use existing variable names */
+[data-theme="dark"] {
+  color-scheme: dark;
+  
+  /* Dark theme colors using existing variable names */
+  --primary-color: #4a7bc8;
+  --primary-light: #6b95e6;
+  --primary-dark: #2c5aa0;
+  
+  --secondary-color: #daa520;
+  --secondary-light: #f4d03f;
+  --secondary-dark: #b8860b;
+  
+  --accent-color: #8b5cf6;
+  --accent-light: #a78bfa;
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  /* Neutral colors for dark mode */
+  --neutral-50: #1c1917;
+  --neutral-100: #292524;
+  --neutral-200: #44403c;
+  --neutral-300: #57534e;
+  --neutral-400: #78716c;
+  --neutral-500: #a8a29e;
+  --neutral-600: #d6d3d1;
+  --neutral-700: #e7e5e4;
+  --neutral-800: #f5f5f4;
+  --neutral-900: #fafaf9;
+  
+  /* Semantic colors */
+  --background: #0c0a09;
+  --surface: #1c1917;
+  --surface-alt: #292524;
+  --text-primary: #fafaf9;
+  --text-secondary: #e7e5e4;
+  --text-muted: #a8a29e;
+  --border: #44403c;
+  --border-light: #292524;
+}
+
+/* Dark mode toggle in navigation */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.dark-mode-toggle:hover {
+  background: var(--surface-alt);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Add toggle to nav-links group */
+.nav-links {
+  align-items: center;
+}
+
+/* Apply theme to body and key elements */
+[data-theme="dark"] body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(28, 25, 23, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .nav.scrolled {
+  background: rgba(28, 25, 23, 0.98) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Ensure all text uses theme variables */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span {
+  color: var(--text-secondary);
+}
+
+/* Cards and surfaces */
+[data-theme="dark"] .card,
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .wisdom-card,
+[data-theme="dark"] .community-card {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-primary {
+  background: var(--primary-color);
+  color: var(--background);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background: var(--surface-alt);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+/* Forms */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: var(--surface-alt);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 123, 200, 0.2);
+}
+
+/* Footer */
+[data-theme="dark"] footer {
+  background: var(--surface) !important;
+  border-top: 1px solid var(--border);
+}
+
+/* Mobile responsiveness for toggle */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body, .nav, .card, input, textarea, select {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
