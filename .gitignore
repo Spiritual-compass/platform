@@ -127,3 +127,10 @@ bots/*/.env
 # Local development
 local-config.json
 dev-settings.json.env.deploy
+
+# Python virtual environments
+image-gen-env/
+venv/
+env/
+.venv/
+ENV/
