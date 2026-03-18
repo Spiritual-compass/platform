@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Mythology | Spiritual Compass</title>
+    <meta name="description" content="Explore ancient mythological traditions and their spiritual wisdom. From Norse to Greek mythology, discover the sacred stories that shaped civilizations.">
+    
+    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/content-pages.css">
+    <link rel="stylesheet" href="/styles/dramatic-overhaul.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="compass-icon">🧭</span>
+                <span class="logo-text">Spiritual Compass</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/assessment/" class="nav-link">Find Your Path</a>
+                <a href="/wisdom/" class="nav-link">Daily Wisdom</a>
+                <a href="/mythology/" class="nav-link active">Mythology</a>
+                <a href="/#practices" class="nav-link">Practices</a>
+                <a href="/#teachings" class="nav-link">Teachings</a>
+                <a href="/history/" class="nav-link">Sacred History</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-main">
+        <div class="content-container">
+            <header class="content-header">
+                <h1 class="content-title">Sacred Mythology</h1>
+                <p class="content-subtitle">
+                    Ancient stories that reveal universal truths about the human condition, 
+                    the divine, and our place in the cosmos.
+                </p>
+            </header>
+
+            <div class="mythology-grid">
+                <div class="mythology-card">
+                    <div class="card-header">
+                        <span class="card-icon">⚡</span>
+                        <h2 class="card-title">Norse Mythology</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">
+                            Explore the rich spiritual tradition of the Norse peoples. From Odin's quest for wisdom 
+                            to the World Tree Yggdrasil, discover the profound metaphysical teachings hidden 
+                            within Nordic sagas.
+                        </p>
+                        <a href="/mythology/norse/" class="card-link">
+                            Explore Norse Wisdom
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mythology-card">
+                    <div class="card-header">
+                        <span class="card-icon">⚱️</span>
+                        <h2 class="card-title">Greek Mythology</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">
+                            Journey through the timeless stories of ancient Greece. From Prometheus's gift of fire 
+                            to Psyche's transformation, uncover the psychological and spiritual truths embedded 
+                            in classical myths.
+                        </p>
+                        <a href="/mythology/greek/" class="card-link">
+                            Explore Greek Wisdom
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mythology-intro">
+                <h3>The Sacred Purpose of Mythology</h3>
+                <p>
+                    Mythology serves as humanity's earliest spiritual textbook. These sacred stories encode 
+                    universal principles of transformation, heroism, sacrifice, and transcendence that speak 
+                    to the soul across cultures and centuries.
+                </p>
+                
+                <p>
+                    Rather than mere entertainment, myths are initiatory narratives—maps for the journey 
+                    from ordinary consciousness to divine understanding. They teach us about the eternal 
+                    patterns that govern both outer world and inner psyche.
+                </p>
+
+                <blockquote class="wisdom-quote">
+                    "Myths are public dreams; dreams are private myths." 
+                    <cite>— Joseph Campbell</cite>
+                </blockquote>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .mythology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mythology-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .mythology-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(187, 154, 108, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        .card-title {
+            color: var(--primary-light);
+            margin: 0;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .card-link:hover {
+            color: var(--accent-light);
+        }
+
+        .link-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .card-link:hover .link-arrow {
+            transform: translateX(4px);
+        }
+
+        .mythology-intro {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            margin-top: 3rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .mythology-intro h3 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        .mythology-intro p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .wisdom-quote {
+            font-style: italic;
+            color: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+
+        .wisdom-quote cite {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html>
