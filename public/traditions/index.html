@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiritual Traditions - Spiritual Compass</title>
-    <meta name="description" content="Explore diverse spiritual traditions from around the world - ancient wisdom, eastern philosophy, western mysticism, and indigenous practices.">
-    
-    <!-- Google Fonts -->
+    <meta name="description" content="Explore 15+ spiritual traditions from around the world — Eastern philosophy, Western mysticism, ancient mythology, and indigenous wisdom.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8352366706266722"
          crossorigin="anonymous"></script>
+    <style>
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        .category-badge {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .badge-gold    { background: #fef3c7; color: #92400e; }
+        .badge-blue    { background: #dbeafe; color: #1e40af; }
+        .badge-teal    { background: #d1fae5; color: #065f46; }
+        .badge-purple  { background: #ede9fe; color: #4c1d95; }
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+            font-family: var(--font-secondary);
+        }
+        .category-desc {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+            max-width: 750px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
-                                <nav class="nav">
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
+                <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
                     <a href="/prayer/" class="nav-link">Prayer</a>
@@ -40,102 +69,169 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <div class="container">
-            <!-- Page Header -->
-            <div class="content-header">
-                <h1 class="content-title">Spiritual Traditions</h1>
-                <p class="hero-subtitle">Explore the rich tapestry of spiritual wisdom from cultures and traditions around the world.</p>
-            </div>            <!-- Eastern Traditions -->
-            <section class="section">
-                <h2 class="section-title">Eastern Traditions</h2>
+    <main class="main" style="padding: 0;">
+
+        <!-- Hero -->
+        <section class="hero hero-dark">
+            <div class="container">
+                <span class="hero-symbol">🌍</span>
+                <h1 class="hero-title">Wisdom Traditions</h1>
+                <p class="hero-subtitle">From the banks of the Ganges to the Norse fjords — 15+ traditions, each offering a unique path to understanding the sacred.</p>
+                <div class="hero-cta">
+                    <a href="/assessment/" class="btn-primary">Find My Tradition →</a>
+                    <a href="/guides/" class="btn-outline">Beginner Guides</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick jump pills -->
+        <div style="background: var(--bg-secondary); padding: var(--space-md) 0; border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="tradition-pills">
+                    <a href="#eastern" class="trad-pill trad-gold">Eastern</a>
+                    <a href="#western" class="trad-pill trad-blue">Western</a>
+                    <a href="#mystical" class="trad-pill trad-purple">Mystical</a>
+                    <a href="#ancient" class="trad-pill trad-green">Ancient &amp; Indigenous</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- EASTERN TRADITIONS -->
+        <section class="section section-gold" id="eastern">
+            <div class="container">
+                <div class="category-header">
+                    <span class="category-badge badge-gold">Eastern</span>
+                    <h2 class="category-title">Eastern Traditions</h2>
+                </div>
+                <p class="category-desc">The great spiritual civilizations of Asia — traditions that have guided billions toward liberation, compassion, and harmony with the cosmos for thousands of years.</p>
                 <div class="card-grid">
-                    <div class="card">
+                    <div class="card card-gold">
+                        <span class="card-icon">☸️</span>
                         <h3 class="card-title">Buddhism</h3>
-                        <p class="card-description">Explore Zen masters, Tibetan teachings, Theravada practices, and profound teaching stories. Complete wisdom from 2,500 years of awakened masters.</p>
-                        <a href="/traditions/buddhist/" class="card-link">Explore Buddhist Wisdom →</a>
+                        <p class="card-description">Explore Zen masters, Tibetan teachings, and Theravada practices. The Four Noble Truths, the Eightfold Path, and 2,500 years of awakened wisdom.</p>
+                        <a href="/traditions/buddhist/" class="card-link">Explore Buddhism →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-gold">
+                        <span class="card-icon">🕉️</span>
                         <h3 class="card-title">Hinduism</h3>
-                        <p class="card-description">Discover the ancient Vedic tradition, yoga philosophy, karma, dharma, and the paths to moksha (liberation).</p>
+                        <p class="card-description">The oldest living religion — yoga, karma, dharma, and the vast pantheon of devas. Multiple paths to moksha in one of humanity's richest spiritual traditions.</p>
                         <a href="/traditions/hinduism/" class="card-link">Explore Hinduism →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-gold">
+                        <span class="card-icon">☯️</span>
                         <h3 class="card-title">Taoism</h3>
-                        <p class="card-description">Learn about the Tao, wu wei (non-action), yin-yang balance, and living in harmony with natural flow.</p>
-                        <a href="/traditions/taoism/" class="card-link">Study Taoism →</a>
+                        <p class="card-description">Wu wei, the Tao Te Ching, and the art of moving in harmony with the natural flow of existence. Ancient Chinese wisdom for modern life.</p>
+                        <a href="/traditions/taoism/" class="card-link">Explore Taoism →</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Western Traditions -->
-            <section class="section">
-                <h2 class="section-title">Western Traditions</h2>
+        <!-- WESTERN TRADITIONS -->
+        <section class="section section-blue" id="western">
+            <div class="container">
+                <div class="category-header">
+                    <span class="category-badge badge-blue">Western</span>
+                    <h2 class="category-title">Western Traditions</h2>
+                </div>
+                <p class="category-desc">The spiritual inheritance of Europe and the Near East — monotheistic mysticism, philosophical wisdom, and the contemplative depths within Christianity, Judaism, and Greek thought.</p>
                 <div class="card-grid">
-                    <div class="card">
-                        <h3 class="card-title">Christianity</h3>
-                        <p class="card-description">Comprehensive Christian mysticism: Desert Fathers, medieval saints, contemplative prayer, and modern teachers. Complete spiritual wisdom.</p>
+                    <div class="card card-blue">
+                        <span class="card-icon">✝️</span>
+                        <h3 class="card-title">Christian Mysticism</h3>
+                        <p class="card-description">The Desert Fathers, the medieval mystics, and contemplative prayer — the rich interior life of the Christian tradition beyond Sunday worship.</p>
                         <a href="/traditions/christian/" class="card-link">Explore Christian Mysticism →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-blue">
+                        <span class="card-icon">🏛️</span>
                         <h3 class="card-title">Ancient Greek Philosophy</h3>
-                        <p class="card-description">Study the philosophical foundations of Western thought through Plato, Aristotle, and the Stoic masters.</p>
-                        <a href="/traditions/ancient-greek-philosophy/" class="card-link">Greek Philosophy →</a>
+                        <p class="card-description">The 12 Olympians, the Eleusinian Mysteries, and the philosophical schools — Stoicism, Platonism, and Neoplatonism — that shaped all of Western thought.</p>
+                        <a href="/traditions/ancient-greek-philosophy/" class="card-link">Explore Greek Wisdom →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-blue">
+                        <span class="card-icon">✡️</span>
                         <h3 class="card-title">Kabbalah</h3>
-                        <p class="card-description">Delve into Jewish mysticism, the Tree of Life, sefirot, and esoteric interpretations of sacred texts.</p>
-                        <a href="/traditions/kabbalah/" class="card-link">Study Kabbalah →</a>
+                        <p class="card-description">The Tree of Life, the ten Sefirot, and Jewish mysticism — a profound esoteric system mapping the structure of creation and the divine.</p>
+                        <a href="/traditions/kabbalah/" class="card-link">Explore Kabbalah →</a>
                     </div>
                 </div>
-            </section>            <!-- Mystical & Esoteric -->
-            <section class="section">
-                <h2 class="section-title">Mystical & Esoteric</h2>
+            </div>
+        </section>
+
+        <!-- MYSTICAL & ESOTERIC -->
+        <section class="section section-purple" id="mystical">
+            <div class="container">
+                <div class="category-header">
+                    <span class="category-badge badge-purple">Mystical</span>
+                    <h2 class="category-title">Mystical &amp; Esoteric</h2>
+                </div>
+                <p class="category-desc">Traditions that emphasize direct experience of the divine — through love, nature, poetry, and the hidden dimensions of existence.</p>
                 <div class="card-grid">
-                    <div class="card">
+                    <div class="card card-purple">
+                        <span class="card-icon">🌹</span>
                         <h3 class="card-title">Sufism</h3>
-                        <p class="card-description">Explore Islamic mysticism, the path of divine love, whirling meditation, and the poetry of Rumi and Hafez.</p>
+                        <p class="card-description">The mystical heart of Islam — dhikr, sama, and the path of divine love as taught by Rumi, Ibn Arabi, and the great Sufi orders.</p>
                         <a href="/traditions/sufism/" class="card-link">Discover Sufism →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-purple">
+                        <span class="card-icon">🌿</span>
                         <h3 class="card-title">Celtic Druidism</h3>
-                        <p class="card-description">Explore the nature-based spirituality of the ancient Celts, their reverence for trees, and seasonal celebrations.</p>
+                        <p class="card-description">The sacred wheel of the year, the living temple of nature, and the ancient wisdom of the Druids — earth as temple, seasons as divine revelation.</p>
                         <a href="/traditions/celtic/" class="card-link">Discover Celtic Ways →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-purple">
+                        <span class="card-icon">🌸</span>
                         <h3 class="card-title">Sacred Feminine</h3>
-                        <p class="card-description">Honor the divine feminine across traditions, from ancient goddesses to modern earth-based spirituality.</p>
+                        <p class="card-description">The divine feminine across traditions — from ancient goddesses and earth-based spirituality to modern expressions of feminine sacred wisdom.</p>
                         <a href="/traditions/sacred-feminine/" class="card-link">Sacred Feminine →</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Ancient Wisdom -->
-            <section class="section">
-                <h2 class="section-title">Ancient Wisdom</h2>
+        <!-- ANCIENT & INDIGENOUS -->
+        <section class="section section-green" id="ancient">
+            <div class="container">
+                <div class="category-header">
+                    <span class="category-badge badge-teal">Ancient &amp; Indigenous</span>
+                    <h2 class="category-title">Ancient &amp; Indigenous Wisdom</h2>
+                </div>
+                <p class="category-desc">The earliest spiritual traditions of humanity — the gods of Egypt, the Norse worlds, and the living indigenous wisdom of the Americas. Ancient does not mean outdated.</p>
                 <div class="card-grid">
-                    <div class="card">
-                        <h3 class="card-title">Egyptian Mysteries</h3>
-                        <p class="card-description">Discover the wisdom of ancient Egypt, mystery initiations, and the spiritual teachings of the pharaohs and priests.</p>
+                    <div class="card card-teal">
+                        <span class="card-icon">𓂀</span>
+                        <h3 class="card-title">Ancient Egyptian</h3>
+                        <p class="card-description">Ra, Osiris, Ma'at, and three thousand years of gods, ritual, and the pursuit of eternal life — one of history's most enduring spiritual traditions.</p>
                         <a href="/traditions/egyptian/" class="card-link">Explore Egyptian Wisdom →</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-teal">
+                        <span class="card-icon">⚡</span>
                         <h3 class="card-title">Norse Mythology</h3>
-                        <p class="card-description">Journey through the Nine Worlds, meet the Norse gods, and understand the Viking spiritual worldview.</p>
+                        <p class="card-description">Odin, Thor, Yggdrasil, and the Nine Worlds — the Viking cosmology of fate, honor, and the eternal cycle of creation and destruction.</p>
                         <a href="/traditions/norse/" class="card-link">Enter Norse Realm →</a>
                     </div>
-                    <div class="card">
-                        <h3 class="card-title">Native Wisdom</h3>
-                        <p class="card-description">Honor the sacred traditions of indigenous peoples, their connection to earth, and ceremonial practices.</p>
+                    <div class="card card-teal">
+                        <span class="card-icon">🦅</span>
+                        <h3 class="card-title">Native American Wisdom</h3>
+                        <p class="card-description">The Medicine Wheel, the Great Spirit, and the living traditions of the Lakota, Haudenosaunee, Anishinaabe, and many other nations.</p>
                         <a href="/traditions/native-american/" class="card-link">Respect Native Wisdom →</a>
                     </div>
                 </div>
-            </section>        </div>
+            </div>
+        </section>
+
+        <!-- Assessment CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Which Tradition Calls to You?</h2>
+                <p>Our free Spiritual Compass assessment asks 12 questions about what you seek — and points you toward the traditions and practices most aligned with your nature.</p>
+                <a href="/assessment/" class="btn-white">Take the Free Assessment →</a>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

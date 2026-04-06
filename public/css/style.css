@@ -238,7 +238,243 @@ body {
     
 }
 
-/* Content page specific styles */
+/* ============================================
+   VISUAL DESIGN UTILITIES
+   ============================================ */
+
+/* Hero dark gradient variant */
+.hero-dark {
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
+    padding: var(--space-xxl) 0;
+}
+.hero-dark .hero-title {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.hero-dark .hero-subtitle {
+    color: rgba(255,255,255,0.82);
+}
+
+/* Hero symbol / large icon */
+.hero-symbol {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-md);
+    display: block;
+    text-align: center;
+}
+
+/* Button styles */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background: var(--accent-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+    font-size: 1rem;
+}
+.btn-primary:hover {
+    background: #c0392b;
+    color: white;
+    transform: translateY(-1px);
+}
+/* Compact size when used in the header */
+.header-actions .btn-primary {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    font-size: 1rem;
+}
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+    color: white;
+}
+
+/* Hero CTA row */
+.hero-cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--space-lg);
+}
+
+/* Stats strip */
+.stats-strip {
+    background: var(--primary-color);
+    padding: var(--space-md) 0;
+}
+.stats-strip .container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+.stat-item {
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+}
+.stat-item strong {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+}
+
+/* Colored section backgrounds */
+.section-dark {
+    background: #1a252f;
+    color: white;
+}
+.section-dark .section-title { color: white; }
+.section-dark p { color: rgba(255,255,255,0.8); }
+
+.section-warm    { background: #fdf6f0; }
+.section-blue    { background: #eaf4fb; }
+.section-green   { background: #eafaf1; }
+.section-gold    { background: #fef9e7; }
+.section-purple  { background: #f5eef8; }
+
+/* Colored card top borders */
+.card-accent  { border-top: 3px solid var(--accent-color); }
+.card-blue    { border-top: 3px solid #2980b9; }
+.card-green   { border-top: 3px solid #27ae60; }
+.card-purple  { border-top: 3px solid #8e44ad; }
+.card-gold    { border-top: 3px solid #f39c12; }
+.card-teal    { border-top: 3px solid #16a085; }
+
+/* Card icon area */
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+/* Quote panel (dark) */
+.quote-panel {
+    background: #1a252f;
+    color: white;
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: var(--space-lg) 0;
+}
+.quote-panel blockquote {
+    font-family: var(--font-secondary);
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.92);
+    max-width: 750px;
+    margin: 0 auto var(--space-sm) auto;
+}
+.quote-panel cite {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.9rem;
+}
+
+/* CTA section */
+.cta-section {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #c0392b 100%);
+    padding: var(--space-xxl) 0;
+    text-align: center;
+    color: white;
+}
+.cta-section .cta-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    color: white;
+    margin-bottom: var(--space-md);
+}
+.cta-section p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-lg) auto;
+    line-height: 1.7;
+}
+.btn-white {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: white;
+    color: var(--accent-color);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    color: var(--accent-color);
+}
+
+/* Tradition pill navigation */
+.tradition-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin: var(--space-lg) 0 0 0;
+}
+.trad-pill {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.trad-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.trad-orange  { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.trad-blue    { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+.trad-green   { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+.trad-purple  { background: #ede9fe; color: #4c1d95; border: 1px solid #ddd6fe; }
+.trad-gold    { background: #fef9c3; color: #78350f; border: 1px solid #fef08a; }
+.trad-red     { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+/* Highlighted intro box */
+.intro-highlight {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent-color);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin-bottom: var(--space-xl);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Nav active link */
+.nav-link.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   Content page specific styles */
 .content-page .main {
     padding: var(--space-lg) 0;
 }
