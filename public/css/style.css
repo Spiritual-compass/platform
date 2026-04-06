@@ -178,28 +178,6 @@ body {
     text-decoration: underline;
 }
 
-/* AdSense ad containers - max 3 per page */
-.ad-container {
-    display: flex;
-    justify-content: center;
-    margin: var(--space-xl) 0;
-    padding: var(--space-md);
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-}
-
-.ad-placeholder {
-    width: 728px;
-    height: 90px;
-    background: var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    border-radius: var(--border-radius);
-}
-
 /* Footer */
 .footer {
     background: var(--secondary-color);
@@ -258,10 +236,6 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .ad-placeholder {
-        width: 320px;
-        height: 50px;
-    }
 }
 
 /* Content page specific styles */
