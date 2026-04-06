@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Contents - Spiritual Compass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .sitemap-section {
+            margin-bottom: var(--space-xl);
+        }
+        .sitemap-section h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-xs);
+            border-bottom: 2px solid var(--border-color);
+        }
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: var(--space-sm);
+        }
+        .sitemap-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem var(--space-sm);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+        .sitemap-link:hover {
+            background: var(--bg-primary);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateX(3px);
+        }
+        .sitemap-link .icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .sitemap-link .path {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+            margin-left: auto;
+        }
+        .badge {
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+        }
+        .badge.new {
+            background: #27ae60;
+            color: white;
+        }
+        .badge.old {
+            background: var(--text-secondary);
+            color: white;
+        }
+        .stats {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-md) var(--space-lg);
+        }
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Spiritual Compass</a>
+                                <nav class="nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/meditation/" class="nav-link">Meditation</a>
+                    <a href="/prayer/" class="nav-link">Prayer</a>
+                    <a href="/rituals/" class="nav-link">Rituals</a>
+                    <a href="/practices/" class="nav-link">Practices</a>
+                    <a href="/traditions/" class="nav-link">Traditions</a>
+                    <a href="/teachers/" class="nav-link">Teachers</a>
+                    <a href="/texts/" class="nav-link">Texts</a>
+                    <a href="/wisdom/" class="nav-link">Wisdom</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="/assessment/" class="btn-primary">Take Assessment</a>
+                </div>
+                <div class="header-actions">
+                    <a href="/assessment/" class="btn-primary">Take Assessment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Site Contents</h1>
+                <p class="hero-subtitle">Complete inventory of all pages — <span style="color: #27ae60; font-weight: 600;">green badge</span> = new template, <span style="color: var(--text-secondary); font-weight: 600;">grey badge</span> = legacy design</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-num">37</span>
+                        <span class="stat-label">Total Pages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">14</span>
+                        <span class="stat-label">New Template</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">14</span>
+                        <span class="stat-label">Traditions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">11</span>
+                        <span class="stat-label">Legacy Pages</span>
+                    </div>
+                </div>
+
+                <!-- Main Pages -->
+                <div class="sitemap-section">
+                    <h2>Main Pages</h2>
+                    <div class="sitemap-grid">
+                        <a href="/" class="sitemap-link">
+                            <span class="icon">🏠</span>
+                            <span>Home</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/</span>
+                        </a>
+                        <a href="/about/" class="sitemap-link">
+                            <span class="icon">ℹ️</span>
+                            <span>About</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/about/</span>
+                        </a>
+                        <a href="/assessment/" class="sitemap-link">
+                            <span class="icon">🧭</span>
+                            <span>Spiritual Assessment</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/assessment/</span>
+                        </a>
+                        <a href="/practices/" class="sitemap-link">
+                            <span class="icon">📖</span>
+                            <span>Practices</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/practices/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spiritual Practices -->
+                <div class="sitemap-section">
+                    <h2>Spiritual Practices</h2>
+                    <div class="sitemap-grid">
+                        <a href="/meditation/" class="sitemap-link">
+                            <span class="icon">🧘</span>
+                            <span>Meditation &amp; Mindfulness</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/meditation/</span>
+                        </a>
+                        <a href="/prayer/" class="sitemap-link">
+                            <span class="icon">🙏</span>
+                            <span>Prayer &amp; Contemplation</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/prayer/</span>
+                        </a>
+                        <a href="/rituals/" class="sitemap-link">
+                            <span class="icon">📿</span>
+                            <span>Sacred Rituals</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/rituals/</span>
+                        </a>
+                        <a href="/wisdom/" class="sitemap-link">
+                            <span class="icon">💫</span>
+                            <span>Daily Wisdom</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/wisdom/</span>
+                        </a>
+                        <a href="/teachers/" class="sitemap-link">
+                            <span class="icon">👥</span>
+                            <span>Spiritual Teachers</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/teachers/</span>
+                        </a>
+                        <a href="/texts/" class="sitemap-link">
+                            <span class="icon">📚</span>
+                            <span>Sacred Texts</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/texts/</span>
+                        </a>
+                        <a href="/paths/" class="sitemap-link">
+                            <span class="icon">🛤️</span>
+                            <span>Spiritual Paths</span>
+                            <span class="badge old">legacy</span>
+                            <span class="path">/paths/</span>
+                        </a>
+                        <a href="/history/" class="sitemap-link">
+                            <span class="icon">📜</span>
+                            <span>History</span>
+                            <span class="badge old">legacy</span>
+                            <span class="path">/history/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Traditions -->
+                <div class="sitemap-section">
+                    <h2>Traditions</h2>
+                    <div class="sitemap-grid">
+                        <a href="/traditions/" class="sitemap-link">
+                            <span class="icon">🌍</span>
+                            <span>All Traditions</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/</span>
+                        </a>
+                        <a href="/traditions/buddhist/" class="sitemap-link">
+                            <span class="icon">☸️</span>
+                            <span>Buddhist</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/buddhist/</span>
+                        </a>
+                        <a href="/traditions/buddhist-teaching-stories/" class="sitemap-link">
+                            <span class="icon">📖</span>
+                            <span>Buddhist Teaching Stories</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/buddhist-teaching-stories/</span>
+                        </a>
+                        <a href="/traditions/christian/" class="sitemap-link">
+                            <span class="icon">✝️</span>
+                            <span>Christian</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/christian/</span>
+                        </a>
+                        <a href="/traditions/christian-desert-fathers/" class="sitemap-link">
+                            <span class="icon">🏜️</span>
+                            <span>Christian Desert Fathers</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/christian-desert-fathers/</span>
+                        </a>
+                        <a href="/traditions/desert-fathers/" class="sitemap-link">
+                            <span class="icon">🌵</span>
+                            <span>Desert Fathers</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/desert-fathers/</span>
+                        </a>
+                        <a href="/traditions/hinduism/" class="sitemap-link">
+                            <span class="icon">🕉️</span>
+                            <span>Hinduism</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/hinduism/</span>
+                        </a>
+                        <a href="/traditions/sufism/" class="sitemap-link">
+                            <span class="icon">🌹</span>
+                            <span>Sufism</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/sufism/</span>
+                        </a>
+                        <a href="/traditions/kabbalah/" class="sitemap-link">
+                            <span class="icon">✡️</span>
+                            <span>Kabbalah</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/kabbalah/</span>
+                        </a>
+                        <a href="/traditions/taoism/" class="sitemap-link">
+                            <span class="icon">☯️</span>
+                            <span>Taoism</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/taoism/</span>
+                        </a>
+                        <a href="/traditions/celtic/" class="sitemap-link">
+                            <span class="icon">🍀</span>
+                            <span>Celtic</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/celtic/</span>
+                        </a>
+                        <a href="/traditions/norse/" class="sitemap-link">
+                            <span class="icon">⚡</span>
+                            <span>Norse</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/norse/</span>
+                        </a>
+                        <a href="/traditions/egyptian/" class="sitemap-link">
+                            <span class="icon">𓂀</span>
+                            <span>Egyptian</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/egyptian/</span>
+                        </a>
+                        <a href="/traditions/ancient-greek-philosophy/" class="sitemap-link">
+                            <span class="icon">🏛️</span>
+                            <span>Ancient Greek Philosophy</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/ancient-greek-philosophy/</span>
+                        </a>
+                        <a href="/traditions/native-american/" class="sitemap-link">
+                            <span class="icon">🦅</span>
+                            <span>Native American</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/native-american/</span>
+                        </a>
+                        <a href="/traditions/sacred-feminine/" class="sitemap-link">
+                            <span class="icon">🌙</span>
+                            <span>Sacred Feminine</span>
+                            <span class="badge new">new</span>
+                            <span class="path">/traditions/sacred-feminine/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="sitemap-section">
+                    <h2>Contact</h2>
+                    <div class="sitemap-grid">
+                        <a href="/contact/" class="sitemap-link">
+                            <span class="icon">📧</span>
+                            <span>Contact</span>
+                            <span class="badge old">legacy</span>
+                            <span class="path">/contact/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legal -->
+                <div class="sitemap-section">
+                    <h2>Legal</h2>
+                    <div class="sitemap-grid">
+                        <a href="/privacy/" class="sitemap-link">
+                            <span class="icon">🔒</span>
+                            <span>Privacy Policy</span>
+                            <span class="badge old">legacy</span>
+                            <span class="path">/privacy/</span>
+                        </a>
+                        <a href="/terms/" class="sitemap-link">
+                            <span class="icon">📋</span>
+                            <span>Terms of Use</span>
+                            <span class="badge old">legacy</span>
+                            <span class="path">/terms/</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Practices</h3>
+                    <a href="/meditation/">Meditation</a>
+                    <a href="/prayer/">Prayer</a>
+                    <a href="/rituals/">Rituals</a>
+                    <a href="/assessment/">Assessment</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Wisdom</h3>
+                    <a href="/traditions/">Traditions</a>
+                    <a href="/teachers/">Teachers</a>
+                    <a href="/texts/">Sacred Texts</a>
+                    <a href="/wisdom/">Teachings</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="/paths/">Spiritual Paths</a>
+                    <a href="/history/">History</a>
+                    <a href="/books/">Books</a>
+                    <a href="/guides/">Guides</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <a href="/contact/">Contact</a>
+                    <a href="/about/">About</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

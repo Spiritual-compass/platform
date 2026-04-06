@@ -170,6 +170,42 @@ class MeditationExercises {
             duration: 0
           }
         ]
+      },
+      evening: {
+        title: "🌙 Evening Reflection",
+        duration: "15 minutes",
+        steps: [
+          {
+            time: 0,
+            title: "Settling Down",
+            text: "Find a comfortable position. Let go of the day's activity. Take three slow, deep breaths and allow your body to soften.",
+            duration: 90
+          },
+          {
+            time: 90,
+            title: "Review with Kindness",
+            text: "Gently review your day without judgment. What moments stand out? What challenged you? Simply observe, as if watching a film.",
+            duration: 240
+          },
+          {
+            time: 330,
+            title: "Gratitude",
+            text: "Bring to mind three things you are grateful for today — however small. Let the feeling of gratitude fill your chest.",
+            duration: 180
+          },
+          {
+            time: 510,
+            title: "Release",
+            text: "Consciously release anything you are carrying — worries, regrets, unfinished business. Breathe it out. Tomorrow is another day.",
+            duration: 180
+          },
+          {
+            time: 690,
+            title: "Setting Down",
+            text: "Place one hand on your heart. Offer yourself kindness for your efforts today. Rest in stillness before sleep.",
+            duration: 210
+          }
+        ]
       }
     };
     

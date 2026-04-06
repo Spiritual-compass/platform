@@ -5,50 +5,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiritual Assessment - Find Your Path - Spiritual Compass</title>
     <meta name="description" content="Discover your spiritual path across multiple traditions with our comprehensive assessment tool.">
-    
-    <link rel="icon" href="/images/compass-icon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family:Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/improved-colors.css">
-    <link rel="stylesheet" href="/styles/enhanced-interactions.css">
-    <link rel="stylesheet" href="/styles/contrast-fix.css">
-    <link rel="stylesheet" href="/styles/spiritual-backgrounds.css">
-    <link rel="stylesheet" href="/styles/content-pages.css">
-    <link rel="stylesheet" href="/styles/assessment.css">
-    <link rel="stylesheet" href="/styles/enhanced-assessment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .assessment-intro {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .assessment-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .assessment-progress {
+            margin-bottom: var(--space-xl);
+            text-align: center;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: var(--space-sm);
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+            width: 33%;
+        }
+        .progress-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .question-card {
+            display: none;
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--space-lg);
+        }
+        .question-card.active {
+            display: block;
+        }
+        .question-card h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-md);
+            font-size: 1.2rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: var(--space-sm);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: var(--bg-primary);
+        }
+        .option:hover {
+            border-color: var(--accent-color);
+            background: var(--bg-secondary);
+        }
+        .option input[type="radio"] {
+            margin: 0;
+            accent-color: var(--accent-color);
+        }
+        .assessment-note {
+            text-align: center;
+            margin: var(--space-lg) 0;
+            padding: var(--space-md);
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+            color: var(--text-secondary);
+        }
+        .assessment-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--space-lg);
+            gap: var(--space-sm);
+        }
+        .btn-action {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 2px solid var(--primary-color);
+        }
+        .btn-action.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        .btn-action.primary:hover {
+            background: var(--secondary-color);
+        }
+        .btn-action.secondary {
+            background: transparent;
+            color: var(--primary-color);
+        }
+        .btn-action.secondary:hover {
+            background: var(--bg-secondary);
+        }
+        .btn-action:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .results-container {
+            background: var(--bg-secondary);
+            padding: var(--space-xl);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+        .result-card {
+            background: var(--bg-primary);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        .recommendation-card {
+            background: var(--bg-primary);
+            padding: var(--space-md);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .recommendation-card h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+        .recommendation-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: var(--space-sm);
+        }
+        .recommendation-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .recommendation-card a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <span class="compass-icon">🧭</span>
-                <span class="logo-text">Spiritual Compass</span>
-            </a>
-            <div class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/#about" class="nav-link">About</a>
-                <a href="/assessment/" class="nav-link active">Assessment</a>
-                <a href="/meditation/" class="nav-link">Meditation</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Spiritual Compass</a>
+                <nav class="nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/meditation/" class="nav-link">Meditation</a>
+                    <a href="/prayer/" class="nav-link">Prayer</a>
+                    <a href="/rituals/" class="nav-link">Rituals</a>
+                    <a href="/practices/" class="nav-link">Practices</a>
+                    <a href="/traditions/" class="nav-link">Traditions</a>
+                    <a href="/teachers/" class="nav-link">Teachers</a>
+                    <a href="/texts/" class="nav-link">Texts</a>
+                    <a href="/wisdom/" class="nav-link">Wisdom</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="/assessment/" class="btn-primary active">Take Assessment</a>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero assessment-hero">
-        <div class="container">
-            <h1>🧭 Find Your Spiritual Path</h1>
-            <p class="hero-subtitle">A comprehensive assessment to help guide your spiritual journey</p>
-        </div>
-    </section>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Find Your Spiritual Path</h1>
+                <p class="hero-subtitle">A comprehensive assessment to help guide your spiritual journey. There are no right or wrong answers — only insights to illuminate your path.</p>
+            </div>
+        </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
         <section class="section">
             <div class="container">
                 <div class="assessment-intro">
-                    <h2>Discover Your Spiritual Direction</h2>
-                    <p>This thoughtful assessment will help you explore your spiritual inclinations, values, and practices across multiple traditions. There are no right or wrong answers—only insights to guide your journey.</p>
+                    <h2 class="section-title">Discover Your Spiritual Direction</h2>
+                    <p style="color: var(--text-secondary);">This thoughtful assessment will help you explore your spiritual inclinations, values, and practices across multiple traditions.</p>
                 </div>
 
                 <div class="assessment-container">
@@ -56,10 +214,10 @@
                         <div class="progress-bar">
                             <div class="progress-fill" id="progressFill"></div>
                         </div>
-                        <span class="progress-text">Question <span id="currentQuestion">1</span> of 15</span>
+                        <span class="progress-text">Question <span id="currentQuestion">1</span> of 3</span>
                     </div>
 
-                    <div class="assessment-form">
+                    <div class="assessment-form" id="assessmentForm">
                         <div class="question-card active" data-question="1">
                             <h3>How do you typically seek spiritual insight or guidance?</h3>
                             <div class="options">
@@ -87,11 +245,11 @@
                             <div class="options">
                                 <label class="option">
                                     <input type="radio" name="q2" value="essential">
-                                    <span>Essential - I need fellowship and shared worship</span>
+                                    <span>Essential — I need fellowship and shared worship</span>
                                 </label>
                                 <label class="option">
                                     <input type="radio" name="q2" value="helpful">
-                                    <span>Helpful but not necessary - I enjoy spiritual discussions</span>
+                                    <span>Helpful but not necessary — I enjoy spiritual discussions</span>
                                 </label>
                                 <label class="option">
                                     <input type="radio" name="q2" value="personal">
@@ -99,7 +257,7 @@
                                 </label>
                                 <label class="option">
                                     <input type="radio" name="q2" value="individual">
-                                    <span>Completely individual - my path is uniquely mine</span>
+                                    <span>Completely individual — my path is uniquely mine</span>
                                 </label>
                             </div>
                         </div>
@@ -126,31 +284,29 @@
                             </div>
                         </div>
 
-                        <!-- Simplified for demo - would continue with more questions -->
                         <div class="assessment-note">
-                            <p><em>Note: This is a simplified demo. The full assessment contains 15 comprehensive questions exploring your spiritual preferences, practices, and beliefs across multiple traditions.</em></p>
+                            <em>Note: This is a simplified assessment. The full version explores 15 comprehensive questions across spiritual preferences, practices, and beliefs.</em>
                         </div>
 
                         <div class="assessment-actions">
-                            <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
-                            <button class="btn btn-primary" id="nextBtn">Next</button>
-                            <button class="btn btn-primary" id="submitBtn" style="display: none;">Get My Results</button>
+                            <button class="btn-action secondary" id="prevBtn" disabled>← Previous</button>
+                            <button class="btn-action primary" id="nextBtn">Next →</button>
+                            <button class="btn-action primary" id="submitBtn" style="display: none;">Get My Results</button>
                         </div>
                     </div>
 
                     <div class="results-container" id="resultsContainer" style="display: none;">
-                        <h2>Your Spiritual Compass Results</h2>
+                        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: var(--space-lg);">Your Spiritual Compass Results</h2>
                         <div class="result-card">
-                            <h3>Your Primary Spiritual Inclination</h3>
-                            <div class="result-content" id="primaryResult">
-                                <!-- Results will be populated by JavaScript -->
-                            </div>
+                            <h3 style="color: var(--primary-color); margin-bottom: var(--space-md);">Your Primary Spiritual Inclination</h3>
+                            <div id="primaryResult"></div>
                         </div>
-                        <div class="recommendations">
-                            <h3>Recommended Paths to Explore</h3>
-                            <div class="recommendation-grid" id="recommendationGrid">
-                                <!-- Recommendations will be populated -->
-                            </div>
+                        <div>
+                            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: var(--space-md);">Recommended Paths to Explore</h3>
+                            <div class="recommendation-grid" id="recommendationGrid"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: var(--space-xl);">
+                            <button class="btn-action secondary" id="retakeBtn">Retake Assessment</button>
                         </div>
                     </div>
                 </div>
@@ -158,65 +314,67 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="compass-icon">🧭</span>
-                        <span>Spiritual Compass</span>
-                    </div>
-                    <p>Honoring all paths to the sacred.</p>
+                    <h3>Practices</h3>
+                    <a href="/meditation/">Meditation</a>
+                    <a href="/prayer/">Prayer</a>
+                    <a href="/rituals/">Rituals</a>
+                    <a href="/assessment/">Assessment</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Explore</h4>
-                    <a href="/assessment/">Spiritual Assessment</a>
-                    <a href="/meditation/">Meditation Guide</a>
+                    <h3>Wisdom</h3>
+                    <a href="/traditions/">Traditions</a>
+                    <a href="/teachers/">Teachers</a>
                     <a href="/texts/">Sacred Texts</a>
-                    <a href="/prayer/">Prayer Practices</a>
+                    <a href="/wisdom/">Teachings</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
-                    <a href="/support/">Spiritual Support</a>
-                    <a href="/#contact">Contact Us</a>
+                    <h3>Resources</h3>
+                    <a href="/paths/">Spiritual Paths</a>
+                    <a href="/history/">History</a>
+                    <a href="/books/">Books</a>
+                    <a href="/guides/">Guides</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <a href="/contact/">Contact</a>
+                    <a href="/about/">About</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Spiritual Compass. Made with respect for all spiritual traditions.</p>
+                <p>&copy; 2026 Spiritual Compass. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple assessment functionality
         let currentQuestionNum = 1;
-        const totalQuestions = 3; // Simplified for demo
-        
+        const totalQuestions = 3;
+
         const nextBtn = document.getElementById('nextBtn');
         const prevBtn = document.getElementById('prevBtn');
         const submitBtn = document.getElementById('submitBtn');
         const progressFill = document.getElementById('progressFill');
         const currentQuestionSpan = document.getElementById('currentQuestion');
-        
+
         function updateProgress() {
-            const progress = (currentQuestionNum / totalQuestions) * 100;
-            progressFill.style.width = progress + '%';
+            progressFill.style.width = (currentQuestionNum / totalQuestions * 100) + '%';
             currentQuestionSpan.textContent = currentQuestionNum;
         }
-        
+
         function showQuestion(num) {
-            document.querySelectorAll('.question-card').forEach(card => {
-                card.classList.remove('active');
-            });
-            
-            const currentCard = document.querySelector(`[data-question="${num}"]`);
-            if (currentCard) {
-                currentCard.classList.add('active');
-            }
-            
+            document.querySelectorAll('.question-card').forEach(card => card.classList.remove('active'));
+            const card = document.querySelector('[data-question="' + num + '"]');
+            if (card) card.classList.add('active');
             prevBtn.disabled = num === 1;
-            
             if (num === totalQuestions) {
                 nextBtn.style.display = 'none';
                 submitBtn.style.display = 'inline-block';
@@ -224,213 +382,63 @@
                 nextBtn.style.display = 'inline-block';
                 submitBtn.style.display = 'none';
             }
-            
             updateProgress();
         }
-        
+
         nextBtn.addEventListener('click', () => {
             if (currentQuestionNum < totalQuestions) {
                 currentQuestionNum++;
                 showQuestion(currentQuestionNum);
             }
         });
-        
+
         prevBtn.addEventListener('click', () => {
             if (currentQuestionNum > 1) {
                 currentQuestionNum--;
                 showQuestion(currentQuestionNum);
             }
         });
-        
+
         submitBtn.addEventListener('click', () => {
-            // Simple results logic
-            document.querySelector('.assessment-form').style.display = 'none';
+            document.getElementById('assessmentForm').style.display = 'none';
             document.getElementById('resultsContainer').style.display = 'block';
-            
+
             document.getElementById('primaryResult').innerHTML = `
-                <div class="result-tradition">
-                    <h4>🧘‍♀️ Contemplative & Meditative Path</h4>
-                    <p>Your responses suggest a strong affinity for contemplative practices and inner spiritual exploration. You may find fulfillment in meditation, mindfulness, and traditions that emphasize direct spiritual experience.</p>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🧘‍♀️</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.75rem;">Contemplative &amp; Meditative Path</h4>
+                    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">Your responses suggest a strong affinity for contemplative practices and inner spiritual exploration. You may find fulfillment in meditation, mindfulness, and traditions that emphasize direct spiritual experience.</p>
                 </div>
             `;
-            
+
             document.getElementById('recommendationGrid').innerHTML = `
                 <div class="recommendation-card">
                     <h4>Buddhism</h4>
                     <p>Explore meditation practices and the Four Noble Truths</p>
-                    <a href="/meditation/" class="btn btn-outline btn-sm">Start Meditating</a>
+                    <a href="/meditation/">Start Meditating →</a>
                 </div>
                 <div class="recommendation-card">
                     <h4>Christian Contemplation</h4>
                     <p>Discover contemplative prayer and mystic traditions</p>
-                    <a href="/prayer/" class="btn btn-outline btn-sm">Prayer Guides</a>
+                    <a href="/prayer/">Prayer Guides →</a>
                 </div>
                 <div class="recommendation-card">
                     <h4>Hindu Philosophy</h4>
                     <p>Study the Bhagavad Gita and yoga philosophy</p>
-                    <a href="/texts/" class="btn btn-outline btn-sm">Read Texts</a>
+                    <a href="/texts/">Read Texts →</a>
                 </div>
             `;
         });
-    </script>
-    <script src="/scripts/enhanced-assessment.js"></script>
 
-    <style>
-        .assessment-hero {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(59, 130, 246, 0.1));
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .assessment-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--hope-yellow), var(--wisdom-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-        
-        .assessment-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .assessment-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .assessment-progress {
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: var(--border-light);
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--peace-green));
-            transition: width 0.3s ease;
-            width: 33%;
-        }
-        
-        .progress-text {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .question-card {
-            display: none;
-            background: var(--surface-elevated);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            margin-bottom: 2rem;
-        }
-        
-        .question-card.active {
-            display: block;
-        }
-        
-        .question-card h3 {
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-        }
-        
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .option {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
-            border: 2px solid var(--border-light);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .option:hover {
-            border-color: var(--primary);
-            background: rgba(59, 130, 246, 0.05);
-        }
-        
-        .option input[type="radio"] {
-            margin: 0;
-        }
-        
-        .assessment-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-        
-        .assessment-note {
-            text-align: center;
-            margin: 2rem 0;
-            padding: 1rem;
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .result-card {
-            background: var(--surface-elevated);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            margin-bottom: 2rem;
-        }
-        
-        .result-tradition {
-            text-align: center;
-        }
-        
-        .recommendation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        
-        .recommendation-card {
-            background: var(--surface-elevated);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-light);
-            text-align: center;
-        }
-        
-        .btn-sm {
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .nav-link.active {
-            color: var(--primary);
-            font-weight: 600;
-        }
-    </style>
+        document.getElementById('retakeBtn').addEventListener('click', () => {
+            currentQuestionNum = 1;
+            document.getElementById('resultsContainer').style.display = 'none';
+            document.getElementById('assessmentForm').style.display = 'block';
+            document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+            showQuestion(1);
+        });
+
+        updateProgress();
+    </script>
 </body>
 </html>

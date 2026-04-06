@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Guides - Spiritual Compass</title>
+    <meta name="description" content="Step-by-step guides for beginning your spiritual journey. Practical introductions to meditation, prayer, sacred texts, and the world's great traditions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .guide-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .guide-card:hover {
+            box-shadow: var(--box-shadow);
+            border-color: var(--accent-color);
+        }
+        .guide-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            background: var(--accent-color);
+            color: white;
+        }
+        .guide-tag.intermediate {
+            background: var(--primary-color);
+        }
+        .guide-tag.advanced {
+            background: var(--secondary-color);
+        }
+        .guide-card h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        .guide-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            flex: 1;
+        }
+        .guide-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .guide-steps {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+        }
+        .guide-steps ol {
+            padding-left: 1.5rem;
+            line-height: 2;
+            color: var(--text-secondary);
+        }
+        .guide-steps li {
+            padding-left: 0.5rem;
+        }
+        .guide-steps li strong {
+            color: var(--text-primary);
+        }
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-md);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Spiritual Compass</a>
+                <nav class="nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/meditation/" class="nav-link">Meditation</a>
+                    <a href="/prayer/" class="nav-link">Prayer</a>
+                    <a href="/rituals/" class="nav-link">Rituals</a>
+                    <a href="/practices/" class="nav-link">Practices</a>
+                    <a href="/traditions/" class="nav-link">Traditions</a>
+                    <a href="/teachers/" class="nav-link">Teachers</a>
+                    <a href="/texts/" class="nav-link">Texts</a>
+                    <a href="/wisdom/" class="nav-link">Wisdom</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="/assessment/" class="btn-primary">Take Assessment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Beginner Guides</h1>
+                <p class="hero-subtitle">Practical introductions to spiritual practice — wherever you are starting from.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Starting Your Practice</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;">Every tradition began with a first step. These guides offer clear, honest starting points — no prior experience or beliefs required.</p>
+
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <span class="guide-tag">Beginner</span>
+                        <h3>🧘 How to Meditate for the First Time</h3>
+                        <p>A no-frills introduction to sitting quietly with yourself. Covers posture, breath, and what to do when (not if) your mind wanders.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 10 min read</span>
+                            <span>·</span>
+                            <a href="/meditation/" class="card-link" style="font-size: 0.85rem;">Go to Meditation →</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <span class="guide-tag">Beginner</span>
+                        <h3>🙏 An Introduction to Prayer</h3>
+                        <p>What prayer is, what it isn't, and how people across traditions have used it to find stillness, gratitude, and connection.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 8 min read</span>
+                            <span>·</span>
+                            <a href="/prayer/" class="card-link" style="font-size: 0.85rem;">Go to Prayer →</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <span class="guide-tag">Beginner</span>
+                        <h3>🌍 Choosing a Tradition to Explore</h3>
+                        <p>A candid overview of the world's spiritual traditions to help you decide where to begin your deeper study — without committing to anything.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 12 min read</span>
+                            <span>·</span>
+                            <a href="/traditions/" class="card-link" style="font-size: 0.85rem;">Explore Traditions →</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <span class="guide-tag">Beginner</span>
+                        <h3>📚 Reading Sacred Texts Without a Guide</h3>
+                        <p>How to approach ancient scriptures as a modern reader — what to look for, what to set aside, and how to let the text speak to you.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 10 min read</span>
+                            <span>·</span>
+                            <a href="/texts/" class="card-link" style="font-size: 0.85rem;">Browse Texts →</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <span class="guide-tag intermediate">Intermediate</span>
+                        <h3>📿 Building a Daily Spiritual Practice</h3>
+                        <p>Moving from occasional inspiration to a consistent routine. How to design a practice that fits your life and grows with you over time.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 15 min read</span>
+                            <span>·</span>
+                            <a href="/practices/" class="card-link" style="font-size: 0.85rem;">See Practices →</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <span class="guide-tag intermediate">Intermediate</span>
+                        <h3>🏛️ Finding a Teacher or Community</h3>
+                        <p>When to seek guidance, what to look for in a teacher, and how to evaluate a spiritual community before committing your time and trust.</p>
+                        <div class="guide-meta">
+                            <span>⏱️ 12 min read</span>
+                            <span>·</span>
+                            <a href="/teachers/" class="card-link" style="font-size: 0.85rem;">Meet Teachers →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Tradition-Specific Guides</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;">Short introductions to the core practices and beliefs of each tradition on this site.</p>
+
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <h3>☸️ Getting Started with Buddhism</h3>
+                        <p>The Four Noble Truths, the Eightfold Path, and how to begin a basic meditation practice rooted in the Buddha's original teachings.</p>
+                        <div class="guide-meta"><a href="/traditions/buddhist/" class="card-link" style="font-size: 0.85rem;">Buddhist Tradition →</a></div>
+                    </div>
+                    <div class="guide-card">
+                        <h3>✝️ Getting Started with Christian Contemplation</h3>
+                        <p>Centering prayer, lectio divina, and the Desert Fathers — how the Christian tradition developed a rich interior life beyond Sunday worship.</p>
+                        <div class="guide-meta"><a href="/traditions/christian/" class="card-link" style="font-size: 0.85rem;">Christian Tradition →</a></div>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🕉️ Getting Started with Hindu Practice</h3>
+                        <p>Yoga, puja, mantra, and the major schools of Hindu philosophy — a map for navigating one of the world's oldest and most diverse traditions.</p>
+                        <div class="guide-meta"><a href="/traditions/hinduism/" class="card-link" style="font-size: 0.85rem;">Hindu Tradition →</a></div>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🌹 Getting Started with Sufism</h3>
+                        <p>The mystical heart of Islam — dhikr, sama, and the path of love as taught by Rumi, Ibn Arabi, and the great Sufi orders.</p>
+                        <div class="guide-meta"><a href="/traditions/sufism/" class="card-link" style="font-size: 0.85rem;">Sufi Tradition →</a></div>
+                    </div>
+                    <div class="guide-card">
+                        <h3>☯️ Getting Started with Taoism</h3>
+                        <p>Wu wei, the Tao Te Ching, and the art of moving in harmony with nature — a practical introduction to Taoist philosophy and practice.</p>
+                        <div class="guide-meta"><a href="/traditions/taoism/" class="card-link" style="font-size: 0.85rem;">Taoist Tradition →</a></div>
+                    </div>
+                    <div class="guide-card">
+                        <h3>✡️ Getting Started with Kabbalah</h3>
+                        <p>The Tree of Life, the ten Sefirot, and Jewish mystical practice — an accessible entry into one of the world's most profound esoteric traditions.</p>
+                        <div class="guide-meta"><a href="/traditions/kabbalah/" class="card-link" style="font-size: 0.85rem;">Kabbalah Tradition →</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Your First Week</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-lg) auto; line-height: 1.8;">A simple day-by-day framework for anyone starting completely from scratch.</p>
+
+                <div class="guide-steps">
+                    <ol>
+                        <li><strong>Day 1 — Sit still for five minutes.</strong> No technique required. Just stop, close your eyes, and notice what's happening inside you.</li>
+                        <li><strong>Day 2 — Read one short sacred text.</strong> A psalm, a Zen koan, a verse of the Tao Te Ching. Let it sit with you through the day.</li>
+                        <li><strong>Day 3 — Take the assessment.</strong> Use the <a href="/assessment/" class="card-link">Spiritual Compass assessment</a> to understand where your instincts lean.</li>
+                        <li><strong>Day 4 — Try one guided meditation.</strong> Visit the <a href="/meditation/" class="card-link">meditation page</a> and use the Start Practice button on any exercise.</li>
+                        <li><strong>Day 5 — Explore one tradition in depth.</strong> Choose the tradition from the assessment results and spend thirty minutes on its page.</li>
+                        <li><strong>Day 6 — Create a small ritual.</strong> Light a candle, take three breaths, set an intention. Do it at the same time each day this week.</li>
+                        <li><strong>Day 7 — Reflect.</strong> What resonated? What felt foreign? What surprised you? Write three sentences in a journal.</li>
+                    </ol>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-xl);">
+                    <a href="/assessment/" class="card-link" style="margin-right: var(--space-md);">Take the Assessment →</a>
+                    <a href="/traditions/" class="card-link" style="margin-right: var(--space-md);">Explore Traditions →</a>
+                    <a href="/wisdom/" class="card-link">Daily Wisdom →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Practices</h3>
+                    <a href="/meditation/">Meditation</a>
+                    <a href="/prayer/">Prayer</a>
+                    <a href="/rituals/">Rituals</a>
+                    <a href="/assessment/">Assessment</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Wisdom</h3>
+                    <a href="/traditions/">Traditions</a>
+                    <a href="/teachers/">Teachers</a>
+                    <a href="/texts/">Sacred Texts</a>
+                    <a href="/wisdom/">Teachings</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="/paths/">Spiritual Paths</a>
+                    <a href="/history/">History</a>
+                    <a href="/books/">Books</a>
+                    <a href="/guides/">Guides</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <a href="/contact/">Contact</a>
+                    <a href="/about/">About</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spiritual Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
