@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Spiritual Compass - Spiritual Compass</title>
+    <title>About Spiritual Compass</title>
+    <meta name="description" content="Spiritual Compass is a free guide to the world's wisdom traditions — helping seekers explore meditation, prayer, sacred texts, and spiritual practices without bias or agenda.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8352366706266722"
          crossorigin="anonymous"></script>
+    <style>
+        .about-body {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .about-body h2 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            font-family: var(--font-secondary);
+            margin: var(--space-xl) 0 var(--space-md) 0;
+        }
+        .about-body p { margin-bottom: var(--space-md); }
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        .principle-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+        }
+        .principle-card .icon { font-size: 1.75rem; display: block; margin-bottom: var(--space-xs); }
+        .principle-card h3 { color: var(--primary-color); font-size: 1rem; margin-bottom: var(--space-xs); }
+        .principle-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+        .disclaimer-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: var(--space-xl) 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+    </style>
 </head>
-<body class="content-page">
+<body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
-                                <nav class="nav">
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
+                <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
                     <a href="/prayer/" class="nav-link">Prayer</a>
@@ -33,18 +76,83 @@
             </div>
         </div>
     </header>
-    <main class="main">
-        <div class="container">
-            <div class="content-header">
-                <h1 class="content-title">About Spiritual Compass</h1>
-                <div class="content-meta"><span>Our Mission</span> • <span>Contact</span></div>
+
+    <main class="main" style="padding: 0;">
+
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">About Spiritual Compass</h1>
+                <p class="hero-subtitle">A free, independent guide to the world's wisdom traditions — built for seekers, not believers.</p>
             </div>
-            <div class="ad-container">
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="about-body">
+
+                    <h2>What This Site Is</h2>
+                    <p>Spiritual Compass is a free educational resource dedicated to exploring the world's great spiritual and wisdom traditions — Buddhism, Hinduism, Christianity, Islam, Taoism, Judaism, Norse mythology, Celtic Druidism, ancient Egyptian spirituality, Native American traditions, Greek philosophy, and more.</p>
+                    <p>We believe that the spiritual heritage of humanity is too important to be locked behind academic paywalls, denominational gatekeeping, or the assumption that you already belong to one tradition. This site is for everyone who is genuinely curious — whether you are deeply devoted, quietly searching, philosophically minded, or simply open.</p>
+
+                    <h2>Our Approach</h2>
+                    <p>We approach every tradition with respect, intellectual honesty, and a commitment to accuracy. We do not promote one path over another. We do not ask you to believe anything. We present the teachings, practices, and history of each tradition as faithfully as we can — and trust you to draw your own conclusions.</p>
+                    <p>Where traditions disagree — sometimes profoundly — we do not paper over the differences. Understanding what makes each tradition distinct is as important as recognising what they share.</p>
+
+                    <div class="principle-grid">
+                        <div class="principle-card">
+                            <span class="icon">⚖️</span>
+                            <h3>No Bias</h3>
+                            <p>We treat all traditions with equal seriousness and respect — ancient or modern, Eastern or Western, mainstream or esoteric.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="icon">🔍</span>
+                            <h3>Accuracy First</h3>
+                            <p>Content is researched carefully. We draw on primary texts, scholarly sources, and lived tradition — not popular myth or surface-level summaries.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="icon">🚪</span>
+                            <h3>Always Free</h3>
+                            <p>No subscriptions, no paywalls, no account required. Spiritual knowledge should be accessible to anyone willing to seek it.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="icon">🧭</span>
+                            <h3>You Decide</h3>
+                            <p>We are a compass, not a destination. We point — you walk. The path you choose is entirely your own.</p>
+                        </div>
+                    </div>
+
+                    <h2>What You'll Find Here</h2>
+                    <p><strong>Traditions</strong> — In-depth guides to 15+ spiritual traditions, covering their history, core beliefs, gods and figures, sacred practices, and living relevance today.</p>
+                    <p><strong>Meditation</strong> — Six guided meditation practices drawn from different traditions, with an interactive timer you can use directly in your browser.</p>
+                    <p><strong>Prayer &amp; Rituals</strong> — How people across traditions have used prayer and sacred action to connect with the divine and mark the turning points of life.</p>
+                    <p><strong>Sacred Texts</strong> — Introductions to the foundational scriptures of each tradition — what they say, how to approach them, and why they still matter.</p>
+                    <p><strong>Teachers</strong> — Profiles of the great spiritual teachers of history and the modern era who have guided millions on the inner path.</p>
+                    <p><strong>Books</strong> — A curated library of recommended reading, covering every tradition covered on this site.</p>
+                    <p><strong>Assessment</strong> — A free 15-question assessment that identifies which spiritual traditions are most aligned with your values, temperament, and what you seek.</p>
+
+                    <h2>A Note on Indigenous Traditions</h2>
+                    <p>We include content on Native American and other indigenous spiritual traditions with particular care. These are living traditions, not museum pieces — many of their practices remain sacred and private, and we present only what is publicly shared by indigenous communities themselves. We encourage everyone approaching indigenous wisdom to do so with humility, respect, and an awareness of the history of appropriation these traditions have endured.</p>
+
+                    <div class="disclaimer-box">
+                        <strong>Affiliate disclosure:</strong> The Books page contains Amazon affiliate links. As an Amazon Associate, Spiritual Compass earns a small commission from qualifying purchases at no extra cost to you. This helps keep the site free and ad-supported. We only recommend books we would genuinely suggest to a seeker.
+                    </div>
+
+                    <h2>Contact</h2>
+                    <p>Questions, corrections, or suggestions are welcome. If you notice an inaccuracy in how we've described your tradition, please let us know — we take that seriously and will correct it promptly.</p>
+                    <p>You can reach us via the <a href="/contact/" style="color: var(--accent-color);">contact page</a>.</p>
+
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-xl);">
+                    <a href="/assessment/" class="btn-primary" style="margin-right: var(--space-md);">Take the Assessment →</a>
+                    <a href="/traditions/" class="card-link">Explore Traditions →</a>
+                </div>
             </div>
-            <article class="content-body"><p>Coming soon: Deep exploration of this tradition and its spiritual teachings.</p></article>
-        </div>
+        </section>
+
     </main>
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
