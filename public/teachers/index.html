@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiritual Teachers - Spiritual Compass</title>
-    <meta name="description" content="Learn from the great spiritual teachers of history. Explore wisdom from enlightened masters, mystics, and guides across all traditions.">
+    <title>Spiritual Teachers — Wisdom Keepers Across Traditions - Spiritual Compass</title>
+    <meta name="description" content="Meet the great spiritual teachers of history and the modern era — from the Buddha and Rumi to Thich Nhat Hanh and Simone Weil. Wisdom keepers across all traditions.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -15,40 +15,45 @@
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: var(--space-lg);
-            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .teacher-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--box-shadow);
         }
-        .teacher-card.historical {
-            border-left: 4px solid var(--accent-color);
-        }
         .teacher-avatar {
             font-size: 2.5rem;
             margin-bottom: var(--space-sm);
+            display: block;
+        }
+        .teacher-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
         }
         .teacher-tradition {
             color: var(--accent-color);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: var(--space-sm);
         }
-        .teacher-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: var(--space-sm);
-        }
-        .tag {
-            background: var(--bg-secondary);
+        .teacher-description {
             color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            padding: 0.2rem 0.6rem;
-            border-radius: 1rem;
-            font-size: 0.8rem;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+        .teacher-quote {
+            border-left: 3px solid var(--border-color);
+            padding-left: var(--space-sm);
+            margin-top: var(--space-sm);
+            font-family: var(--font-secondary);
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
         .teachers-grid {
             display: grid;
@@ -57,10 +62,11 @@
             margin-top: var(--space-md);
         }
         .category-heading {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
+            font-family: var(--font-secondary);
             margin-bottom: var(--space-md);
-            padding-bottom: var(--space-xs);
+            padding-bottom: var(--space-sm);
             border-bottom: 2px solid var(--border-color);
         }
         .category-block {
@@ -74,7 +80,7 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
                 <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
@@ -93,182 +99,203 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" style="padding: 0;">
+
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Spiritual Teachers</h1>
-                <p class="hero-subtitle">Learn from wisdom keepers across all traditions. Throughout history, spiritual teachers have illuminated the path for seekers — discover their insights for your own journey.</p>
+                <p class="hero-subtitle">Throughout history, certain individuals have seen more deeply than their contemporaries and devoted their lives to pointing others toward the truth. These are their stories.</p>
             </div>
         </section>
 
+        <!-- Founders and Prophets -->
         <section class="section">
             <div class="container">
-
                 <div class="category-block">
-                    <h2 class="category-heading">🌟 Contemporary Teachers</h2>
+                    <h2 class="category-heading">⚡ Founders &amp; Prophets</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg); line-height: 1.7;">The teachers whose insights became the foundations of living traditions, shaping the spiritual lives of billions.</p>
                     <div class="teachers-grid">
                         <div class="teacher-card">
-                            <div class="teacher-avatar">🧘‍♂️</div>
-                            <h3 class="card-title">Thích Nhất Hạnh</h3>
-                            <p class="teacher-tradition">Buddhism · Mindfulness</p>
-                            <p class="card-description">Vietnamese Zen master who brought mindfulness to the West. Teaches peace, compassion, and present-moment awareness.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Mindful Living</span>
-                                <span class="tag">Peace</span>
-                            </div>
+                            <span class="teacher-avatar">☸️</span>
+                            <div class="teacher-name">Siddhartha Gautama (The Buddha)</div>
+                            <div class="teacher-tradition">Buddhism · c. 563–483 BCE</div>
+                            <p class="teacher-description">Born a prince in what is now Nepal, Siddhartha renounced wealth and position to seek the end of suffering. After years of asceticism and meditation, he attained awakening under the Bodhi tree at Bodh Gaya. He spent the next 45 years teaching the Four Noble Truths and the Eightfold Path across northern India. His insight — that suffering arises from craving and can be ended — remains one of the most psychologically acute teachings in human history.</p>
+                            <div class="teacher-quote">"Three things cannot be long hidden: the sun, the moon, and the truth."</div>
                         </div>
                         <div class="teacher-card">
-                            <div class="teacher-avatar">🤲</div>
-                            <h3 class="card-title">Richard Rohr</h3>
-                            <p class="teacher-tradition">Christianity · Contemplative</p>
-                            <p class="card-description">Franciscan priest exploring contemplative Christianity, non-dual consciousness, and spiritual transformation.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Contemplation</span>
-                                <span class="tag">Transformation</span>
-                            </div>
+                            <span class="teacher-avatar">☯️</span>
+                            <div class="teacher-name">Lao Tzu</div>
+                            <div class="teacher-tradition">Taoism · c. 6th century BCE</div>
+                            <p class="teacher-description">The semi-legendary sage credited with writing the Tao Te Ching — 81 brief, cryptic verses on the nature of the Tao (the Way) and how to live in harmony with it. Whether historical figure or composite, his teaching on wu wei (effortless action), simplicity, and returning to the natural flow has shaped Chinese civilisation and influenced millions of seekers worldwide. The Tao Te Ching is the most translated text in the world after the Bible.</p>
+                            <div class="teacher-quote">"Knowing others is wisdom. Knowing yourself is enlightenment."</div>
                         </div>
                         <div class="teacher-card">
-                            <div class="teacher-avatar">🌙</div>
-                            <h3 class="card-title">Pema Chödrön</h3>
-                            <p class="teacher-tradition">Buddhism · Tibetan</p>
-                            <p class="card-description">American Buddhist nun teaching courage, resilience, and working with difficult emotions through Buddhist wisdom.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Courage</span>
-                                <span class="tag">Compassion</span>
-                            </div>
+                            <span class="teacher-avatar">✝️</span>
+                            <div class="teacher-name">Jesus of Nazareth</div>
+                            <div class="teacher-tradition">Christianity · c. 4 BCE–30 CE</div>
+                            <p class="teacher-description">An itinerant Jewish teacher in 1st-century Palestine whose teachings on love, forgiveness, the Kingdom of God, and care for the poor became the foundation of Christianity. His parables — the Prodigal Son, the Good Samaritan, the Sermon on the Mount — are among the most influential ethical teachings ever recorded. Beyond theological claims, his emphasis on loving enemies, serving the least, and inner purity over outward observance has challenged and inspired people of every tradition.</p>
+                            <div class="teacher-quote">"Love one another as I have loved you."</div>
                         </div>
                         <div class="teacher-card">
-                            <div class="teacher-avatar">🕊️</div>
-                            <h3 class="card-title">Henri Nouwen</h3>
-                            <p class="teacher-tradition">Christianity · Catholic</p>
-                            <p class="card-description">Dutch priest and spiritual writer exploring solitude, community, and the spiritual life in modern times.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Solitude</span>
-                                <span class="tag">Service</span>
-                            </div>
+                            <span class="teacher-avatar">🌟</span>
+                            <div class="teacher-name">Guru Nanak</div>
+                            <div class="teacher-tradition">Sikhism · 1469–1539</div>
+                            <p class="teacher-description">The founder of Sikhism, born in the Punjab region. After a mystical experience in his thirties, he declared "There is no Hindu, there is no Muslim" and began teaching the oneness of God (Waheguru), the equality of all people, and the importance of honest work, prayer, and service (seva). He travelled thousands of miles — to Mecca, Tibet, Baghdad — sharing his teaching. His compositions form the opening of the Guru Granth Sahib, Sikhism's eternal scripture.</p>
+                            <div class="teacher-quote">"Even kings and emperors with heaps of wealth and vast dominion cannot compare with an ant filled with the love of God."</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="category-block">
-                    <h2 class="category-heading">📿 Classical Masters</h2>
-                    <div class="teachers-grid">
-                        <div class="teacher-card historical">
-                            <div class="teacher-avatar">☸️</div>
-                            <h3 class="card-title">Buddha (Siddhartha Gautama)</h3>
-                            <p class="teacher-tradition">Buddhism · Founder</p>
-                            <p class="card-description">The awakened one who discovered the Middle Way and taught the path to liberation from suffering.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Four Noble Truths</span>
-                                <span class="tag">Mindfulness</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card historical">
-                            <div class="teacher-avatar">✝️</div>
-                            <h3 class="card-title">Jesus of Nazareth</h3>
-                            <p class="teacher-tradition">Christianity · Founder</p>
-                            <p class="card-description">Central figure of Christianity, teaching love, compassion, forgiveness, and the kingdom of heaven.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Love</span>
-                                <span class="tag">Forgiveness</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card historical">
-                            <div class="teacher-avatar">🌹</div>
-                            <h3 class="card-title">Rumi (Jalal ad-Din)</h3>
-                            <p class="teacher-tradition">Islam · Sufism</p>
-                            <p class="card-description">13th-century Persian poet and mystic whose verses on divine love continue to inspire seekers worldwide.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Divine Love</span>
-                                <span class="tag">Poetry</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card historical">
-                            <div class="teacher-avatar">☯️</div>
-                            <h3 class="card-title">Lao Tzu</h3>
-                            <p class="teacher-tradition">Taoism · Founder</p>
-                            <p class="card-description">Legendary Chinese philosopher who wrote the Tao Te Ching, teaching the way of natural harmony.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Wu Wei</span>
-                                <span class="tag">Simplicity</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="category-block">
-                    <h2 class="category-heading">🏛️ Mystics &amp; Contemplatives</h2>
-                    <div class="teachers-grid">
-                        <div class="teacher-card">
-                            <div class="teacher-avatar">🌟</div>
-                            <h3 class="card-title">Meister Eckhart</h3>
-                            <p class="teacher-tradition">Christianity · Mysticism</p>
-                            <p class="card-description">Medieval German theologian and mystic who taught about union with God through detachment and inner stillness.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Union</span>
-                                <span class="tag">Detachment</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card">
-                            <div class="teacher-avatar">🌺</div>
-                            <h3 class="card-title">Teresa of Ávila</h3>
-                            <p class="teacher-tradition">Christianity · Mysticism</p>
-                            <p class="card-description">16th-century Spanish mystic who mapped the soul's journey to God through contemplative prayer.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Interior Castle</span>
-                                <span class="tag">Prayer</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card">
-                            <div class="teacher-avatar">🕌</div>
-                            <h3 class="card-title">Ibn Arabi</h3>
-                            <p class="teacher-tradition">Islam · Sufism</p>
-                            <p class="card-description">Andalusian Muslim scholar and mystic known as "the Greatest Master," teaching unity of being.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">Wisdom</span>
-                            </div>
-                        </div>
-                        <div class="teacher-card">
-                            <div class="teacher-avatar">🕸️</div>
-                            <h3 class="card-title">Ramana Maharshi</h3>
-                            <p class="teacher-tradition">Hinduism · Advaita</p>
-                            <p class="card-description">20th-century Indian sage who taught self-inquiry and non-dual awareness through direct experience.</p>
-                            <div class="teacher-tags">
-                                <span class="tag">Self-Inquiry</span>
-                                <span class="tag">Non-Dual</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: var(--space-xxl);">
-                    <h2 class="section-title">How to Learn from Teachers</h2>
-                    <div class="card-grid">
-                        <div class="card">
-                            <h3 class="card-title">📚 Study Their Teachings</h3>
-                            <p class="card-description">Read their original works or reliable translations. Take notes on key insights that resonate with your spiritual journey.</p>
-                        </div>
-                        <div class="card">
-                            <h3 class="card-title">🧘 Practice Their Methods</h3>
-                            <p class="card-description">Try the specific practices they recommend. Spiritual wisdom is meant to be lived, not just understood intellectually.</p>
-                        </div>
-                        <div class="card">
-                            <h3 class="card-title">💭 Reflect &amp; Apply</h3>
-                            <p class="card-description">Consider how their teachings apply to your daily life. How can their wisdom guide your choices and relationships?</p>
-                        </div>
-                        <div class="card">
-                            <h3 class="card-title">🤝 Find Community</h3>
-                            <p class="card-description">Connect with others who study the same teachers. Sharing insights deepens understanding and provides encouragement.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
+
+        <!-- Classical Mystics -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="category-block" style="margin-bottom: 0;">
+                    <h2 class="category-heading">🏛️ Classical Mystics &amp; Philosophers</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg); line-height: 1.7;">Thinkers and contemplatives who mapped the inner territory of divine experience and left detailed accounts of what they found.</p>
+                    <div class="teachers-grid">
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🌹</span>
+                            <div class="teacher-name">Rumi (Jalal ad-Din Muhammad Balkhi)</div>
+                            <div class="teacher-tradition">Sufism · 1207–1273</div>
+                            <p class="teacher-description">A Persian Islamic scholar and jurist who was transformed by his encounter with the wandering dervish Shams-e Tabrizi into one of history's greatest mystical poets. His Masnavi — six books of poetry exploring the longing of the soul for its divine source — is sometimes called "the Persian Quran." He founded the Mevlevi Sufi order, known for the whirling meditation. Today he is one of the best-selling poets in the world.</p>
+                            <div class="teacher-quote">"Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🌟</span>
+                            <div class="teacher-name">Meister Eckhart</div>
+                            <div class="teacher-tradition">Christian Mysticism · c. 1260–1328</div>
+                            <p class="teacher-description">A Dominican friar and theologian who developed a radical mystical theology centred on the birth of God in the soul and the Godhead beyond all attributes. He taught that the deepest ground of the soul and the ground of God are one — an insight that earned him condemnation by the pope but enduring admiration from Zen masters, Vedantists, and contemporary spiritual seekers. His German sermons are among the most profound texts of Western mysticism.</p>
+                            <div class="teacher-quote">"The ground of God and the ground of the soul are one and the same ground."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🌺</span>
+                            <div class="teacher-name">Teresa of Ávila</div>
+                            <div class="teacher-tradition">Christian Mysticism · 1515–1582</div>
+                            <p class="teacher-description">Spanish Carmelite nun, reformer, and Doctor of the Church who wrote the most systematic account of the contemplative life in Christian tradition. Her Interior Castle maps the soul's journey through seven "dwelling places" toward union with God. A practical administrator as well as a mystic, she combined deep prayer with vigorous action. Her friendship and collaboration with John of the Cross produced two of the greatest mystical writers in Christian history.</p>
+                            <div class="teacher-quote">"The feeling remains that God is on the journey, too."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🕌</span>
+                            <div class="teacher-name">Ibn Arabi</div>
+                            <div class="teacher-tradition">Sufism · 1165–1240</div>
+                            <p class="teacher-description">The Andalusian Muslim mystic known as "al-Shaykh al-Akbar" (the Greatest Master), whose doctrine of wahdat al-wujud (Unity of Being) holds that all existence is a single divine reality appearing in infinite forms. His Fusus al-Hikam and Futuhat al-Makkiyya are among the most sophisticated works of Islamic philosophy. Deeply controversial in his lifetime, he is now recognised as the pre-eminent metaphysician of the Sufi tradition.</p>
+                            <div class="teacher-quote">"My heart has become capable of every form — a pasture for gazelles and a convent for Christian monks."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🏛️</span>
+                            <div class="teacher-name">Marcus Aurelius</div>
+                            <div class="teacher-tradition">Stoicism · 121–180 CE</div>
+                            <p class="teacher-description">Roman emperor and Stoic philosopher whose private journal — the Meditations, never intended for publication — is one of the most intimate and enduringly practical spiritual documents in Western tradition. Written during military campaigns, it returns again and again to the core Stoic themes: what is in our control, the transience of all things, the duty to act rightly regardless of outcome, and the kinship of all human beings. A model of wisdom in action.</p>
+                            <div class="teacher-quote">"You have power over your mind, not outside events. Realize this, and you will find strength."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">📿</span>
+                            <div class="teacher-name">Adi Shankaracharya</div>
+                            <div class="teacher-tradition">Hinduism · c. 788–820 CE</div>
+                            <p class="teacher-description">The philosopher-saint who consolidated Advaita Vedanta (non-dual Hinduism) and revitalised Hinduism across the Indian subcontinent. In a life of just 32 years, he wrote profound commentaries on the Upanishads, Bhagavad Gita, and Brahma Sutras; composed devotional hymns; debated scholars across India; and established four monastic centres (mathas) still operating today. His central insight: Brahman alone is real; the apparent diversity of the world is maya (illusion).</p>
+                            <div class="teacher-quote">"Brahman is real, the world is illusory; the individual self is Brahman alone."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🕎</span>
+                            <div class="teacher-name">Maimonides (Moses ben Maimon)</div>
+                            <div class="teacher-tradition">Judaism · 1138–1204</div>
+                            <p class="teacher-description">Medieval Jewish philosopher, rabbi, and physician whose Guide for the Perplexed reconciled Aristotelian philosophy with Jewish scripture — one of the most ambitious intellectual projects of the Middle Ages. He also codified Jewish law in his Mishneh Torah. For Maimonides, the highest form of worship was intellectual contemplation of God — knowledge of God and love of God are inseparable. His influence on both Jewish and Christian thought has been immeasurable.</p>
+                            <div class="teacher-quote">"The risk of a wrong decision is preferable to the terror of indecision."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🎋</span>
+                            <div class="teacher-name">Confucius (Kong Qiu)</div>
+                            <div class="teacher-tradition">Confucianism · 551–479 BCE</div>
+                            <p class="teacher-description">Chinese philosopher and teacher whose emphasis on moral self-cultivation, ritual propriety, social harmony, and family relationships became the foundation of East Asian civilisation. His Analects — a collection of his sayings recorded by disciples — cover ethics, governance, and the nature of virtue (ren, or benevolence). For Confucius, spiritual and moral development are inseparable: becoming more fully human is the highest calling.</p>
+                            <div class="teacher-quote">"The man who moves a mountain begins by carrying away small stones."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Teachers -->
+        <section class="section">
+            <div class="container">
+                <div class="category-block">
+                    <h2 class="category-heading">🌍 Modern &amp; Contemporary Teachers</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg); line-height: 1.7;">Teachers of the 19th, 20th, and 21st centuries who have brought ancient wisdom into dialogue with the modern world.</p>
+                    <div class="teachers-grid">
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🧘‍♂️</span>
+                            <div class="teacher-name">Thích Nhất Hạnh</div>
+                            <div class="teacher-tradition">Engaged Buddhism · 1926–2022</div>
+                            <p class="teacher-description">Vietnamese Zen master, poet, and peace activist who coined the term "Engaged Buddhism" — the application of contemplative practice to social justice and everyday life. Exiled from Vietnam for his anti-war activism, he established Plum Village monastery in France and wrote over 100 books that brought mindfulness to millions in the West. His teachings on interbeing — the radical interdependence of all life — have become foundational to modern mindfulness culture.</p>
+                            <div class="teacher-quote">"The present moment is the only moment available to us, and it is the door to all moments."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🕊️</span>
+                            <div class="teacher-name">Ramana Maharshi</div>
+                            <div class="teacher-tradition">Advaita Vedanta · 1879–1950</div>
+                            <p class="teacher-description">The sage of Arunachala who attained spontaneous awakening at 16, without a teacher or scripture, and spent the rest of his life at the foot of the sacred hill of Arunachala in Tamil Nadu. His primary teaching was self-inquiry (atma vichara): the practice of asking "Who am I?" until the questioner dissolves into pure awareness. He spoke little but his silent presence drew seekers from across the world — including Carl Jung, Somerset Maugham, and Paul Brunton.</p>
+                            <div class="teacher-quote">"Your own Self-Realisation is the greatest service you can render the world."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🌙</span>
+                            <div class="teacher-name">Pema Chödrön</div>
+                            <div class="teacher-tradition">Tibetan Buddhism · b. 1936</div>
+                            <p class="teacher-description">American Buddhist nun in the Shambhala tradition, ordained by Chögyam Trungpa Rinpoche. Her books — When Things Fall Apart, The Places That Scare You, Start Where You Are — have brought Tibetan Buddhist wisdom on working with fear, uncertainty, and groundlessness to a vast Western audience. She teaches that difficulty is not an obstacle to practice but the very ground of it. Abbot emerita of Gampo Abbey in Nova Scotia.</p>
+                            <div class="teacher-quote">"You are the sky. Everything else — it's just the weather."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">✨</span>
+                            <div class="teacher-name">Swami Vivekananda</div>
+                            <div class="teacher-tradition">Hinduism / Vedanta · 1863–1902</div>
+                            <p class="teacher-description">The young Bengali monk who introduced Vedanta and yoga to the West at the Parliament of the World's Religions in Chicago in 1893, beginning his address with "Sisters and brothers of America!" — a direct, radically inclusive greeting that electrified the audience. A disciple of Ramakrishna, he founded the Ramakrishna Mission and articulated a vision of practical Vedanta: all religions lead to the same truth, and service to humanity is the highest form of worship.</p>
+                            <div class="teacher-quote">"Arise, awake, and stop not until the goal is reached."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🤲</span>
+                            <div class="teacher-name">Richard Rohr</div>
+                            <div class="teacher-tradition">Christian Mysticism · b. 1943</div>
+                            <p class="teacher-description">Franciscan friar and founder of the Center for Action and Contemplation in Albuquerque. His writing — The Universal Christ, Falling Upward, The Naked Now — explores how authentic spirituality transcends dualistic thinking and embraces the whole of life. Rohr draws on Christian mysticism, Zen, and Jungian psychology to articulate a "perennial tradition" that connects the great spiritual insights across traditions. One of the most widely read Catholic teachers of the modern era.</p>
+                            <div class="teacher-quote">"The great religions are the windows through which we can see divine light."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🌿</span>
+                            <div class="teacher-name">Hildegard of Bingen</div>
+                            <div class="teacher-tradition">Christian Mysticism · 1098–1179</div>
+                            <p class="teacher-description">Benedictine abbess, composer, visionary, theologian, herbalist, and one of the most extraordinary figures of the Middle Ages. Her mystical visions, recorded in Scivias, described God as "Living Light" and the universe as suffused with viriditas — the greening power of divine creativity. She composed 77 musical works still performed today, wrote on medicine and natural history, and corresponded with popes, emperors, and Bernard of Clairvaux. Declared a Doctor of the Church in 2012.</p>
+                            <div class="teacher-quote">"We cannot live in a world that is not our own, in a world that is interpreted for us by others."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">📖</span>
+                            <div class="teacher-name">Simone Weil</div>
+                            <div class="teacher-tradition">Christian Philosophy · 1909–1943</div>
+                            <p class="teacher-description">French philosopher, mystic, and social activist whose short life produced some of the most penetrating spiritual writing of the 20th century. A Jew who was drawn profoundly to Christ without joining the Church, she wrote on attention as a form of prayer, on affliction as a pathway to God, and on the social dimensions of spiritual life. Her Waiting for God and Gravity and Grace remain essential texts for anyone seeking to integrate intellectual rigour with contemplative depth.</p>
+                            <div class="teacher-quote">"Attention is the rarest and purest form of generosity."</div>
+                        </div>
+                        <div class="teacher-card">
+                            <span class="teacher-avatar">🔆</span>
+                            <div class="teacher-name">Jiddu Krishnamurti</div>
+                            <div class="teacher-tradition">Non-tradition · 1895–1986</div>
+                            <p class="teacher-description">Indian philosopher who was groomed from childhood by the Theosophical Society to be a World Teacher — and who dissolved their organisation and renounced all spiritual authority, insisting that truth cannot be transmitted through any organisation, tradition, or guru. For six decades he gave talks exploring attention, conditioned thinking, the observer and the observed, and the possibility of a mind free of psychological time. His approach was radically empirical: see what is actually happening in your own consciousness.</p>
+                            <div class="teacher-quote">"Truth is a pathless land."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Find Your Own Path</h2>
+                <p>Every teacher points; none can walk your path for you. Our free assessment helps you identify which traditions and approaches are most aligned with how you think, feel, and seek.</p>
+                <a href="/assessment/" class="btn-white">Take the Free Assessment →</a>
+            </div>
+        </section>
+
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

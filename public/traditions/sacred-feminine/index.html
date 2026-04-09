@@ -3,20 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE - Spiritual Compass</title>
+    <title>The Sacred Feminine - Spiritual Compass</title>
+    <meta name="description" content="Explore the Sacred Feminine across world traditions — from Isis and Shakti to the Black Madonna and the Goddess in Wicca. The divine feminine in world spirituality.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .goddess-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: var(--space-md);
+        }
+        .goddess-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            border-top: 3px solid var(--accent-color);
+        }
+        .goddess-card h3 { color: var(--primary-color); margin-bottom: var(--space-xs); font-size: 1.05rem; }
+        .goddess-card .tradition {
+            font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--accent-color); margin-bottom: var(--space-sm);
+        }
+        .goddess-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+        .quote-block {
+            border-left: 4px solid var(--accent-color);
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-secondary);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: var(--space-lg) 0;
+        }
+        .quote-block blockquote {
+            font-family: var(--font-secondary);
+            font-size: 1.15rem; font-style: italic;
+            color: var(--text-primary); margin: 0 0 var(--space-xs) 0; line-height: 1.6;
+        }
+        .quote-block cite { font-size: 0.85rem; color: var(--text-secondary); }
+    </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8352366706266722"
          crossorigin="anonymous"></script>
 </head>
-<body class="content-page">
+<body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
-                                <nav class="nav">
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
+                <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
                     <a href="/prayer/" class="nav-link">Prayer</a>
@@ -33,18 +67,215 @@
             </div>
         </div>
     </header>
-    <main class="main">
-        <div class="container">
-            <div class="content-header">
-                <h1 class="content-title">TITLE</h1>
-                <div class="content-meta">META</div>
+
+    <main class="main" style="padding: 0;">
+
+        <!-- Hero Section -->
+        <section class="hero hero-dark">
+            <div class="container">
+                <span class="hero-symbol">🌙</span>
+                <h1 class="hero-title">The Sacred Feminine</h1>
+                <p class="hero-subtitle">The divine feminine across world traditions — goddess, mother, wisdom, and the hidden face of the sacred.</p>
             </div>
-            <div class="ad-container">
+        </section>
+
+        <!-- Section 1: The Universal Feminine (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">The Universal Feminine</h2>
+                <p style="max-width: 800px; margin: 0 auto var(--space-lg) auto; text-align: center; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+                    Before patriarchal religious institutions consolidated, goddess worship was near-universal. The oldest known religious figurines — the Venus of Willendorf (c.28,000 BCE) and scores of similar figures from across Eurasia and beyond — are female. The sacred feminine represents the nurturing, creative, receptive, cyclical, and intuitive aspects of the divine. It never disappeared: it persisted in goddess traditions, in Marian devotion, in Shakti worship, and in the emergence of the modern Goddess movement. Across cultures and millennia, humanity has returned again and again to the image of the divine as feminine — as the source from which life pours forth and to which it eventually returns.
+                </p>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+                    <div class="card card-accent">
+                        <span class="card-icon">🌱</span>
+                        <h3 class="card-title">Creation and Fertility</h3>
+                        <p class="card-description">The feminine as origin of life — earth mother, mother of gods, the womb from which existence springs. Found in nearly every ancient culture: Gaia (Greek), Ninhursag (Sumerian), Pachamama (Andean). The creative power that brings forth the world is consistently imaged as feminine — not passive, but generative and inexhaustibly abundant.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">📖</span>
+                        <h3 class="card-title">Wisdom and Knowledge</h3>
+                        <p class="card-description">Sophia (Gnostic), Saraswati (Hindu), Athena (Greek) — the goddess as bearer of divine wisdom, language, arts, and insight. In the Hebrew scriptures, Wisdom (Hokmah) is personified as a woman who was present at creation, delighting in the inhabited world. The feminine divine is not only the body of the world but its intelligence.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">🔥</span>
+                        <h3 class="card-title">Death and Transformation</h3>
+                        <p class="card-description">Kali (Hindu), Hecate (Greek), the Morrigan (Celtic), Ereshkigal (Sumerian) — the fierce, transformative aspect that destroys to create anew. The feminine as initiator of profound change. This face of the goddess is not evil but necessary: she strips away what has outlived its purpose, making room for the new. She is the midwife of death and rebirth alike.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">❤️</span>
+                        <h3 class="card-title">Love and Devotion</h3>
+                        <p class="card-description">Aphrodite (Greek), Lakshmi (Hindu), Hathor (Egyptian), Oshun (Yoruba) — the feminine as love, beauty, abundance, and the power that draws all things together. This is not merely romantic love but the cosmic eros that holds the universe in relation. Love, in many traditions, is the fundamental force of creation, and it wears a feminine face.</p>
+                    </div>
+                </div>
             </div>
-            <article class="content-body"><p>Coming soon: Deep exploration of this tradition and its spiritual teachings.</p></article>
-        </div>
+        </section>
+
+        <!-- Section 2: Great Goddesses (bg-secondary) -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Great Goddesses Across Traditions</h2>
+                <p style="max-width: 700px; margin: 0 auto var(--space-lg) auto; text-align: center; color: var(--text-secondary);">
+                    From Egypt to India, from Greece to China, the divine feminine has taken countless forms — each reflecting the deepest needs and insights of her culture while sharing common threads of power, compassion, and mystery.
+                </p>
+                <div class="goddess-grid">
+                    <div class="goddess-card">
+                        <h3>Isis</h3>
+                        <div class="tradition">Egyptian</div>
+                        <p>Great goddess of magic and healing, devoted mother and wife. She reassembled the slain Osiris, conceived Horus through miraculous power, and became the most widely worshipped goddess of the ancient world. Her cult spread across the Roman Empire, and her image — enthroned mother nursing the divine child — shaped later iconography of the Madonna and Child.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Shakti</h3>
+                        <div class="tradition">Hindu</div>
+                        <p>The primordial feminine energy of the universe — the very power by which the divine acts in the world. Without Shakti, even Shiva is inert. She manifests as Durga (warrior protector), Kali (destroyer of illusion), Lakshmi (abundance and grace), Saraswati (wisdom and arts), and countless other forms. All are one divine feminine in different expressions.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Kuan Yin (Guanyin)</h3>
+                        <div class="tradition">Buddhist / Taoist</div>
+                        <p>The Bodhisattva of compassion, beloved across East Asia — she who hears the cries of the world. Originally male in Indian Buddhism (Avalokitesvara), she became feminine in China as the embodiment of merciful, motherly compassion. She is called upon in times of danger, illness, and grief, and millions pray to her daily across China, Japan, Vietnam, and Korea.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Mary, Mother of Jesus</h3>
+                        <div class="tradition">Christian</div>
+                        <p>Through Marian devotion, the feminine divine persisted and flourished within Christianity. The Black Madonna traditions, apparitions like Lourdes and Fatima, the feast of the Immaculate Heart, and the declaration of Mary as Theotokos (God-bearer) all suggest a longing for the divine mother that official theology could not entirely suppress. She remains one of the most venerated figures in human history.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Sophia</h3>
+                        <div class="tradition">Gnostic / Christian</div>
+                        <p>Divine Wisdom personified — the feminine face of God in Gnostic Christianity and Jewish Wisdom literature (Proverbs 8, Sirach 24). Some Gnostic traditions saw Sophia as the creator or co-creator of the material world. In Eastern Orthodoxy, the great cathedral of Hagia Sophia is dedicated to this divine wisdom, identified with Christ but carrying the feminine name.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Durga</h3>
+                        <div class="tradition">Hindu</div>
+                        <p>The warrior goddess who defeated the buffalo demon Mahishasura when no male god could prevail. Fierce protector of dharma (righteous order), she rides a lion and wields weapons gifted by each of the gods. Durga Puja, her great autumn festival, is among the largest religious celebrations on earth. She demonstrates that the feminine is not only nurturing but supremely powerful.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>The Morrigan</h3>
+                        <div class="tradition">Celtic / Irish</div>
+                        <p>Triple goddess of fate, war, and sovereignty in Irish mythology. She appears as crow, washing woman at the ford, and queen of the land. She prophesies death in battle but also embodies the sovereignty of the land itself — the king must be wedded to the goddess to rule. She is wildness, fate, and the power that lies beneath all human affairs.</p>
+                    </div>
+                    <div class="goddess-card">
+                        <h3>Artemis / Diana</h3>
+                        <div class="tradition">Greek / Roman</div>
+                        <p>Goddess of the hunt, the moon, and the wilderness. Twin of Apollo, she is a virgin goddess — not in the modern sense of sexual inexperience, but in the older sense of belonging to herself alone, beholden to no man. She protects young women and wild animals. In the Ephesian cult, she was the great mother of all nature, her statue adorned with dozens of nurturing breasts.</p>
+                    </div>
+                </div>
+
+                <div class="quote-block" style="margin-top: var(--space-xl);">
+                    <blockquote>"I am She who was before the beginning. I am the earth, the sea, the sky. All things come from me and to me all things return."</blockquote>
+                    <cite>— Ancient Sumerian hymn to Inanna</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Living Traditions (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">The Sacred Feminine in Living Traditions</h2>
+                <p style="max-width: 760px; margin: 0 auto var(--space-lg) auto; text-align: center; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+                    Goddess veneration is not merely a matter of ancient history. Today, hundreds of millions of people participate in living traditions that place the sacred feminine at the centre of spiritual practice — from the vast festivals of India to the growing Goddess movement in the West.
+                </p>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                    <div class="card card-purple">
+                        <span class="card-icon">🪷</span>
+                        <h3 class="card-title">Shakta Hinduism</h3>
+                        <p class="card-description">A living tradition with hundreds of millions of practitioners, centred on the worship of Devi in her many forms. Durga Puja, celebrated in Bengal and across the Hindu world each autumn, is one of the largest religious festivals on earth, with elaborate clay images of the goddess ritually immersed in rivers at its conclusion. Kali worship in Bengal, the Navratri festivals, and Tantric traditions where the feminine is the supreme reality all make Shaktism one of the world's great living goddess traditions.</p>
+                    </div>
+                    <div class="card card-purple">
+                        <span class="card-icon">🌕</span>
+                        <h3 class="card-title">Goddess Spirituality and Wicca</h3>
+                        <p class="card-description">The modern Goddess movement emerged in the twentieth century, drawing on ancient traditions, archaeology (notably Marija Gimbutas's work on the goddess cultures of Old Europe), and feminist spirituality. Wicca, developed by Gerald Gardner and later profoundly shaped by Doreen Valiente, centres on the Goddess and her consort, the Horned God, as primary divine figures. Contemporary Goddess spirituality is richly diverse, encompassing Wicca, Dianic traditions, Reclaiming, and many independent practitioners who honour the earth and moon as sacred.</p>
+                    </div>
+                    <div class="card card-purple">
+                        <span class="card-icon">🕯️</span>
+                        <h3 class="card-title">Marian Devotion</h3>
+                        <p class="card-description">Within Catholicism, Orthodox Christianity, and many folk traditions worldwide, devotion to Mary fills much of the emotional and spiritual space that goddess worship occupies elsewhere. Marian shrines attract hundreds of millions of pilgrims annually — Guadalupe, Lourdes, Fatima, Czestochowa, and thousands of local sites. The Black Madonna traditions, with their dark-skinned images of the divine mother, are particularly evocative of pre-Christian earth goddess energy absorbed into Christian devotion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Key Themes (bg-secondary) -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Key Themes and Archetypes</h2>
+                <p style="max-width: 740px; margin: 0 auto var(--space-lg) auto; text-align: center; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+                    Beneath the enormous diversity of goddess traditions across cultures, certain recurring archetypes and themes emerge — patterns so consistent across time and geography that they suggest something deep in human consciousness seeking expression through the feminine image of the divine.
+                </p>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+                    <div class="card card-teal">
+                        <span class="card-icon">🌑🌕🌘</span>
+                        <h3 class="card-title">The Triple Goddess</h3>
+                        <p class="card-description">Maiden (youth, new beginnings, possibility), Mother (fullness, creation, nurture, embodied power), and Crone (wisdom, age, death, and rebirth). This threefold structure corresponds to the lunar cycle — waxing, full, and waning — and maps onto the stages of a human life. It honours all phases, including those — like age and death — that patriarchal culture tends to diminish or fear.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">🌍</span>
+                        <h3 class="card-title">Earth and Nature</h3>
+                        <p class="card-description">The feminine as the living earth — virtually all indigenous traditions have some version of the earth mother, the ground of being on which all life depends and to which all life returns. Modern ecological spirituality reclaims this connection, understanding the earth not as a resource to be exploited but as a living sacred body. The environmental crisis is, in part, a spiritual crisis arising from the loss of this reverence.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">🌑</span>
+                        <h3 class="card-title">The Dark Feminine</h3>
+                        <p class="card-description">Kali, Hecate, the Crone — this aspect of the sacred feminine is often the most feared and most suppressed in patriarchal religion, yet psychologically it is essential. The dark goddess does not destroy for destruction's sake: she clears away what is no longer serving life. The wisdom that comes from facing darkness, loss, grief, and death cannot be found elsewhere. Refusing her is refusing transformation itself.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">☯️</span>
+                        <h3 class="card-title">Sacred Marriage</h3>
+                        <p class="card-description">The union of masculine and feminine principles as the fundamental generative act — hieros gamos in ancient Greece and Mesopotamia, Shiva and Shakti in Hindu Tantra, the divine marriage of the Shekinah and the Holy One in Kabbalah. This is not about gender in the human sense but about the interplay of complementary cosmic forces: receptivity and action, darkness and light, stillness and movement. The world arises from their union.</p>
+                    </div>
+                </div>
+
+                <div class="quote-block" style="margin-top: var(--space-xl);">
+                    <blockquote>"The wild nature carries the bundles for healing; it carries everything a woman needs to be and know. It carries the medicine for all things."</blockquote>
+                    <cite>— Clarissa Pinkola Est&eacute;s, <em>Women Who Run With the Wolves</em></cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Practices (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">Practices and Approaches</h2>
+                <p style="max-width: 760px; margin: 0 auto var(--space-lg) auto; text-align: center; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+                    The sacred feminine is not only a subject of study but an invitation to a different kind of spiritual life — one rooted in the body, the earth, the lunar cycle, and the full range of experience, including what our culture tends to call shadow. The following approaches offer entry points for sincere seekers.
+                </p>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                    <div class="card card-accent">
+                        <span class="card-icon">🏛️</span>
+                        <h3 class="card-title">Working with Goddess Archetypes</h3>
+                        <p class="card-description">Choose a goddess whose qualities speak to your situation and study her mythology with care and respect for her cultural context. Create a simple altar with natural objects — flowers, a candle, a bowl of water, something from the earth. Invite her qualities into your life through reflection, journaling, and simple devotional acts. Notice what shifts. Archetypes, however we understand them metaphysically, carry real transformative power when engaged with sincerely.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">🌙</span>
+                        <h3 class="card-title">Moon Practices</h3>
+                        <p class="card-description">Align your inner life with the lunar cycle, which many goddess traditions see as the primary symbol of feminine consciousness — its capacity to wax, flourish, wane, and renew. At new moon, set intentions and plant seeds; at full moon, celebrate, offer gratitude, and let yourself be illuminated; at the waning and dark moon, release what no longer serves and rest in the necessary darkness. Working with the moon over months creates a profound attunement to cyclical time.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">🌿</span>
+                        <h3 class="card-title">Body and Breath</h3>
+                        <p class="card-description">Honour the body as sacred — it is the earth, the vessel, the manifestation of the Great Mother in personal form. Yoga, intuitive dance, walking barefoot on the earth, and breath practices rooted in embodiment reconnect us with the wisdom that lives below the neck. The sacred feminine invites us out of the disembodied intellect and back into full, sensate, earthed presence. The body is not a problem to be transcended but the very ground of spiritual life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section (dark) -->
+        <section class="cta-section" style="background: linear-gradient(135deg, #4a235a 0%, #6c3483 100%);">
+            <div class="container">
+                <h2 class="cta-title">The Return of the Goddess</h2>
+                <p>
+                    Something significant is happening in contemporary spirituality. After centuries of suppression, the sacred feminine is returning with force — in the growth of goddess traditions worldwide, in feminist theology's recovery of the divine feminine within Judaism and Christianity, in ecology's reframing of the earth as sacred, and in a widespread intuition that something essential has been missing from the dominant spiritual narrative of Western civilization.
+                </p>
+                <p>
+                    This return matters not because the feminine is superior to the masculine, but because wholeness requires both. The integration of what has been suppressed — the body, the earth, the cyclical, the dark, the relational — is the spiritual work of our time. Exploring the sacred feminine is not nostalgia for a mythic past but a path toward a more complete and life-sustaining vision of the sacred.
+                </p>
+                <a href="/assessment/" class="btn-white" style="margin-top: var(--space-md);">Discover Your Spiritual Path</a>
+            </div>
+        </section>
+
     </main>
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

@@ -3,22 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramana's Silent Teaching - Hindu Vedanta - Spiritual Compass</title>
-    <meta name="description" content="Explore Ramana Maharshi's direct path of self-inquiry and the profound simplicity of non-dualistic awakening through the question 'Who am I?'">
-    
+    <title>Hinduism — The Eternal Path - Spiritual Compass</title>
+    <meta name="description" content="Explore Hinduism — the world's oldest living religion, with the Vedas, Upanishads, yoga paths, gods of the trimurti, and the pursuit of moksha.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .deity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: var(--space-md);
+        }
+        .deity-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            border-top: 3px solid var(--accent-color);
+        }
+        .deity-card h3 { color: var(--primary-color); margin-bottom: var(--space-xs); font-size: 1.05rem; }
+        .deity-card .domain {
+            font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--accent-color); margin-bottom: var(--space-sm);
+        }
+        .deity-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+        .quote-block {
+            border-left: 4px solid var(--accent-color);
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-secondary);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: var(--space-lg) 0;
+        }
+        .quote-block blockquote {
+            font-family: var(--font-secondary);
+            font-size: 1.15rem; font-style: italic;
+            color: var(--text-primary); margin: 0 0 var(--space-xs) 0; line-height: 1.6;
+        }
+        .quote-block cite { font-size: 0.85rem; color: var(--text-secondary); }
+    </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8352366706266722"
          crossorigin="anonymous"></script>
 </head>
-<body class="content-page">
+<body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
-                                <nav class="nav">
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
+                <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
                     <a href="/prayer/" class="nav-link">Prayer</a>
@@ -35,237 +67,211 @@
             </div>
         </div>
     </header>
-    
-    <main class="main">
-        <div class="container">
-            <div class="content-header">
-                <h1 class="content-title">Ramana's Silent Teaching</h1>
-                <div class="content-meta">
-                    <span class="tradition-tag">Hindu Vedanta</span>
-                    <span class="date">1879-1950</span>
+
+    <main class="main" style="padding: 0;">
+
+        <!-- Hero Section -->
+        <section class="hero hero-dark">
+            <div class="container">
+                <span class="hero-symbol">🕉️</span>
+                <h1 class="hero-title">Hinduism — The Eternal Path</h1>
+                <p class="hero-subtitle">The world's oldest living religion — a vast, diverse tradition spanning the Vedic hymns, the Upanishads, devotional bhakti, and the philosophies of yoga.</p>
+            </div>
+        </section>
+
+        <!-- Section 1: The Foundations (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">The Foundations</h2>
+                <div class="card-grid">
+                    <div class="card card-accent">
+                        <span class="card-icon">📿</span>
+                        <h3 class="card-title">What is Hinduism?</h3>
+                        <p class="card-description">No single founder, no single scripture, no single creed. <em>Sanatana Dharma</em> — "the eternal law" — is its traditional name. A family of traditions originating in the Indian subcontinent, unified by shared concepts: dharma, karma, moksha, and the Vedas as a root reference. Over 1 billion adherents worldwide make Hinduism the third-largest religion on earth, yet it has never sought converts and carries no founding moment in history. It simply is — ancient, adaptive, and endlessly diverse.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">✨</span>
+                        <h3 class="card-title">Brahman and Atman</h3>
+                        <p class="card-description">Brahman is the ultimate reality — infinite, formless, the source and substance of all that is. Atman is the individual soul. The great insight of the Upanishads distils this into one of philosophy's most arresting equations: <em>Atman is Brahman</em>. The Chandogya Upanishad captures it in three words: <em>Tat tvam asi</em> — "That thou art." The deepest self and ultimate reality are not two things, but one. The boundary between the seeker and the sought is the very illusion spiritual practice aims to dissolve.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">⚖️</span>
+                        <h3 class="card-title">Dharma</h3>
+                        <p class="card-description">Cosmic order and one's duty within it. Dharma governs right action — it is not a rigid code but a living principle that differs by stage of life (<em>ashrama</em>), social role (<em>varna</em>), and individual circumstances. The student, the householder, the forest-dweller, and the renunciant each embody dharma differently. Living in accordance with dharma brings harmony to oneself and to the world; violating it generates suffering. The Bhagavad Gita's central counsel is to act from one's dharma without attachment to outcome.</p>
+                    </div>
+                    <div class="card card-accent">
+                        <span class="card-icon">🔄</span>
+                        <h3 class="card-title">Karma and Rebirth</h3>
+                        <p class="card-description">Every action (<em>karma</em>) — physical, verbal, and mental — creates impressions that shape future experience. The soul (<em>jiva</em>) takes successive births, drawn by the accumulated weight of karma, until all karma is resolved and <em>moksha</em> (liberation) is attained. Liberation ends the cycle of <em>samsara</em> — the wheel of repeated birth and death. This is not pessimism but realism: the world of conditioned existence is not the final word, and the spiritual path leads beyond it.</p>
+                    </div>
+                </div>
+
+                <div class="quote-block" style="margin-top: var(--space-xl);">
+                    <blockquote>"The soul is never born nor dies at any time. It has not come into being, does not come into being, and will not come into being. It is unborn, eternal, ever-existing, and primeval."</blockquote>
+                    <cite>— Bhagavad Gita, 2.20</cite>
                 </div>
             </div>
-            
-            <div class="ad-container">
+        </section>
+
+        <!-- Section 2: The Sacred Texts (bg-secondary) -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">The Sacred Texts</h2>
+                <div class="card-grid">
+                    <div class="card card-gold">
+                        <span class="card-icon">📖</span>
+                        <h3 class="card-title">The Vedas</h3>
+                        <p class="card-description">The oldest scriptures of Hinduism, composed approximately 1500–1200 BCE and transmitted orally for centuries before being written down. There are four Vedas: the <em>Rigveda</em> (hymns of praise to the gods), the <em>Samaveda</em> (melodic chants used in ritual), the <em>Yajurveda</em> (prose formulas for sacrificial ceremony), and the <em>Atharvaveda</em> (spells, charms, and philosophical hymns). The Vedas are <em>shruti</em> — "that which is heard" — considered not humanly authored but directly revealed to the ancient seers (<em>rishis</em>) in states of deep meditation.</p>
+                    </div>
+                    <div class="card card-gold">
+                        <span class="card-icon">🌅</span>
+                        <h3 class="card-title">The Upanishads</h3>
+                        <p class="card-description">108 philosophical texts appended to the Vedas (c. 800–200 BCE), called <em>Vedanta</em> — "the end of the Vedas" — both because they conclude the Vedic literature and because they represent its philosophical summit. The Upanishads explore the nature of Brahman, Atman, consciousness, and the path to moksha with extraordinary clarity and depth. The <em>Bhagavad Gita</em>, though not technically Shruti, forms the third of the "triple canon" of Vedanta alongside the Upanishads and the Brahma Sutras, and remains the most widely read Hindu scripture in the world.</p>
+                    </div>
+                    <div class="card card-gold">
+                        <span class="card-icon">🏹</span>
+                        <h3 class="card-title">The Epics and Puranas</h3>
+                        <p class="card-description">The <em>Mahabharata</em> — containing the Bhagavad Gita — and the <em>Ramayana</em> are the great epics of Hinduism, narrative in form but containing vast philosophical, ethical, and devotional teachings about dharma, love, and divine incarnation. The 18 major <em>Puranas</em> contain the stories of the gods, cosmological teachings, and devotional hymns that have shaped popular Hindu religion across millennia. These texts are <em>smriti</em> — "that which is remembered" — human compositions inspired by revelation.</p>
+                    </div>
+                </div>
+                <p style="margin-top: var(--space-lg); color: var(--text-secondary); line-height: 1.8; max-width: 820px;">
+                    The sheer range of Hindu scripture is unmatched in the world's religious literature — from the ecstatic nature-hymns of the Rigveda to the cool philosophical precision of the Upanishads, from the dramatic battlefield counsel of the Bhagavad Gita to the devotional poetry of the Tamil Alvars. No single text governs all Hindus. Different communities, lineages, and schools draw on different scriptural authorities, yet recognise a shared root in the Vedic revelation. This breadth is not a weakness but a strength: Hinduism has always made room for the scholar, the devotee, the mystic, and the ordinary householder who simply lights a lamp at dusk.
+                </p>
             </div>
-            
-            <article class="content-body">
-                <div class="hero-section">
-                    <h2>The Direct Path of Self-Inquiry</h2>
-                    <p class="lead">"Who am I? What is this 'I' that appears as the experiencer of all thoughts, sensations, and perceptions?"</p>
+        </section>
+
+        <!-- Section 3: The Gods (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">The Gods — A Living Pantheon</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-lg) auto; line-height: 1.7;">
+                    Hinduism's pantheon is vast — tradition counts 33 principal deities and speaks of 330 million forms of the divine. Yet most Hindu theologians hold that these are faces of a single ultimate reality. The many gods are not competitors but perspectives: different aspects of Brahman made accessible to human devotion.
+                </p>
+                <div class="deity-grid">
+                    <div class="deity-card">
+                        <h3>Brahma</h3>
+                        <div class="domain">Creator &middot; Creation</div>
+                        <p>The creator of the universe in the Hindu Trimurti. Often depicted with four faces looking in all directions and four arms holding the Vedas, a water pot, a rosary, and a lotus. Less widely worshipped than Vishnu or Shiva — tradition says his creative work is done — but essential to the cosmic triad of creation, preservation, and dissolution.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Vishnu</h3>
+                        <div class="domain">Preserver &middot; Sustainer</div>
+                        <p>The preserver and protector of the universe, whose mercy upholds cosmic order. When dharma declines and evil threatens creation, Vishnu descends to earth as an avatar (incarnation) to restore balance. His ten principal avatars include the fish Matsya, the turtle Kurma, the dwarf Vamana, Rama, Krishna, and the future Kalki yet to come.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Shiva</h3>
+                        <div class="domain">Destroyer &middot; Transformer</div>
+                        <p>The destroyer and transformer who clears away the old to allow renewal. Also the Lord of Yoga (Mahayogi), the cosmic dancer (Nataraja) whose dance sustains the rhythm of the universe, and the embodiment of fierce ascetic power. Shiva is the paradox of Hinduism: simultaneously fearsome and compassionate, wild and still, associated with both death and the grace that liberates.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Devi (Shakti)</h3>
+                        <div class="domain">Divine Mother &middot; Power</div>
+                        <p>The supreme goddess and cosmic energy — the feminine power behind all creation. She manifests in peaceful and fierce forms. As Parvati she is Shiva's devoted consort and nurturing mother; as Durga she rides a lion into battle against demonic forces; as the terrible Kali she stands on Shiva's chest, wearing a garland of skulls. Without Shakti, even Shiva cannot move.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Krishna</h3>
+                        <div class="domain">Divine Love &middot; Bhakti</div>
+                        <p>The eighth avatar of Vishnu and the beloved god of devotion and divine play (<em>lila</em>). The speaker of the Bhagavad Gita on the battlefield of Kurukshetra. Worshipped as the Supreme Person by Vaishnava traditions, Krishna is known for his enchanting flute, his cowherd childhood in Vrindavan, his teaching on love and duty, and the boundless tenderness he offers to those who surrender to him.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Rama</h3>
+                        <div class="domain">Dharma &middot; Virtue</div>
+                        <p>The seventh avatar of Vishnu and the ideal king. The Ramayana tells of his life in exile, his wife Sita's abduction by the demon king Ravana, and their rescue through the loyal friendship of the monkey god Hanuman. Rama embodies righteous kingship (<em>ramarajya</em>) — rule by dharma — and his name alone is held by many devotees to be the greatest of all mantras.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Ganesha</h3>
+                        <div class="domain">Beginnings &middot; Wisdom</div>
+                        <p>The elephant-headed son of Shiva and Parvati, remover of obstacles and patron of beginnings, arts, sciences, and wisdom. Ganesha is invoked before any important undertaking — a business venture, a journey, a marriage, a writing project. His pot belly holds the universe. His broken tusk, according to legend, was used to write the Mahabharata. One of the most universally beloved of all Hindu deities.</p>
+                    </div>
+                    <div class="deity-card">
+                        <h3>Lakshmi</h3>
+                        <div class="domain">Abundance &middot; Fortune</div>
+                        <p>The goddess of wealth, beauty, and spiritual prosperity. Wife of Vishnu, she is always at his side, grounding divine grace in material well-being. She pours coins from her hands in her most iconic depiction. Lakshmi's blessings flow to those who are morally worthy, industrious, and devoted — she is said to leave a household where laziness or impurity reigns. Worshipped especially during the festival of Diwali.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Four Paths of Yoga (bg-secondary) -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">The Four Paths of Yoga</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 680px; margin: 0 auto var(--space-lg) auto; line-height: 1.7;">
+                    The word <em>yoga</em> comes from the Sanskrit root meaning "to yoke" or "to unite." In its broadest sense, yoga is any path that leads to union with the divine. The Hindu tradition recognises four main temperaments and, for each, a corresponding path to liberation.
+                </p>
+                <div class="card-grid">
+                    <div class="card card-blue">
+                        <span class="card-icon">🔍</span>
+                        <h3 class="card-title">Jnana Yoga — Path of Knowledge</h3>
+                        <p class="card-description">Liberation through direct inquiry into the nature of the self. The practice is relentless self-investigation: What is the "I"? Who am I beyond body, senses, and thought? When all false identifications are stripped away, what remains? Championed by Adi Shankaracharya (788–820 CE) and the Advaita Vedanta school, Jnana Yoga holds that liberation is not something to be attained but something to be recognised — the Self was never bound.</p>
+                    </div>
+                    <div class="card card-blue">
+                        <span class="card-icon">❤️</span>
+                        <h3 class="card-title">Bhakti Yoga — Path of Devotion</h3>
+                        <p class="card-description">Liberation through love and devotion to God. The heart surrenders entirely to the divine beloved — expressed through song (<em>kirtan</em>), prayer, ritual worship (<em>puja</em>), and constant remembrance of the divine name. Considered the path most accessible to ordinary people. The great poet-saints — Mirabai, Tukaram, Andal, Kabir — showed that God could be reached by a milkmaid's song as surely as by a philosopher's argument.</p>
+                    </div>
+                    <div class="card card-blue">
+                        <span class="card-icon">🤲</span>
+                        <h3 class="card-title">Karma Yoga — Path of Action</h3>
+                        <p class="card-description">Liberation through selfless action. Act rightly, fulfil your duties, and serve others — but without attachment to results. Offer all actions as service to God, and work becomes worship. The Bhagavad Gita calls this the path for those who must live in the world: householders, rulers, warriors. You need not renounce action to find freedom; you need only renounce the ego's claim on its fruits.</p>
+                    </div>
+                    <div class="card card-blue">
+                        <span class="card-icon">🧘</span>
+                        <h3 class="card-title">Raja Yoga — Path of Meditation</h3>
+                        <p class="card-description">Liberation through systematic practice and meditation. Codified by Patanjali in the <em>Yoga Sutras</em> (c. 400 CE), Raja Yoga follows an eightfold path: ethical restraints (<em>yama</em>), positive observances (<em>niyama</em>), posture (<em>asana</em>), breath regulation (<em>pranayama</em>), withdrawal of senses (<em>pratyahara</em>), concentration (<em>dharana</em>), meditation (<em>dhyana</em>), and final absorption into the object of meditation (<em>samadhi</em>). This is the yoga most associated in the West with physical postures, though asana is only one of its eight limbs.</p>
+                    </div>
                 </div>
 
-                <section class="content-section">
-                    <h2>📖 Historical Context: Ancient Wisdom in Modern Form</h2>
-                    <div class="context-grid">
-                        <div class="context-card">
-                            <strong>Period:</strong> 1879-1950, British colonial South India
-                        </div>
-                        <div class="context-card">
-                            <strong>Tradition:</strong> Non-dualistic Vedanta in modern expression
-                        </div>
-                        <div class="context-card">
-                            <strong>Innovation:</strong> Direct self-inquiry without religious framework
-                        </div>
-                        <div class="context-card">
-                            <strong>Legacy:</strong> Ancient wisdom meeting Western spiritual seeking
-                        </div>
-                    </div>
-                    
-                    <p>
-                        In the late 19th century, as British colonial rule was transforming traditional Indian society, ancient Vedantic wisdom found its most direct and accessible modern expression in the teachings of Sri Ramana Maharshi. Born Venkataraman Iyer in the village of Tiruchuli, Tamil Nadu, this unlikely sage would demonstrate that the profound realization of the Upanishads—"Tat tvam asi" (Thou art That)—could be achieved through simple, direct investigation of the nature of consciousness itself.
-                    </p>
-                    
-                    <p>
-                        Unlike the complex philosophical systems and elaborate spiritual practices that characterized most approaches to Advaita Vedanta, Ramana's method was startlingly simple: honest inquiry into the nature of the "I" that experiences all mental and physical phenomena. This radical simplification made the most profound teachings of Hindu spirituality accessible to seekers from any cultural background.
-                    </p>
-                </section>
-
-                <section class="content-section">
-                    <h2>⚡ The Death That Wasn't: A Teenager's Spontaneous Awakening</h2>
-                    
-                    <blockquote class="story-highlight">
-                        <p>
-                            On a sweltering July afternoon in 1896, sixteen-year-old Venkataraman Iyer was alone in his uncle's house in Madurai, half-heartedly studying for his school examinations. Without warning, the boy was suddenly gripped by an overwhelming terror of death. It wasn't triggered by any external threat or particular thought—death simply appeared as an imminent, inescapable reality.
-                        </p>
-                        
-                        <p>
-                            But rather than running from this terror or seeking distraction, something in the young man's psyche responded with extraordinary spiritual intelligence.
-                        </p>
-                    </blockquote>
-                    
-                    <blockquote class="wisdom-quote">
-                        <p>
-                            "The shock of the fear of death drove my mind inward and I said to myself mentally: 'Now death has come; what does it mean? What is it that is dying? This body dies, but am I the body? The body is matter—it will decompose and return to the elements. What in me, if anything, is aware of this process?'"
-                        </p>
-                        <cite>— Ramana's later description</cite>
-                    </blockquote>
-                    
-                    <h3>🔍 The Great Investigation</h3>
-                    <p>
-                        What followed was perhaps the most methodical and penetrating self-inquiry ever documented. Instead of being overwhelmed by fear, Venkataraman used it as a catalyst for investigating the very nature of identity and consciousness.
-                    </p>
-                    
-                    <div class="insights-grid">
-                        <div class="insight-card">
-                            <h4>First Discovery: The Witness</h4>
-                            <p>Thoughts arise and pass away, but something remains aware of their coming and going. Even if all thoughts stopped, the awareness that knows thoughts would remain untouched.</p>
-                        </div>
-                        
-                        <div class="insight-card">
-                            <h4>Second Discovery: Beyond Emotions</h4>
-                            <p>Emotions and sensations are temporary phenomena that appear in consciousness like waves in the ocean. The fear of death itself was simply another temporary experience.</p>
-                        </div>
-                        
-                        <div class="insight-card">
-                            <h4>Third Discovery: Beyond the Body</h4>
-                            <p>The body is an object known by consciousness, not consciousness itself. He could observe the body's sensations, but what was doing the observing was distinct from what was being observed.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>🎯 The Practice of Self-Inquiry</h2>
-                    
-                    <div class="method-highlight">
-                        <h3>The Central Question: "Who Am I?"</h3>
-                        <p>
-                            Ramana's teaching method was deceptively simple. When anyone came to him with spiritual problems, philosophical questions, or practical difficulties, he would invariably redirect their attention to the fundamental inquiry: <strong>"Who is it that has this problem? Who is asking this question? Who wants liberation?"</strong>
-                        </p>
-                    </div>
-                    
-                    <div class="practice-steps">
-                        <div class="step-card">
-                            <h4>Step 1: Recognize the "I" Thought</h4>
-                            <p>Notice how all experiences—thoughts, emotions, sensations—are claimed by an "I": "I think," "I feel," "I want," "I remember."</p>
-                        </div>
-                        
-                        <div class="step-card">
-                            <h4>Step 2: Trace the "I" to its Source</h4>
-                            <p>Ask: "Where does this 'I' come from? What is the source of this sense of 'I'?" Follow the 'I'-feeling back to its origin.</p>
-                        </div>
-                        
-                        <div class="step-card">
-                            <h4>Step 3: Abide in Pure Awareness</h4>
-                            <p>As you trace the 'I' back, it dissolves into pure awareness—consciousness knowing itself without any object of knowledge.</p>
-                        </div>
-                        
-                        <div class="step-card">
-                            <h4>Step 4: Rest in What Remains</h4>
-                            <p>What remains when the personal 'I' dissolves? This is your true nature—not a thing, but the very awareness in which all things appear.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>💎 Core Insights of Self-Inquiry</h2>
-                    
-                    <div class="themes-grid">
-                        <div class="theme-card">
-                            <h3>🔍 Beyond Identification</h3>
-                            <p>You are not your thoughts, emotions, body, or personal history—you are the awareness in which all these appear</p>
-                        </div>
-                        <div class="theme-card">
-                            <h3>🌟 Present Moment Awakening</h3>
-                            <p>Enlightenment is not a future achievement but the recognition of what you already are—pure awareness</p>
-                        </div>
-                        <div class="theme-card">
-                            <h3>🕉️ No-Method Method</h3>
-                            <p>Self-inquiry is ultimately the dissolution of the seeker into what was always already present</p>
-                        </div>
-                        <div class="theme-card">
-                            <h3>🔇 The Power of Silence</h3>
-                            <p>True teaching happens in silence—the transmission of presence beyond words and concepts</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>🎯 Living Self-Inquiry Today</h2>
-                    
-                    <div class="practice-list">
-                        <div class="practice-item">
-                            <h4>Moment-to-Moment Inquiry</h4>
-                            <p>Apply self-inquiry to everyday experiences</p>
-                            <ul>
-                                <li>When stressed, ask "Who is stressed?"</li>
-                                <li>When happy, ask "Who is happy?"</li>
-                                <li>Trace every experience back to the experiencer</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="practice-item">
-                            <h4>Meditation Without Object</h4>
-                            <p>Practice awareness being aware of itself</p>
-                            <ul>
-                                <li>Sit quietly without focusing on any particular object</li>
-                                <li>Simply be aware of being aware</li>
-                                <li>When thoughts arise, ask "Who knows these thoughts?"</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="practice-item">
-                            <h4>The "I-Am" Feeling</h4>
-                            <p>Investigate the sense of existence itself</p>
-                            <ul>
-                                <li>Feel the simple sense of "I am" without adding "I am this" or "I am that"</li>
-                                <li>Rest in pure being-ness</li>
-                                <li>Let this be the foundation for all activities</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>📝 Ramana's Essential Teachings</h2>
-                    
-                    <div class="teachings-grid">
-                        <blockquote class="teaching-quote">
-                            <p>"Your own Self-realization is the greatest service you can render the world."</p>
-                            <cite>— Sri Ramana Maharshi</cite>
-                        </blockquote>
-                        
-                        <blockquote class="teaching-quote">
-                            <p>"There is no greater mystery than this: being Reality ourselves, we seek to gain Reality."</p>
-                            <cite>— Sri Ramana Maharshi</cite>
-                        </blockquote>
-                        
-                        <blockquote class="teaching-quote">
-                            <p>"Silence is ever-speaking; it is the perennial flow of language interrupted by speaking."</p>
-                            <cite>— Sri Ramana Maharshi</cite>
-                        </blockquote>
-                        
-                        <blockquote class="teaching-quote">
-                            <p>"The mind is only a bundle of thoughts. The thoughts have their root in the I-thought. Whoever investigates the True 'I' enjoys the stillness of bliss."</p>
-                            <cite>— Sri Ramana Maharshi</cite>
-                        </blockquote>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>Universal Applications</h2>
-                    
-                    <p>
-                        While Ramana's teachings emerged from the Hindu Vedantic tradition, their directness and simplicity make them applicable across all spiritual paths:
-                    </p>
-                    
-                    <ul class="universal-list">
-                        <li><strong>For Christians:</strong> The inquiry "Who am I?" leads to the same recognition that mystics like Meister Eckhart called "union with God"</li>
-                        <li><strong>For Buddhists:</strong> Self-inquiry reveals the "no-self" teaching—there is no separate personal self to be found</li>
-                        <li><strong>For Muslims:</strong> The dissolution of the ego-self into pure awareness reflects the Sufi understanding of fana (extinction in Allah)</li>
-                        <li><strong>For Secular Seekers:</strong> The practice requires no religious belief, only honest investigation of present-moment experience</li>
-                    </ul>
-                </section>
-
-                <div class="content-navigation">
-                    <a href="/traditions/buddhist/" class="nav-button prev">← Buddhist Mindfulness Wisdom</a>
-                    <a href="/traditions/sufism/" class="nav-button next">Sufi Mystical Poetry →</a>
+                <div class="quote-block" style="margin-top: var(--space-xl);">
+                    <blockquote>"Elevate yourself through the power of your own mind, and do not degrade yourself, for the mind can be the friend and also the enemy of the self."</blockquote>
+                    <cite>— Bhagavad Gita, 6.5</cite>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Key Concepts (white) -->
+        <section class="section" style="background: var(--bg-primary);">
+            <div class="container">
+                <h2 class="section-title">Key Concepts</h2>
+                <div class="card-grid">
+                    <div class="card card-teal">
+                        <span class="card-icon">🌊</span>
+                        <h3 class="card-title">Moksha</h3>
+                        <p class="card-description">Liberation — the supreme goal of spiritual life. Release from the cycle of birth and death (<em>samsara</em>) and from the karma that drives it. The various schools of Hinduism describe moksha differently: in Advaita Vedanta it is the realisation of one's identity with Brahman; in Vaishnavism it is eternal loving relationship with God in his divine realm; in Shaivism it is dissolving into Shiva's infinite awareness. All agree that it is the end of suffering and the fulfilment of the soul's deepest longing.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">🕊️</span>
+                        <h3 class="card-title">Ahimsa</h3>
+                        <p class="card-description">Non-violence — perhaps the most influential ethical principle to emerge from the Indian philosophical traditions. <em>Ahimsa</em> holds that all living beings possess a spark of the divine and are therefore worthy of respect and protection from harm. Foundational not only to Hinduism but to Jainism and Buddhism. In the twentieth century, Mahatma Gandhi built his entire political philosophy of <em>satyagraha</em> (truth-force) on ahimsa, using it to challenge empire and transform a nation.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">🪔</span>
+                        <h3 class="card-title">Puja</h3>
+                        <p class="card-description">Ritual devotional worship — the heartbeat of everyday Hindu practice, carried out at home shrines and great pilgrimage temples alike. A typical puja involves bathing the deity's image, dressing it, offering flowers, incense, water, food (<em>prasad</em>), and the waving of a lamp (<em>arati</em>). At its core, puja is a meeting: the devotee offers hospitality to the divine guest, and the deity offers grace in return. This mutual gaze — the seeing and being seen — is called <em>darshan</em>, one of the most sought spiritual experiences in Hindu life.</p>
+                    </div>
+                    <div class="card card-teal">
+                        <span class="card-icon">🌀</span>
+                        <h3 class="card-title">Maya</h3>
+                        <p class="card-description">The cosmic power of illusion or misperception that leads us to mistake the temporary, conditioned world for ultimate reality. <em>Maya</em> does not mean the world is unreal — it means we misidentify it as the deepest truth, and, worse, misidentify ourselves as separate, finite selves. Under maya, the infinite Atman takes itself to be a bounded ego, and suffering follows. The entire project of spiritual practice, in the Advaita view, is the removal of maya's veil — not by escaping the world, but by seeing it rightly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Hinduism Today — CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Hinduism Today</h2>
+                <p>
+                    Hinduism is not a relic of antiquity — it is one of the most dynamic religious forces on earth. Its major schools — Advaita Vedanta, Vaishnavism, Shaivism, Shaktism, and Smartism — continue to generate living teachers, vibrant communities, and fresh philosophical inquiry. Its contributions to world culture are immeasurable: the discipline of yoga, the science of meditation, the philosophical framework of Vedanta, the principle of ahimsa, and the insight that the divine can wear a thousand faces without ceasing to be one. A billion people find in Hinduism not a museum piece but a living, responsive tradition — one that can meet them in the kitchen, the temple, the forest hermitage, or the college seminar room. Whether you come as a seeker of philosophy, a lover of devotional song, or simply someone curious about the world's oldest continuous spiritual tradition, Hinduism's doors — like its pantheon — are inexhaustibly wide.
+                </p>
+                <a href="/assessment/" class="btn-white">Discover Your Spiritual Path</a>
+            </div>
+        </section>
+
     </main>
-    
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -273,6 +279,7 @@
                     <a href="/meditation/">Meditation</a>
                     <a href="/prayer/">Prayer</a>
                     <a href="/rituals/">Rituals</a>
+                    <a href="/practices/">All Practices</a>
                     <a href="/assessment/">Assessment</a>
                 </div>
                 <div class="footer-section">
@@ -293,11 +300,14 @@
                     <h3>Community</h3>
                     <a href="/contact/">Contact</a>
                     <a href="/about/">About</a>
+                    <a href="/newsletter/">Newsletter</a>
+                    <a href="/community/">Forum</a>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
-                    <a href="/privacy/">Privacy</a>
-                    <a href="/terms/">Terms</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                    <a href="/cookies/">Cookie Policy</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -305,5 +315,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>

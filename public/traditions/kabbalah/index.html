@@ -3,26 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewish Mysticism & Kabbalah - The Zohar - Spiritual Compass</title>
-    <meta name="description" content="Explore the mystical heart of Jewish spirituality through the Zohar, Sefirot, and profound Kabbalistic wisdom traditions.">
-    
-    <!-- Google Fonts -->
+    <title>Kabbalah — Jewish Mysticism - Spiritual Compass</title>
+    <meta name="description" content="Explore Kabbalah, the mystical heart of Judaism — the Tree of Life, the Sefirot, the Zohar, and the path to divine union.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .sefirot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: var(--space-md);
+        }
+        .sefirah-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            border-top: 3px solid var(--accent-color);
+        }
+        .sefirah-card h3 { color: var(--primary-color); margin-bottom: var(--space-xs); font-size: 1.05rem; }
+        .sefirah-card .attribute {
+            font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--accent-color); margin-bottom: var(--space-sm);
+        }
+        .sefirah-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+        .quote-block {
+            border-left: 4px solid var(--accent-color);
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-secondary);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: var(--space-lg) 0;
+        }
+        .quote-block blockquote {
+            font-family: var(--font-secondary);
+            font-size: 1.15rem; font-style: italic;
+            color: var(--text-primary); margin: 0 0 var(--space-xs) 0; line-height: 1.6;
+        }
+        .quote-block cite { font-size: 0.85rem; color: var(--text-secondary); }
+    </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8352366706266722"
          crossorigin="anonymous"></script>
 </head>
-<body class="content-page">
-    <!-- Header -->
+<body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">Spiritual Compass</a>
-                                <nav class="nav">
+                <a href="/" class="logo">🧭 Spiritual Compass</a>
+                <nav class="nav">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/meditation/" class="nav-link">Meditation</a>
                     <a href="/prayer/" class="nav-link">Prayer</a>
@@ -40,42 +68,209 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <div class="container">
-            <!-- Content Header -->
-            <div class="content-header">
-                <h1 class="content-title">✡️ Jewish Mysticism & Kabbalah</h1>
-                <div class="content-meta">
-                    <span>Jewish Tradition</span> • <span>Kabbalah</span> • <span>The Zohar</span> • <span>Divine Emanation</span>
+    <main class="main" style="padding: 0;">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">✡️ Kabbalah — The Mystical Heart of Judaism</h1>
+                <p class="hero-subtitle">An ancient tradition mapping the hidden structure of creation — the pathways of divine light descending from the infinite into the world, and the soul's journey of return.</p>
+            </div>
+        </section>
+
+        <!-- Section 1: What is Kabbalah? -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">What is Kabbalah?</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 750px; margin: 0 auto var(--space-xl) auto; font-size: 1.05rem; line-height: 1.8;">The word <em>Kabbalah</em> means "received tradition" — a body of esoteric wisdom passed from teacher to student within Judaism, concerned with the inner nature of God, the cosmos, and the human soul.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3 class="card-title">📜 Origins</h3>
+                        <p class="card-description">Jewish mysticism has ancient roots in biblical visions and Talmudic speculation, but its classical flowering came in 13th-century Spain and Provence, culminating in the Zohar. The great Kabbalistic centre of Safed in 16th-century Palestine, home to Isaac Luria and Joseph Karo, marks the tradition's most creative period.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">🌟 The Goal</h3>
+                        <p class="card-description">Kabbalah aims at direct experiential knowledge of God — what the tradition calls <em>da'at</em>, a knowing that goes beyond intellectual understanding into union. The practitioner ascends the Tree of Life, refines the soul, and participates in <em>tikkun olam</em>: the repair and restoration of the world.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">📚 Key Texts</h3>
+                        <p class="card-description">The <em>Sefer Yetzirah</em> (Book of Formation, 3rd–6th century) describes creation through Hebrew letters and numbers. The <em>Zohar</em> (13th century, attributed to Shimon bar Yochai, compiled by Moses de León) is the central masterwork. The <em>Bahir</em> and the extensive Lurianic writings of Chaim Vital round out the classical canon.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">🌿 Modern Streams</h3>
+                        <p class="card-description">Kabbalah flows in several currents today: the traditional, studied within Orthodox Judaism as part of the wider Torah; the Lurianic system, which has been dominant since the 16th century; Hasidism, the popular movement founded by the Baal Shem Tov in 18th-century Ukraine; and contemporary forms popularised by teachers such as Philip Berg, sometimes called "pop Kabbalah."</p>
+                    </div>
                 </div>
-                <p class="lead-text">The mystical heart of Jewish spirituality: divine emanation, sacred union, and the profound wisdom of the Sefirot</p>
             </div>
+        </section>
 
-            <!-- Navigation -->
-            <div style="text-align: center; margin: 2rem 0;">
-                <div style="display: inline-flex; gap: 1rem; flex-wrap: wrap; background: var(--surface-color, #f8fafc); padding: 1rem; border-radius: 8px;">
-                    <a href="#the-zohar" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">The Zohar</a>
-                    <a href="#sefirot" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Sefirot</a>
-                    <a href="#divine-sexuality" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Sacred Union</a>
-                    <a href="#mystical-torah" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Mystical Torah</a>
+        <!-- Section 2: Ein Sof and the Ten Sefirot -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Ein Sof and the Ten Sefirot</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 750px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;"><em>Ein Sof</em> — "without end" — is the infinite, unknowable aspect of God that transcends all description and all thought. The Ten Sefirot are the divine attributes or emanations through which Ein Sof reveals itself and creates the universe. Arranged in a precise pattern of relationships, they form the <em>Etz Chayyim</em>, the Tree of Life — the central diagram of Kabbalistic thought.</p>
+
+                <div class="sefirot-grid">
+                    <div class="sefirah-card">
+                        <div class="attribute">Crown · Divine Will</div>
+                        <h3>1. Keter</h3>
+                        <p>The highest Sefirah, closest to Ein Sof and nearly indistinguishable from it. Keter is pure divine will — the first impulse of intention before any thought or form has arisen. The point where the infinite becomes finite.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Wisdom · The Father</div>
+                        <h3>2. Chokhmah</h3>
+                        <p>The first flash of divine insight — undifferentiated, unbounded intelligence before it takes shape. Chokhmah is the father principle: pure potential, the primordial point from which all structured thought emerges.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Understanding · The Mother</div>
+                        <h3>3. Binah</h3>
+                        <p>The divine mother and great womb of creation. Binah receives the lightning-flash of Chokhmah and gives it structure, depth, and form. It is the faculty of deep understanding, contemplation, and the generation of distinct thought.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Loving-Kindness · Grace</div>
+                        <h3>4. Chesed</h3>
+                        <p>Unconditional love and divine generosity without limit. Chesed is the overflowing grace of God — the impulse to give, to expand, and to bestow blessing on all of creation without condition or measure.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Strength · Judgment</div>
+                        <h3>5. Gevurah</h3>
+                        <p>Divine strength, discipline, and discernment. Gevurah is the limiting power that gives form to Chesed's boundless love — without it, love would dissolve all boundaries. It represents holy severity, justice, and the courage to say no.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Beauty · Harmony · The Heart</div>
+                        <h3>6. Tiferet</h3>
+                        <p>The heart of the Tree of Life, where all streams converge. Tiferet holds the balance between Chesed's mercy and Gevurah's strength, embodying beauty, compassion, and truth. It is the divine son, associated with the sacred heart of all things.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Victory · Eternity</div>
+                        <h3>7. Netzach</h3>
+                        <p>The eternal endurance of divine will, expressed as emotion, desire, and creative force. Netzach is associated with nature, the passions, music, and the raw vitality that drives life forward. It overcomes all obstacles through persistence.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Splendour · Form</div>
+                        <h3>8. Hod</h3>
+                        <p>The divine glory as it is expressed in structure, ritual, and language. Where Netzach is feeling, Hod is the articulate form that captures and transmits it. It governs the intellect's analytic functions, ceremonial prayer, and the precise use of sacred names.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Foundation · The Channel</div>
+                        <h3>9. Yesod</h3>
+                        <p>The great channel through which all the divine energy of the higher Sefirot flows into the material world below. Yesod is the principle of connection and covenant, gathering the streams above and transmitting them to Malkuth.</p>
+                    </div>
+                    <div class="sefirah-card">
+                        <div class="attribute">Kingdom · The Shekhinah</div>
+                        <h3>10. Malkuth</h3>
+                        <p>The final Sefirah, the Shekhinah — God's presence dwelling in the material world. Malkuth is the receiving vessel, the feminine face of the divine that gathers all the light from above and brings it into manifestation. It is the world we inhabit, permeated by hidden holiness.</p>
+                    </div>
+                </div>
+
+                <div class="quote-block">
+                    <blockquote>"When the Holy One wished to create the world, He contemplated the Torah and created the world by means of it."</blockquote>
+                    <cite>— The Zohar</cite>
                 </div>
             </div>
+        </section>
 
-            <!-- Ad Space -->
-            <div class="ad-container" style="text-align: center; margin: 2rem 0;">
+        <!-- Section 3: Sacred Texts -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Sacred Texts</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;">Kabbalistic literature spans nearly two millennia. These three works form the bedrock of the tradition and have shaped Jewish spirituality — and Western esotericism — more than any others.</p>
+
+                <div class="card-grid">
+                    <div class="card" style="border-top: 3px solid #b8960c;">
+                        <h3 class="card-title">📖 The Zohar</h3>
+                        <p class="card-description">The central masterwork of Kabbalah — a mystical commentary on the Torah written in Aramaic and attributed to the 2nd-century sage Shimon bar Yochai. In reality it was compiled in 13th-century Castile by Moses de León, who drew on centuries of transmitted wisdom. The Zohar reveals the hidden meaning beneath every word of scripture, describing the inner life of God and the soul's relationship to the divine in language of extraordinary beauty.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid #b8960c;">
+                        <h3 class="card-title">📜 Sefer Yetzirah</h3>
+                        <p class="card-description">The "Book of Formation" is one of the oldest surviving texts of Jewish esotericism, composed somewhere between the 3rd and 6th centuries CE. Compact and cryptic, it describes how God created the universe through two primary instruments: the 22 letters of the Hebrew alphabet, each carrying a specific creative power, and the ten Sefirot in their most primordial form. Its influence on subsequent Kabbalistic thought — and on Jewish mystical meditation — has been incalculable.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid #b8960c;">
+                        <h3 class="card-title">🌿 Lurianic Writings</h3>
+                        <p class="card-description">Isaac Luria (1534–1572), known as the Ari ("the Holy Lion"), taught in Safed for only a few years before his death, yet he transformed Kabbalah. He wrote almost nothing; his disciple Chaim Vital recorded his teachings in the <em>Etz Chayyim</em> and other works. Luria introduced the revolutionary concepts of <em>tzimtzum</em> (God's self-contraction to make room for creation), <em>shevirat ha-kelim</em> (the shattering of the divine vessels), and <em>tikkun</em> (the ongoing cosmic repair). Lurianic Kabbalah became the dominant form of the tradition and profoundly shaped Hasidism.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <article class="content-article">
-                
-                <!-- Introduction -->
-                <section class="content-section">
-                    <h2>The Book of Splendor</h2>
-                    <p>In the dimly lit study chambers of 13th-century Spain, where Jewish scholars gathered to study Torah by flickering candlelight, a revolutionary spiritual document was taking shape that would transform Jewish mysticism forever.</p>
-                    
-                    <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 2rem 0; font-style: italic; color: var(--text-light);">
-                        "The narratives of the Torah are only the outer garment of the Torah. Whoever thinks that this garment is the Torah itself, and that there is nothing else beneath it, may his spirit deflate and may he have no portion in the world to come."<br>
-                            <footer class="footer">
+        <!-- Section 4: Core Teachings -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Core Teachings</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;">Beyond the Tree of Life, Kabbalah articulates a cosmology and ethics that places the human being at the very centre of a living, responsive universe.</p>
+
+                <div class="card-grid">
+                    <div class="card" style="border-top: 3px solid var(--primary-color);">
+                        <h3 class="card-title">🔤 PaRDeS</h3>
+                        <p class="card-description">The acronym PaRDeS (meaning "orchard" or "paradise") describes the four levels at which Torah can be read: <em>Peshat</em> (the plain, literal meaning), <em>Remez</em> (allegorical and philosophical interpretation), <em>Derash</em> (homiletical teaching and moral application), and <em>Sod</em> (the secret, mystical dimension). Kabbalah operates primarily at the Sod level, seeking the divine structures hidden within every letter, word, and narrative of scripture.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid var(--primary-color);">
+                        <h3 class="card-title">🌌 Tzimtzum</h3>
+                        <p class="card-description">Luria's revolutionary idea that before creation could occur, God contracted into Himself — withdrawing divine light to create a vacant space, the <em>challal</em>, in which the world could exist. Creation does not arise from nothing but from the "empty space" left by God's self-limitation. This teaching resolves the paradox of how an infinite God can coexist with a finite world, and gives profound dignity to created existence.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid var(--primary-color);">
+                        <h3 class="card-title">🌍 Tikkun Olam</h3>
+                        <p class="card-description">"Repair of the world" — the idea that when the vessels of the primordial world shattered under the force of divine light, sparks of holiness became scattered and trapped in the material realm. Every human act of righteousness, prayer, and ethical living liberates these sparks and returns them to their source. Each <em>mitzvah</em> (divine commandment) is an act of cosmic repair; ordinary life becomes sacred work.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid var(--primary-color);">
+                        <h3 class="card-title">♻️ Gilgul</h3>
+                        <p class="card-description">The transmigration or reincarnation of souls — widely accepted in Kabbalistic thought though not a universal Jewish doctrine. Souls return to earthly life until they complete their individual <em>tikkun</em>, the specific rectification their soul requires. Luria was said to be able to read the history of a soul's previous lives in a person's face, and his circle placed great importance on diagnosing and addressing the soul's unfinished business across lifetimes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Practices -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Practices</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-xl) auto; line-height: 1.8;">Kabbalah is not a merely speculative system. It has always been accompanied by concrete practices — ways of turning the mind and heart toward the divine light that saturates creation.</p>
+
+                <div class="card-grid">
+                    <div class="card" style="border-top: 3px solid #2d7a4f;">
+                        <h3 class="card-title">📖 Torah Study and Contemplation</h3>
+                        <p class="card-description">For the Kabbalist, Torah is not simply a historical narrative or a legal code but the very blueprint of creation — a living body of divine names and structures. Deep, sustained meditation on the letters, words, and numerical values (<em>gematria</em>) of scripture is itself a spiritual practice, one that seeks the hidden divine intelligence woven into every syllable. The act of study is understood as a form of cleaving to God.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid #2d7a4f;">
+                        <h3 class="card-title">🌳 Meditation on the Sefirot</h3>
+                        <p class="card-description">Practitioners visualise the Tree of Life and meditate on individual Sefirot or on the 22 pathways that connect them, each associated with a Hebrew letter. By dwelling in awareness on a Sefirah — its qualities, its divine name, its colour, its place in the body — the meditator seeks to embody that quality and to trace the stream of divine energy upward toward its source in Ein Sof. This is sometimes called <em>aliyat ha-nefesh</em>, the ascent of the soul.</p>
+                    </div>
+                    <div class="card" style="border-top: 3px solid #2d7a4f;">
+                        <h3 class="card-title">🙏 Hitbonenut and Hitbodedut</h3>
+                        <p class="card-description"><em>Hitbonenut</em> — "contemplation" — is the sustained, concentrated meditation on a divine concept or teaching until insight arises and the distinction between knower and known begins to dissolve. It is the primary meditation of Chabad Hasidism. <em>Hitbodedut</em> — a practice championed by the Hasidic master Rebbe Nachman of Breslov — is spontaneous, unscripted prayer in one's own native language, speaking to God as one would speak to a close friend: honestly, intimately, without ceremony.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dark quote panel -->
+        <section style="background: #1a1a2e; padding: var(--space-xxl) 0;">
+            <div class="container" style="max-width: 760px; text-align: center;">
+                <p style="font-family: var(--font-secondary); font-size: 1.5rem; font-style: italic; color: #e8e0d0; line-height: 1.7; margin-bottom: var(--space-md);">"The world was created for my sake."</p>
+                <p style="color: #9a8fa0; font-size: 0.95rem; margin-bottom: var(--space-lg);">— The Baal Shem Tov, teaching that each soul is a whole world unto itself</p>
+                <p style="color: #c0b8cc; font-size: 1rem; line-height: 1.8;">The Baal Shem Tov — Israel ben Eliezer, founder of Hasidism — drew this teaching from the Talmud and gave it new urgency. Each human being is not a small part of a large universe; each is a complete world. Every individual soul's service — every prayer, every act of kindness, every moment of genuine love — matters infinitely, because without it, something irreplaceable would be missing from creation forever.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA / Kabbalah Today -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Kabbalah Today</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 750px; margin: 0 auto var(--space-lg) auto; font-size: 1.05rem; line-height: 1.8;">Kabbalah is very much alive. Within Jewish communities, the Lurianic system and the Hasidic traditions it inspired continue to shape prayer, study, and daily life for millions of people. Beyond Judaism, Kabbalistic ideas have fertilised the entire Western esoteric tradition — Hermeticism, Rosicrucianism, and the Tarot all bear the deep imprint of the Tree of Life. The 20th century saw figures such as Gershom Scholem bring rigorous scholarship to the tradition, while teachers like Aryeh Kaplan made its meditation practices accessible to contemporary seekers.</p>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 750px; margin: 0 auto var(--space-xl) auto; font-size: 1.05rem; line-height: 1.8;">At its core, Kabbalah offers what every age needs: a vision of a universe saturated with divine light, in which every human action carries cosmic weight, every soul is infinitely precious, and the work of repair — of self, of community, of world — is the most sacred calling there is. Whether you are drawn to Jewish practice, to contemplative meditation, or simply to the deep questions of existence, the Kabbalistic map offers a living and inexhaustible framework for the journey.</p>
+
+                <div style="text-align: center; margin-top: var(--space-xl);">
+                    <a href="/assessment/" class="btn-primary" style="margin-right: var(--space-md);">Find Your Path →</a>
+                    <a href="/traditions/" class="card-link" style="margin-right: var(--space-md);">All Traditions →</a>
+                    <a href="/traditions/sufism/" class="card-link">Explore Sufism →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -112,287 +307,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Spiritual Compass. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-                    </blockquote>
-                    
-                    <p>The <em>Sefer ha-Zohar</em> (Book of Splendor), attributed to the 2nd-century sage Rabbi Shimon bar Yochai but likely composed by Moses de León around 1280 CE, emerged as perhaps the most influential work of Jewish mysticism ever written. The Zohar presents a radically different understanding of reality than the rational philosophy that dominated medieval Jewish thought – revealing a dynamic, intimate divine presence permeating all existence through complex systems of divine emanation, cosmic correspondences, and mystical symbolism.</p>
-                </section>
-
-                <!-- The Sefirot -->
-                <section class="content-section" id="sefirot">
-                    <h2>🌳 The Sefirot: Divine Emanation & Cosmic Structure</h2>
-                    
-                    <p>The Zohar's most significant innovation was its systematic presentation of the <strong>sefirot</strong> – ten divine emanations through which the infinite, unknowable God (Ein Sof) manifests in creation. This teaching revolutionized Jewish theology by providing a bridge between absolute divine transcendence and intimate divine immanence.</p>
-                    
-                    <h3>🌲 The Ten Sefirot (Tree of Life)</h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #9333ea;">
-                            <h4>👑 1. Keter (Crown)</h4>
-                            <p><strong>Divine Will</strong><br>
-                            The first stirring of divine will, closest to Ein Sof. Pure intention before manifestation.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
-                            <h4>💡 2. Chokhmah (Wisdom)</h4>
-                            <p><strong>Divine Insight</strong><br>
-                            Primordial wisdom as the first point of creation. Pure knowing beyond concepts.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #059669;">
-                            <h4>🧠 3. Binah (Understanding)</h4>
-                            <p><strong>Divine Comprehension</strong><br>
-                            Understanding that gives form to wisdom. The cosmic mother that births reality.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #dc2626;">
-                            <h4>❤️ 4. Chesed (Love/Kindness)</h4>
-                            <p><strong>Divine Grace</strong><br>
-                            Unlimited love and expansiveness. The right arm of divine mercy.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ea580c;">
-                            <h4>⚖️ 5. Gevurah (Strength/Judgment)</h4>
-                            <p><strong>Divine Discipline</strong><br>
-                            Necessary limitation and boundary-setting. Divine justice and discernment.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #facc15;">
-                            <h4>🌅 6. Tiferet (Beauty/Harmony)</h4>
-                            <p><strong>Divine Balance</strong><br>
-                            Perfect harmony of love and judgment. The heart center of the divine system.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #16a34a;">
-                            <h4>🏆 7. Netzach (Eternity/Victory)</h4>
-                            <p><strong>Divine Persistence</strong><br>
-                            Enduring divine nature that overcomes all obstacles. Cosmic endurance.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #7c3aed;">
-                            <h4>✨ 8. Hod (Splendor/Majesty)</h4>
-                            <p><strong>Divine Glory</strong><br>
-                            Receptivity and surrender to divine will. Humble acceptance of divine beauty.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #db2777;">
-                            <h4>⚡ 9. Yesod (Foundation)</h4>
-                            <p><strong>Divine Creativity</strong><br>
-                            Foundation of all creation. Divine sexual energy that generates life.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #059669;">
-                            <h4>🌍 10. Malkhut (Kingdom)</h4>
-                            <p><strong>Divine Presence</strong><br>
-                            Divine presence in the material world. The Shekhinah in exile seeking reunion.</p>
-                        </div>
-                    </div>
-                    
-                    <h4>🏛️ The Three Columns</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
-                        <div style="text-align: center; padding: 1rem; background: var(--surface-color, #f8fafc); border-radius: 8px;">
-                            <h5>Right Column (Mercy)</h5>
-                            <p>Chokhmah, Chesed, Netzach<br><em>Divine expansion and grace</em></p>
-                        </div>
-                        <div style="text-align: center; padding: 1rem; background: var(--surface-color, #f8fafc); border-radius: 8px;">
-                            <h5>Left Column (Judgment)</h5>
-                            <p>Binah, Gevurah, Hod<br><em>Divine contraction and discernment</em></p>
-                        </div>
-                        <div style="text-align: center; padding: 1rem; background: var(--surface-color, #f8fafc); border-radius: 8px;">
-                            <h5>Middle Column (Balance)</h5>
-                            <p>Keter, Tiferet, Yesod, Malkhut<br><em>Perfect harmony of opposites</em></p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Divine Sexuality -->
-                <section class="content-section" id="divine-sexuality">
-                    <h2>💫 Divine Sexuality and Sacred Union</h2>
-                    
-                    <h3>The Mystical Marriage</h3>
-                    <p>One of the Zohar's most revolutionary teachings concerns divine sexuality. The text presents the sefirot as arranged in divine couples, with the ultimate sacred marriage being that between <strong>Tiferet</strong> (divine masculine) and <strong>Malkhut</strong> (divine feminine, the Shekhinah).</p>
-                    
-                    <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 2rem 0; font-style: italic; color: var(--text-light);">
-                        "When male and female are joined together, blessings are present, and all the worlds are blessed. For this reason, the lower union causes the upper union... The Holy One does not take up His dwelling in any place where male and female are not found together."<br>
-                        <footer style="margin-top: 0.5rem; font-style: normal; font-size: 0.9em;">— The Zohar</footer>
-                    </blockquote>
-                    
-                    <div style="background: var(--surface-color, #f8fafc); padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                        <h4>🕊️ The Shekhinah in Exile</h4>
-                        <p>The Zohar teaches that through human sin and cosmic imbalance, the Shekhinah (divine feminine presence) has gone into exile, separated from her beloved. This separation causes suffering throughout creation. Human acts of love, justice, and spiritual practice help reunite the divine couple and restore cosmic harmony.</p>
-                        
-                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: white; border-radius: 8px; border: 1px solid var(--border-color, #e5e7eb);">
-                            <h5>🌙 Friday Night Sacred Union Practice</h5>
-                            <p>Traditional Jewish couples honor the divine marriage through the Sabbath ritual:</p>
-                            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                <li><strong>Candle lighting:</strong> Invoking the Shekhinah's presence</li>
-                                <li><strong>Kiddush blessing:</strong> Sanctifying time and space</li>
-                                <li><strong>Sacred intimacy:</strong> Reflecting divine union in human love</li>
-                                <li><strong>Torah study:</strong> Participating in cosmic repair (tikkun olam)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Mystical Torah -->
-                <section class="content-section" id="mystical-torah">
-                    <h2>📜 The Mystical Torah: Hidden Meanings</h2>
-                    
-                    <h3>🏔️ The Four Levels of Torah Interpretation (PaRDeS)</h3>
-                    <p>The Zohar teaches that Torah contains four levels of meaning, like a beautiful woman with many veils:</p>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                            <h4>Peshat (פשט)</h4>
-                            <p><strong>Literal meaning</strong><br>
-                            The simple, historical narrative level that most people see.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                            <h4>Remez (רמז)</h4>
-                            <p><strong>Allegorical meaning</strong><br>
-                            Symbolic and philosophical interpretations revealing deeper truths.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                            <h4>Drash (דרש)</h4>
-                            <p><strong>Homiletical meaning</strong><br>
-                            Moral and ethical teachings for spiritual development.</p>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                            <h4>Sod (סוד)</h4>
-                            <p><strong>Secret meaning</strong><br>
-                            The mystical, esoteric level that reveals divine mysteries.</p>
-                        </div>
-                    </div>
-                    
-                    <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 2rem 0; font-style: italic; color: var(--text-light);">
-                        "Come and see: There is a garment which is visible to all. When those fools see someone in a garment which seems beautiful to them, they look no further. But more precious than the garment is the body, and more precious than the body is the soul."<br>
-                        <footer style="margin-top: 0.5rem; font-style: normal; font-size: 0.9em;">— The Zohar on Torah's hidden meanings</footer>
-                    </blockquote>
-                </section>
-
-                <!-- Modern Applications -->
-                <section class="content-section">
-                    <h2>🌟 Modern Applications of Kabbalistic Wisdom</h2>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 2rem; border-radius: 8px;">
-                            <h3>🧘 Meditation & Prayer</h3>
-                            <p>Use Kabbalistic meditation techniques for modern spiritual practice:</p>
-                            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                <li><strong>Sefirot meditation:</strong> Journey through the Tree of Life</li>
-                                <li><strong>Divine name contemplation:</strong> Sacred letter combinations</li>
-                                <li><strong>Intention (Kavanah):</strong> Directing prayers to specific sefirot</li>
-                                <li><strong>Visualization:</strong> Seeing divine light in all creation</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 2rem; border-radius: 8px;">
-                            <h3>💕 Sacred Relationships</h3>
-                            <p>Apply divine union principles to human relationships:</p>
-                            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                <li><strong>Sacred Sexuality:</strong> View intimate connection as reflection of divine union</li>
-                                <li><strong>Balance:</strong> Honor both masculine and feminine energies</li>
-                                <li><strong>Tikkun:</strong> Heal personal and collective wounds through love</li>
-                                <li><strong>Presence:</strong> Practice seeing divine light in all people</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: var(--surface-color, #f8fafc); padding: 2rem; border-radius: 8px;">
-                            <h3>🎨 Creative Practice</h3>
-                            <p>Channel divine creativity through artistic expression:</p>
-                            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                <li><strong>Intention:</strong> Approach creative work as sacred practice</li>
-                                <li><strong>Flow:</strong> Allow divine inspiration to move through you</li>
-                                <li><strong>Beauty:</strong> Create works that reveal hidden divine beauty</li>
-                                <li><strong>Sharing:</strong> Use creative gifts to heal and inspire others</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
-                        <h3>🌟 The Eternal Wisdom</h3>
-                        <p style="margin: 1rem 0; font-size: 1.1em; line-height: 1.6;">Kabbalah offers profound tools for modern spiritual seekers struggling with materialism, disconnection, and meaninglessness. Its emphasis on divine immanence, sacred sexuality, and cosmic responsibility provides a framework for finding the sacred in everyday life while working to heal our broken world.</p>
-                        
-                        <p style="margin-top: 1.5rem; font-style: italic;">As the Zohar teaches: "The Holy One has an inner aspect and an outer aspect... The inner aspect is for those who know Him intimately and are called 'lovers' and 'friends.'"</p>
-                    </div>
-                </section>
-
-                <!-- Resources -->
-                <section class="content-section">
-                    <h2>📚 Further Exploration</h2>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                        
-                        <div>
-                            <h3>Essential Texts</h3>
-                            <ul style="list-style-type: none; padding: 0;">
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">📜 <em>The Zohar</em> (Sefer ha-Zohar)</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">📖 Gershom Scholem: <em>Major Trends in Jewish Mysticism</em></li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">📜 <em>Sefer Yetzirah</em> (Book of Creation)</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">🌳 Isaac Luria: <em>The Tree of Life</em></li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">🧘 Aryeh Kaplan: <em>Meditation and Kabbalah</em></li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <h3>Related Traditions</h3>
-                            <ul style="list-style-type: none; padding: 0;">
-                                <li style="margin: 0.5rem 0;"><a href="/traditions/christian/" style="color: var(--primary-color); text-decoration: none;">✝️ Christian Mysticism</a></li>
-                                <li style="margin: 0.5rem 0;"><a href="/traditions/sufism/" style="color: var(--primary-color); text-decoration: none;">☪️ Islamic Sufism</a></li>
-                                <li style="margin: 0.5rem 0;"><a href="/traditions/buddhist/" style="color: var(--primary-color); text-decoration: none;">☸️ Buddhist Meditation</a></li>
-                                <li style="margin: 0.5rem 0;"><a href="/traditions/" style="color: var(--primary-color); text-decoration: none;">🧭 All Traditions</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <h3>Modern Teachers</h3>
-                            <ul style="list-style-type: none; padding: 0;">
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">👨‍🏫 Reb Zalman Schachter-Shalomi</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">👨‍🏫 Lawrence Kushner</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">👨‍🏫 Arthur Green</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">👨‍🏫 David Cooper</li>
-                                <li style="margin: 0.5rem 0; padding: 0.5rem; background: var(--surface-color, #f8fafc); border-radius: 4px;">👩‍🏫 Melinda Ribner</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Spiritual Compass</h3>
-                    <p>Guiding souls through authentic spiritual traditions with wisdom, respect, and open hearts.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="/traditions/">Traditions</a></li>
-                        <li><a href="/texts/">Sacred Texts</a></li>
-                        <li><a href="/practices/">Practices</a></li>
-                        <li><a href="/about/">About</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Community</h4>
-                    <ul>
-                        <li><a href="/meditation/">Meditation</a></li>
-                        <li><a href="/prayer/">Prayer</a></li>
-                        <li><a href="/wisdom/">Daily Wisdom</a></li>
-                        <li><a href="/teachers/">Teachers</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </footer>
