@@ -208,22 +208,134 @@ class MeditationExercises {
         ]
       }
     };
-    
+
     this.currentExercise = null;
     this.currentStep = 0;
     this.isRunning = false;
     this.timer = null;
     this.startTime = null;
     this.elapsedTime = 0;
-    
+
+    // Audio
+    this.audioCtx = null;
+    this.masterGain = null;
+    this.droneOsc1 = null;
+    this.droneOsc2 = null;
+    this.musicEnabled = true;
+
     this.init();
   }
-  
+
+  // ─── Audio ────────────────────────────────────────────────────────────────
+
+  initAudio() {
+    try {
+      this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      this.masterGain = this.audioCtx.createGain();
+      this.masterGain.gain.value = 0;
+      this.masterGain.connect(this.audioCtx.destination);
+    } catch (e) {
+      this.musicEnabled = false;
+    }
+  }
+
+  startAmbient() {
+    if (!this.musicEnabled || !this.audioCtx) return;
+    if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+    // Stop any existing drones first
+    this.stopAmbientNow();
+
+    // Two oscillators slightly detuned: 136.1 Hz (Om frequency) + 4 Hz
+    // Creates a gentle 4 Hz theta-wave binaural beat effect
+    this.droneOsc1 = this.audioCtx.createOscillator();
+    this.droneOsc2 = this.audioCtx.createOscillator();
+    this.droneOsc1.type = 'sine';
+    this.droneOsc2.type = 'sine';
+    this.droneOsc1.frequency.value = 136.1;
+    this.droneOsc2.frequency.value = 140.1;
+
+    const droneGain = this.audioCtx.createGain();
+    droneGain.gain.value = 0.045;
+
+    this.droneOsc1.connect(droneGain);
+    this.droneOsc2.connect(droneGain);
+    droneGain.connect(this.masterGain);
+
+    this.droneOsc1.start();
+    this.droneOsc2.start();
+
+    // Fade master in over 3 seconds
+    this.masterGain.gain.cancelScheduledValues(this.audioCtx.currentTime);
+    this.masterGain.gain.setValueAtTime(0, this.audioCtx.currentTime);
+    this.masterGain.gain.linearRampToValueAtTime(1, this.audioCtx.currentTime + 3);
+  }
+
+  stopAmbient() {
+    if (!this.audioCtx || !this.droneOsc1) return;
+    // Fade out over 2 seconds, then stop oscillators
+    this.masterGain.gain.cancelScheduledValues(this.audioCtx.currentTime);
+    this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, this.audioCtx.currentTime);
+    this.masterGain.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 2);
+    const o1 = this.droneOsc1;
+    const o2 = this.droneOsc2;
+    this.droneOsc1 = null;
+    this.droneOsc2 = null;
+    setTimeout(() => { try { o1.stop(); o2.stop(); } catch(e) {} }, 2200);
+  }
+
+  stopAmbientNow() {
+    if (!this.droneOsc1) return;
+    try { this.droneOsc1.stop(); } catch(e) {}
+    try { this.droneOsc2.stop(); } catch(e) {}
+    this.droneOsc1 = null;
+    this.droneOsc2 = null;
+  }
+
+  playBell() {
+    if (!this.musicEnabled || !this.audioCtx) return;
+    if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+    const now = this.audioCtx.currentTime;
+
+    // Singing bowl: fundamental + slight overtone for richness
+    [432, 1200].forEach((freq, i) => {
+      const osc = this.audioCtx.createOscillator();
+      const gain = this.audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      // Overtone is much quieter
+      const peak = i === 0 ? 0.25 : 0.06;
+      gain.gain.setValueAtTime(0, now);
+      gain.gain.linearRampToValueAtTime(peak, now + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 5);
+      osc.connect(gain);
+      gain.connect(this.masterGain);
+      osc.start(now);
+      osc.stop(now + 5.1);
+    });
+  }
+
+  toggleMusic() {
+    if (!this.audioCtx) return;
+    this.musicEnabled = !this.musicEnabled;
+    const btn = document.querySelector('.btn-music');
+    if (this.musicEnabled) {
+      btn.textContent = '🔔 Sound On';
+      if (this.isRunning) this.startAmbient();
+    } else {
+      btn.textContent = '🔕 Sound Off';
+      this.stopAmbient();
+    }
+  }
+
+  // ─── UI ───────────────────────────────────────────────────────────────────
+
   init() {
     this.createModal();
     this.attachEventListeners();
   }
-  
+
   createModal() {
     const modal = document.createElement('div');
     modal.className = 'meditation-modal';
@@ -254,39 +366,32 @@ class MeditationExercises {
           <button class="btn-control btn-play">▶️ Start</button>
           <button class="btn-control btn-pause" style="display: none;">⏸️ Pause</button>
           <button class="btn-control btn-next">⏭️ Next</button>
+          <button class="btn-control btn-music">🔔 Sound On</button>
         </div>
       </div>
     `;
-    
+
     document.body.appendChild(modal);
-    
-    // Add CSS
+
     const style = document.createElement('style');
     style.textContent = `
       .meditation-modal {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         z-index: 10000;
         display: none;
       }
-      
       .modal-overlay {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(10px);
       }
-      
       .modal-content {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 50%; left: 50%;
         transform: translate(-50%, -50%);
         background: var(--bg-primary, #ffffff);
         border-radius: 16px;
@@ -297,11 +402,9 @@ class MeditationExercises {
         overflow-y: auto;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       }
-      
       .modal-close {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 1rem; right: 1rem;
         background: none;
         border: none;
         font-size: 2rem;
@@ -310,18 +413,15 @@ class MeditationExercises {
         line-height: 1;
         padding: 0.5rem;
       }
-      
       .exercise-header {
         text-align: center;
         margin-bottom: 2rem;
       }
-      
       .exercise-title {
         color: var(--text-primary, #333);
         margin: 0 0 1rem 0;
         font-size: 1.8rem;
       }
-      
       .exercise-meta {
         display: flex;
         justify-content: center;
@@ -329,30 +429,25 @@ class MeditationExercises {
         color: var(--text-secondary, #666);
         font-size: 0.9rem;
       }
-      
       .step-content {
         text-align: center;
         margin-bottom: 2rem;
         min-height: 120px;
       }
-      
       .step-title {
         color: var(--text-primary, #333);
         margin: 0 0 1rem 0;
         font-size: 1.4rem;
       }
-      
       .step-text {
         color: var(--text-secondary, #666);
         line-height: 1.6;
         font-size: 1.1rem;
       }
-      
       .exercise-timer {
         text-align: center;
         margin-bottom: 2rem;
       }
-      
       .timer-display {
         font-size: 3rem;
         font-weight: 300;
@@ -360,7 +455,6 @@ class MeditationExercises {
         margin-bottom: 1rem;
         font-family: monospace;
       }
-      
       .timer-progress {
         width: 100%;
         height: 6px;
@@ -368,261 +462,233 @@ class MeditationExercises {
         border-radius: 3px;
         overflow: hidden;
       }
-      
       .timer-bar {
         height: 100%;
         background: linear-gradient(90deg, #4a90e2, #50e3c2);
         width: 0%;
         transition: width 0.3s ease;
       }
-      
       .exercise-controls {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
       }
-      
       .btn-control {
         background: var(--primary-color, #4a90e2);
         color: white;
         border: none;
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.25rem;
         border-radius: 8px;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 0.95rem;
         transition: all 0.2s ease;
       }
-      
       .btn-control:hover {
         background: var(--primary-dark, #357abd);
         transform: translateY(-1px);
       }
-      
       .btn-control:disabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
       }
-      
+      .btn-music {
+        background: #6b7280;
+      }
+      .btn-music:hover {
+        background: #4b5563;
+      }
       @media (max-width: 768px) {
-        .modal-content {
-          width: 95%;
-          padding: 1.5rem;
-        }
-        
-        .timer-display {
-          font-size: 2.5rem;
-        }
-        
-        .exercise-controls {
-          flex-direction: column;
-        }
-        
-        .btn-control {
-          width: 100%;
-        }
+        .modal-content { width: 95%; padding: 1.5rem; }
+        .timer-display { font-size: 2.5rem; }
+        .exercise-controls { flex-direction: column; }
+        .btn-control { width: 100%; }
       }
     `;
-    
+
     document.head.appendChild(style);
   }
-  
+
   attachEventListeners() {
-    // Practice buttons
     const practiceButtons = document.querySelectorAll('.practice-card .btn');
     practiceButtons.forEach((button, index) => {
       button.addEventListener('click', () => {
         const exerciseKeys = Object.keys(this.exercises);
         const exerciseKey = exerciseKeys[index];
-        if (exerciseKey) {
-          this.startExercise(exerciseKey);
-        }
+        if (exerciseKey) this.startExercise(exerciseKey);
       });
     });
-    
-    // Modal controls
+
     document.addEventListener('click', (e) => {
-      if (e.target.matches('.modal-close, .modal-overlay')) {
-        this.closeModal();
-      }
-      
-      if (e.target.matches('.btn-play')) {
-        this.playExercise();
-      }
-      
-      if (e.target.matches('.btn-pause')) {
-        this.pauseExercise();
-      }
-      
-      if (e.target.matches('.btn-next')) {
-        this.nextStep();
-      }
+      if (e.target.matches('.modal-close, .modal-overlay')) this.closeModal();
+      if (e.target.matches('.btn-play'))  this.playExercise();
+      if (e.target.matches('.btn-pause')) this.pauseExercise();
+      if (e.target.matches('.btn-next'))  this.nextStep();
+      if (e.target.matches('.btn-music')) this.toggleMusic();
     });
-    
-    // Keyboard shortcuts
+
     document.addEventListener('keydown', (e) => {
-      if (this.isModalOpen()) {
-        if (e.key === 'Escape') {
-          this.closeModal();
-        }
-        if (e.key === ' ') {
-          e.preventDefault();
-          this.togglePlayPause();
-        }
-        if (e.key === 'ArrowRight') {
-          this.nextStep();
-        }
-      }
+      if (!this.isModalOpen()) return;
+      if (e.key === 'Escape')      this.closeModal();
+      if (e.key === ' ')           { e.preventDefault(); this.togglePlayPause(); }
+      if (e.key === 'ArrowRight')  this.nextStep();
     });
   }
-  
+
+  // ─── Exercise flow ─────────────────────────────────────────────────────────
+
   startExercise(exerciseKey) {
     this.currentExercise = this.exercises[exerciseKey];
     this.currentStep = 0;
     this.elapsedTime = 0;
     this.isRunning = false;
-    
+
+    // Initialise audio on first user interaction
+    if (!this.audioCtx) this.initAudio();
+
+    // Reset music button state
+    this.musicEnabled = true;
+    const btn = document.querySelector('.btn-music');
+    if (btn) btn.textContent = '🔔 Sound On';
+
+    // Ensure Next button is visible (in case a previous session hid it)
+    const nextBtn = document.querySelector('.btn-next');
+    if (nextBtn) nextBtn.style.display = '';
+
     this.showModal();
     this.updateDisplay();
   }
-  
+
   showModal() {
     const modal = document.querySelector('.meditation-modal');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    
-    // Animate in
+
     requestAnimationFrame(() => {
       modal.style.opacity = '0';
       modal.style.transition = 'opacity 0.3s ease';
-      requestAnimationFrame(() => {
-        modal.style.opacity = '1';
-      });
+      requestAnimationFrame(() => { modal.style.opacity = '1'; });
     });
   }
-  
+
   closeModal() {
-    if (this.timer) {
-      clearInterval(this.timer);
-      this.timer = null;
-    }
-    
+    if (this.timer) { clearInterval(this.timer); this.timer = null; }
     this.isRunning = false;
-    
+    this.stopAmbient();
+
     const modal = document.querySelector('.meditation-modal');
     modal.style.transition = 'opacity 0.3s ease';
     modal.style.opacity = '0';
-    
     setTimeout(() => {
       modal.style.display = 'none';
       document.body.style.overflow = '';
     }, 300);
   }
-  
+
   playExercise() {
     this.isRunning = true;
     this.startTime = Date.now() - this.elapsedTime;
-    
-    this.timer = setInterval(() => {
-      this.updateTimer();
-    }, 1000);
-    
+
+    this.timer = setInterval(() => { this.updateTimer(); }, 1000);
+
     document.querySelector('.btn-play').style.display = 'none';
     document.querySelector('.btn-pause').style.display = 'inline-block';
+
+    this.startAmbient();
+    this.playBell();
   }
-  
+
   pauseExercise() {
     this.isRunning = false;
-    
-    if (this.timer) {
-      clearInterval(this.timer);
-      this.timer = null;
-    }
-    
+    if (this.timer) { clearInterval(this.timer); this.timer = null; }
+
     document.querySelector('.btn-play').style.display = 'inline-block';
     document.querySelector('.btn-pause').style.display = 'none';
+
+    this.stopAmbient();
   }
-  
+
   togglePlayPause() {
-    if (this.isRunning) {
-      this.pauseExercise();
-    } else {
-      this.playExercise();
-    }
+    if (this.isRunning) this.pauseExercise();
+    else this.playExercise();
   }
-  
+
   nextStep() {
     if (this.currentStep < this.currentExercise.steps.length - 1) {
       this.currentStep++;
       this.elapsedTime = this.currentExercise.steps[this.currentStep].time * 1000;
-      this.updateDisplay();
-      
+
+      // FIX: update startTime BEFORE updateDisplay so updateTimer() calculates correctly
       if (this.isRunning) {
         this.startTime = Date.now() - this.elapsedTime;
       }
+
+      this.updateDisplay();
+      this.playBell();
     } else {
       this.completeExercise();
     }
   }
-  
+
   updateDisplay() {
     const exercise = this.currentExercise;
     const step = exercise.steps[this.currentStep];
-    
+
     document.querySelector('.exercise-title').textContent = exercise.title;
     document.querySelector('.exercise-duration').textContent = exercise.duration;
-    document.querySelector('.exercise-progress').textContent = `Step ${this.currentStep + 1} of ${exercise.steps.length}`;
-    
+    document.querySelector('.exercise-progress').textContent =
+      `Step ${this.currentStep + 1} of ${exercise.steps.length}`;
+
     document.querySelector('.step-title').textContent = step.title;
     document.querySelector('.step-text').textContent = step.text;
-    
+
     this.updateTimer();
   }
-  
+
   updateTimer() {
     if (this.isRunning) {
       this.elapsedTime = Date.now() - this.startTime;
     }
-    
+
     const step = this.currentExercise.steps[this.currentStep];
-    const stepElapsed = this.elapsedTime - (step.time * 1000);
+    const stepElapsed = Math.max(0, this.elapsedTime - step.time * 1000);
     const stepDuration = step.duration * 1000;
-    
-    // Format time display
+
     const minutes = Math.floor(stepElapsed / 60000);
     const seconds = Math.floor((stepElapsed % 60000) / 1000);
-    document.querySelector('.timer-display').textContent = 
+    document.querySelector('.timer-display').textContent =
       `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
-    // Update progress bar
-    const progress = Math.min(stepElapsed / stepDuration, 1);
-    document.querySelector('.timer-bar').style.width = `${progress * 100}%`;
-    
-    // Auto-advance to next step
-    if (this.isRunning && stepElapsed >= stepDuration && this.currentStep < this.currentExercise.steps.length - 1) {
-      this.nextStep();
-    } else if (this.isRunning && stepElapsed >= stepDuration && this.currentStep === this.currentExercise.steps.length - 1) {
-      this.completeExercise();
+
+    if (stepDuration > 0) {
+      const progress = Math.min(stepElapsed / stepDuration, 1);
+      document.querySelector('.timer-bar').style.width = `${progress * 100}%`;
+    }
+
+    // Auto-advance
+    if (this.isRunning && stepDuration > 0 && stepElapsed >= stepDuration) {
+      if (this.currentStep < this.currentExercise.steps.length - 1) {
+        this.nextStep();
+      } else {
+        this.completeExercise();
+      }
     }
   }
-  
+
   completeExercise() {
     this.pauseExercise();
-    
-    // Show completion message
     document.querySelector('.step-title').textContent = "🙏 Practice Complete";
-    document.querySelector('.step-text').textContent = "Take a moment to appreciate the peace you've cultivated. You can close this window when ready.";
-    
+    document.querySelector('.step-text').textContent =
+      "Take a moment to appreciate the peace you've cultivated. You can close this window when ready.";
     document.querySelector('.btn-next').style.display = 'none';
   }
-  
+
   isModalOpen() {
     const modal = document.querySelector('.meditation-modal');
     return modal && modal.style.display !== 'none';
   }
 }
 
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   new MeditationExercises();
 });
