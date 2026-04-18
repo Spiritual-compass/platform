@@ -300,7 +300,16 @@ class SpiritualAssessment {
     }
     
     scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const currentGroup = document.querySelector(`[data-group="${this.currentGroup}"]`);
+        const target = currentGroup || document.querySelector('.assessment-form');
+        if (target) {
+            const nav = document.querySelector('.nav');
+            const navHeight = nav ? nav.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }
 }
 
