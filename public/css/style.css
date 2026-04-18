@@ -221,21 +221,69 @@ body {
     .hero-title {
         font-size: 2rem;
     }
-    
-    .nav {
-        flex-direction: column;
-        gap: var(--space-sm);
-    }
-    
+
     .header-content {
-        flex-direction: column;
-        gap: var(--space-sm);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    
+
+    /* Nav hidden by default on mobile; shown when open */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        gap: 0;
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .nav.nav-open {
+        display: flex;
+    }
+    .nav .nav-link {
+        padding: 0.75rem 1.25rem;
+        border-top: 1px solid var(--border-color);
+        display: block;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.25rem;
+        margin-left: var(--space-sm);
+    }
+    .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: all 0.2s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Hide CTA button in header on mobile to save space */
+    .header-actions { display: none; }
+
+    .header { position: sticky; }
+
     .card-grid {
         grid-template-columns: 1fr;
     }
-    
 }
 
 /* ============================================
