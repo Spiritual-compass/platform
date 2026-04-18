@@ -79,6 +79,9 @@ body {
     gap: var(--space-lg);
 }
 
+/* Hamburger hidden on desktop */
+.hamburger { display: none; }
+
 .nav-link {
     text-decoration: none;
     color: var(--text-primary);
@@ -229,11 +232,37 @@ body {
         flex-wrap: nowrap;
     }
 
-    /* Nav hidden by default on mobile; shown when open */
+    /* Hide CTA button in header on mobile to save space */
+    .header-actions { display: none; }
+
+    /* Hamburger button — hidden on desktop, flex on mobile */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        flex-shrink: 0;
+    }
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Nav hidden by default on mobile */
     .nav {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
         left: 0;
         right: 0;
         background: var(--bg-primary);
@@ -243,43 +272,12 @@ body {
         z-index: 999;
         box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    .nav.nav-open {
-        display: flex;
-    }
+    .nav.nav-open { display: flex; }
     .nav .nav-link {
-        padding: 0.75rem 1.25rem;
+        padding: 0.85rem 1.25rem;
         border-top: 1px solid var(--border-color);
         display: block;
     }
-
-    /* Hamburger button */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.25rem;
-        margin-left: var(--space-sm);
-    }
-    .hamburger span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background: var(--text-primary);
-        border-radius: 2px;
-        transition: all 0.2s ease;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* Hide CTA button in header on mobile to save space */
-    .header-actions { display: none; }
-
-    .header { position: sticky; }
 
     .card-grid {
         grid-template-columns: 1fr;

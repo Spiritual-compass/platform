@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Test</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: sans-serif; }
+
+        /* ── Header ── */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        .logo { font-size: 1.25rem; font-weight: 700; color: #2c3e50; text-decoration: none; }
+
+        /* Desktop nav */
+        .nav { display: flex; gap: 1.5rem; list-style: none; }
+        .nav a { text-decoration: none; color: #2c3e50; font-size: 0.95rem; }
+
+        /* Hamburger – hidden on desktop */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #2c3e50;
+            border-radius: 2px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+
+            .nav {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 56px;         /* same as header height */
+                left: 0; right: 0;
+                background: #fff;
+                border-bottom: 1px solid #ddd;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+            .nav.open { display: flex; }
+            .nav a {
+                display: block;
+                padding: 0.85rem 1.25rem;
+                border-top: 1px solid #eee;
+            }
+        }
+
+        /* Page content */
+        .content { max-width: 680px; margin: 2rem auto; padding: 0 1rem; }
+        .content h1 { margin-bottom: 1rem; }
+        .content p { margin-bottom: 0.75rem; line-height: 1.6; color: #555; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">🧭 Spiritual Compass</a>
+        <ul class="nav" id="mainNav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Meditation</a></li>
+            <li><a href="#">Prayer</a></li>
+            <li><a href="#">Rituals</a></li>
+            <li><a href="#">Traditions</a></li>
+            <li><a href="#">Teachers</a></li>
+            <li><a href="#">Wisdom</a></li>
+        </ul>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main class="content">
+    <h1>Hamburger Menu Test</h1>
+    <p>Resize the window below 768px (or open DevTools and toggle device emulation) to see the hamburger button appear.</p>
+    <p>Tap/click the hamburger to open and close the nav. The nav items should drop down below the header without covering the page content (it overlays, not pushes).</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>More content here to show the page scrolls normally behind the overlay.</p>
+</main>
+
+<script>
+    var btn = document.getElementById('hamburgerBtn');
+    var nav = document.getElementById('mainNav');
+
+    btn.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when a nav link is clicked
+    nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+            nav.classList.remove('open');
+            btn.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+        if (!btn.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove('open');
+            btn.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>
+</body>
+</html>
