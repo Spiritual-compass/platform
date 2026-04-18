@@ -576,8 +576,16 @@
         document.querySelector('[data-q="' + current + '"]').classList.add('active');
     }
 
-    prevBtn.addEventListener('click', () => { if (current > 1) { current--; updateUI(); } });
-    nextBtn.addEventListener('click', () => { if (current < total) { current++; updateUI(); } });
+    function scrollToQuestion() {
+        const wrap = document.querySelector('.assessment-wrap');
+        const header = document.querySelector('.header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const top = wrap.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 1) { current--; updateUI(); scrollToQuestion(); } });
+    nextBtn.addEventListener('click', () => { if (current < total) { current++; updateUI(); scrollToQuestion(); } });
 
     submitBtn.addEventListener('click', () => {
         // Tally scores
